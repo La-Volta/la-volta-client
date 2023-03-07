@@ -7,9 +7,13 @@ const Sidebar = () => {
                     <div className="sb-sidenav-menu">
                         <div className="nav">
                             <div className="sb-sidenav-menu-heading">Core</div>
-                            <Link className="nav-link" to="/admin">
+                            <Link className="nav-link" to="/admin/dashboard">
                                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                                 Dashboard
+                            </Link>
+                            <Link className="nav-link" to="/admin/profile">
+                                <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
+                                Profile
                             </Link>
                             <div className="sb-sidenav-menu-heading">Interface</div>
                             <Link className="nav-link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -41,10 +45,10 @@ const Sidebar = () => {
                                             <Link className="nav-link" to="password.html">Forgot Password</Link>
                                         </nav>
                                     </div>
-                                    <a className="nav-link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    <Link className="nav-link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                         Error
                                         <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
-                                    </a>
+                                    </Link>
                                     <div className="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav className="sb-sidenav-menu-nested nav">
                                             <Link className="nav-link" to="401.html">401 Page</Link>
