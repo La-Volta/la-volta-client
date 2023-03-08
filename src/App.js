@@ -6,7 +6,7 @@ import Home from './components/frontend/Home';
 
 function App() {
   return (
-    <div className="App">
+    //<div className="App">
         <Router>
           <Switch>
 
@@ -17,7 +17,7 @@ function App() {
           </Switch>
         </Router>
         
-    </div>
+    //</div>
   );
 }
 
