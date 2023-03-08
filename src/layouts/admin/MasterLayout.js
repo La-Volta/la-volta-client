@@ -1,5 +1,4 @@
 import React from 'react';
-import {Route, Routes, Navigate} from 'react-router-dom'
 
 import '../../assets/admin/css/styles.css';
 import '../../assets/admin/js/scripts';
@@ -20,27 +19,8 @@ const MasterLayout = () => {
 
                 <div id="layoutSidenav_content">
                     <main>
-                        
-                        <Routes>
-                            {router.map((route, idx) => {
-                                return(
-                                    route.component && (
-                                        <Route 
-                                            key={idx}
-                                            path={route.path}
-                                            exact={route.exact}
-                                            name={route.name}
-                                            render={(props) => (
-                                                <route.component {...props} />
-                                            )}
-                                        />
-
-                                    )
-                                )
-                                
-                            })}
-                            <Navigate from="/admin" to="/admin/dashboard" />
-                        </Routes>
+               
+                       
 
                     </main>
                     <Footer />
