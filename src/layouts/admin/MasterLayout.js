@@ -1,14 +1,11 @@
 import React from 'react';
-import {Switch, Route, Redirect} from 'react-router-dom'
+import {Route, Routes, Navigate} from 'react-router-dom'
 
 import '../../assets/admin/css/styles.css';
 import '../../assets/admin/js/scripts';
-
-import Navbar from './Navbar';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-
-import routes from '../../routes/routes';
+import Navbar from '../../components/admin/Navbar';
+import Sidebar from '../../components/admin/Sidebar';
+import Footer from '../../components/admin/Footer';
 
 const MasterLayout = () => {
 
@@ -24,8 +21,8 @@ const MasterLayout = () => {
                 <div id="layoutSidenav_content">
                     <main>
                         
-                        <Switch>
-                            {routes.map((route, idx) => {
+                        <Routes>
+                            {router.map((route, idx) => {
                                 return(
                                     route.component && (
                                         <Route 
@@ -42,8 +39,8 @@ const MasterLayout = () => {
                                 )
                                 
                             })}
-                            <Redirect from="/admin" to="/admin/dashboard" />
-                        </Switch>
+                            <Navigate from="/admin" to="/admin/dashboard" />
+                        </Routes>
 
                     </main>
                     <Footer />
