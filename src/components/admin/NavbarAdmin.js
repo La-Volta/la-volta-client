@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Navbar = () => {
+const NavbarAdmin = () => {
 
   return (
     <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -34,4 +34,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default NavbarAdmin
