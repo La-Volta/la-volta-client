@@ -28,7 +28,7 @@ const registerSubmit = (e) => {
   e.preventDefault();
 
   CallUser().getCookies().then(response => {
-    CallUser().post(registerInput).then(res => {
+    CallUser().postRegister(registerInput).then(res => {
       if(res.data.status === 200)
         {
             localStorage.setItem('auth_token', res.data.token);
