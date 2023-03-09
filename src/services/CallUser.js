@@ -20,7 +20,7 @@ const CallUser = () => {
     // };
 
 
-    const post = async (data) => {
+    const postRegister = async (data) => {
         const res = await axios.post(`/api/register`, data);
         return res;
     };
@@ -40,7 +40,7 @@ const CallUser = () => {
     return {
         getCookies,
         // trash,
-        post,
+        postRegister,
         //update,
     };
 }
