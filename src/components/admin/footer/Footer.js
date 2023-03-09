@@ -6,7 +6,7 @@ import generalitat from '../../../assets/images/logoGeneralitat-1.png';
 import diputacio from '../../../assets/images/logoDiputacio-1.png';
 import associacio from '../../../assets/images/logoAssociacioSantNarcis.png';
 import cases from '../../../assets/images/logoCases.png';
-import '../footer/footer.css';
+
 
 
 const Footer = () => {

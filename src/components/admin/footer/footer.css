@@ -5,7 +5,7 @@
 
 .text-muted {
     --bs-text-opacity: 1;
-    color: white !important;
+    color: red !important;
     background-color: black;
     text-align: center;
 }
