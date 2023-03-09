@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 
 
 function Login() {
