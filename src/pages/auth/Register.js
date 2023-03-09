@@ -1,6 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
 import CallUser from '../../services/CallUser';
+import Swal from 'sweetalert2';
+
+
 
 function Register() {
 
@@ -25,8 +28,8 @@ const registerSubmit = (e) => {
         {
             localStorage.setItem('auth_token', res.data.token);
             localStorage.setItem('auth_name', res.data.username);
-            // swal("Success",res.data.message,"success");
-            // history.push('/');
+            Swal.fire("registrat corectament");
+            //history.push('/');
         }
         else
         {
