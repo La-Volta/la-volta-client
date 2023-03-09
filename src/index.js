@@ -2,6 +2,8 @@ import React from 'react';
 import reportWebVitals from './reportWebVitals';
 import Router from './application/Router';
 import { createRoot } from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
 
 
 const container = document.getElementById('root');
