@@ -38,11 +38,16 @@ const registerSubmit = (e) => {
 
   return (
     <div>
+
+      <h6>Fes-te amic de La Volta</h6>
+      <h6>Per a fer efectiva la donació és necessari registrar-se i seguir els passos indicats</h6>
+
       <div className="container py-5">
-                <div className="row justify-content-center">
+           <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
+                              
                                 <h4>Register</h4>
                             </div>
                             <div className="card-body">
