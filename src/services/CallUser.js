@@ -13,6 +13,13 @@ const CallUser = () => {
         
      };
 
+    
+
+    const postLogin = async (data) => {
+        const res = await axios.post(`/api/login`, data);
+        return res;
+    };
+
     // const trash = async (id) => {
     //     let urlActivity = `${url}/${id}`;
     //     const res = await axios.delete(urlActivity);
@@ -42,6 +49,7 @@ const CallUser = () => {
         // trash,
         post,
         //update,
+        postLogin,
     };
 }
 

@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
+import CallUser from '../../services/CallUser';
 
 
 function Login() {
 
-    const history = useHistory();
+    const navigate = useNavigate();
     
     const [loginInput, setLogin] = useState({
         email: '',
@@ -19,31 +21,26 @@ function Login() {
 
     const loginSubmit = (e) => {
         e.preventDefault();
-        
-        const data = {
-            email: loginInput.email,
-            password: loginInput.password,
-        }
 
-        axios.get('/sanctum/csrf-cookie').then(response => {
-            axios.post(`api/login`, data).then(res => {
+        CallUser().getCookies().then(response => {
+            CallUser().postLogin(loginInput).then(res => {
                 if(res.data.status === 200)
                 {
                     localStorage.setItem('auth_token', res.data.token);
                     localStorage.setItem('auth_name', res.data.username);
-                    swal("Success",res.data.message,"success");
+                    Swal.fire("loggeat correctament");
                     if(res.data.role === 'admin')
                     {
-                        history.push('/admin/dashboard');
+                        navigate('/admin/dashboard');
                     }
                     else
                     {
-                        history.push('/');
+                        navigate('/');
                     }
                 }
                 else if(res.data.status === 401)
                 {
-                    swal("Warning",res.data.message,"warning");
+                    Swal.fire("error");
                 }
                 else
                 {
