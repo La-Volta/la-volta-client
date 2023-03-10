@@ -1,8 +1,8 @@
 import React from 'react';
 import NavbarAdmin from '../../components/admin/NavbarAdmin';
 import Sidebar from '../../components/admin/Sidebar';
-import Footer from '../../components/admin/Footer';
-import '../../assets/admin/css/styles.css';
+import Footer from '../../components/admin/footer/Footer';
+import '../../styles/styles.css';
 import '../../assets/admin/js/scripts';
 
 function Profile() {
