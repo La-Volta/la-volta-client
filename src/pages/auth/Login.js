@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 import CallUser from '../../services/CallUser';
+import Navbar from '../../components/Navbar'
 
 
 function Login() {
@@ -53,6 +54,7 @@ function Login() {
 
     return (
         <div>
+            <Navbar />
             <div className="container py-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
