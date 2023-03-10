@@ -1,9 +1,17 @@
 import React from 'react'
 import { useState } from 'react';
 import CallUser from '../../services/CallUser';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 
 function Register() {
+
+  const navigate = useNavigate();
 
   const [registerInput, setRegister] = useState({
     name: '',
@@ -22,13 +30,13 @@ const registerSubmit = (e) => {
   e.preventDefault();
 
   CallUser().getCookies().then(response => {
-    CallUser().post(registerInput).then(res => {
+    CallUser().postRegister(registerInput).then(res => {
       if(res.data.status === 200)
         {
             localStorage.setItem('auth_token', res.data.token);
             localStorage.setItem('auth_name', res.data.username);
-            // swal("Success",res.data.message,"success");
-            // history.push('/');
+            Swal.fire("registrat corectament");
+            navigate("/");
         }
         else
         {

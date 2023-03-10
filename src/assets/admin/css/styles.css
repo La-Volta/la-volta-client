@@ -626,8 +626,8 @@ progress {
   color: #6c757d;
 }
 
-.container,
-.container-fluid,
+/*.container,
+
 .container-xxl,
 .container-xl,
 .container-lg,
@@ -638,7 +638,7 @@ progress {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
-}
+}*/
 
 @media (min-width: 576px) {
   .container-sm, .container {
@@ -6752,9 +6752,9 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex {
+/*.d-flex {
   display: flex !important;
-}
+}*/
 
 .d-inline-flex {
   display: inline-flex !important;
@@ -7105,9 +7105,7 @@ textarea.form-control-lg {
   justify-content: center !important;
 }
 
-.justify-content-between {
-  justify-content: space-between !important;
-}
+
 
 .justify-content-around {
   justify-content: space-around !important;
@@ -7125,9 +7123,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center {
-  align-items: center !important;
-}
+
 
 .align-items-baseline {
   align-items: baseline !important;
@@ -7339,9 +7335,9 @@ textarea.form-control-lg {
   margin-top: 3rem !important;
 }
 
-.mt-auto {
+/*.mt-auto {
   margin-top: auto !important;
-}
+}*/
 
 .me-0 {
   margin-right: 0 !important;
@@ -7471,10 +7467,7 @@ textarea.form-control-lg {
   padding-left: 1rem !important;
 }
 
-.px-4 {
-  padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
-}
+
 
 .px-5 {
   padding-right: 3rem !important;
@@ -7501,10 +7494,9 @@ textarea.form-control-lg {
   padding-bottom: 1rem !important;
 }
 
-.py-4 {
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-}
+/**/
+  /*padding-bottom: 1.5rem !important;
+}*/
 
 .py-5 {
   padding-top: 3rem !important;
@@ -7785,10 +7777,9 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted {
-  --bs-text-opacity: 1;
-  color: #6c757d !important;
-}
+
+
+link
 
 .text-black-50 {
   --bs-text-opacity: 1;
@@ -7851,10 +7842,10 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-light {
+/*.bg-light {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
-}
+}*/
 
 .bg-dark {
   --bs-bg-opacity: 1;
