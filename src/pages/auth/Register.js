@@ -3,7 +3,7 @@ import { useState } from 'react';
 import CallUser from '../../services/CallUser';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
-
+import Navbar from '../../components/Navbar';
 
 
 
@@ -50,7 +50,7 @@ return (
                 
     <div>
       
-
+      <Navbar />
       <div className="text-center">
         <h6 class='pt-5 fs-3 fw-bold'>Fes-te amic de La Volta</h6>
         <h6 class='pt-5 fs-6'>Per a fer efectiva la donació és necessari registrar-se i seguir els passos indicats</h6>
