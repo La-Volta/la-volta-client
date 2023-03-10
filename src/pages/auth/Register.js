@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import CallUser from '../../services/CallUser';
 
+
 function Register() {
 
   const [registerInput, setRegister] = useState({
@@ -37,13 +38,14 @@ const registerSubmit = (e) => {
   })
 }
 
-  return (
+return (
+                
     <div>
+      
 
       <div className="text-center">
-        <h6 class='pt-5'>Fes-te amic de La Volta</h6>
-        <h6 class='pt-5'>Per a fer efectiva la donació és necessari <br>
-        </br>registrar-se i seguir els passos indicats</h6>
+        <h6 class='pt-5 fs-3 fw-bold'>Fes-te amic de La Volta</h6>
+        <h6 class='pt-5 fs-6'>Per a fer efectiva la donació és necessari registrar-se i seguir els passos indicats</h6>
       </div>
       
 
@@ -53,7 +55,7 @@ const registerSubmit = (e) => {
                         <div className="card">
                             <div className="card-header">
                               
-                                <h4 class="text-center">Register</h4>
+                                <h4 class="text-center">Registre</h4>
                             </div>
                             <div className="card-body">
                                 <form onSubmit={registerSubmit}>
@@ -64,13 +66,13 @@ const registerSubmit = (e) => {
                                     </div>
 
                                     <div className="form-group mb-3">
-                                        <label for='firstname'>Cognoms</label>
-                                        <input type="text" name="fisrtname" onChange={handleInput} value={registerInput.firstname} className="form-control"  />
-                                        <span>{registerInput.error_list.firstname}</span>
+                                        <label for='lastname'>Cognoms</label>
+                                        <input type="text" name="lastname" onChange={handleInput} value={registerInput.lastname} className="form-control"  />
+                                        <span>{registerInput.error_list.lastname}</span>
                                     </div>
 
                                     <div className="form-group mb-3">
-                                        <label>Email ID</label>
+                                        <label>Correu electrònic</label>
                                         <input type="text" name="email" onChange={handleInput} value={registerInput.email} className="form-control"  />
                                         <span>{registerInput.error_list.email}</span>
                                     </div>
