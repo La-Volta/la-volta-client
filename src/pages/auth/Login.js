@@ -75,7 +75,8 @@ function Login() {
                                         <span>{loginInput.error_list.password}</span>
                                     </div>
                                     <div className="form-group mb-3">
-                                        <button type="submit" className="btn btn-primary">Login</button>
+                                        <button type="submit" className="btn btn-primary
+                                        ">Login</button>
                                     </div>
                                 </form>
                             </div>
