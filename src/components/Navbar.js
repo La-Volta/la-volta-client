@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top">
             <div className="container">
 
                 <Link className="navbar-brand" to="#">La Volta</Link>
