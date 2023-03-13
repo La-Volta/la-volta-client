@@ -62,7 +62,16 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link active" to="/">Home</Link>
                         </li>
-                        {AuthButtons}
+                        <li className="nav-item">
+                    <Link className="nav-link" to="/login">Login</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/register">Register</Link>
+                </li>
+                <li className="nav-item">
+                <button type="button" onClick={logoutSubmit} className="nav-link btn btn-danger btn-sm text-white">Logout</button>
+            </li>
+                        
                     </ul>
                 </div>
             </div>
