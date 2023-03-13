@@ -35,7 +35,7 @@ const registerSubmit = (e) => {
         {
             localStorage.setItem('auth_token', res.data.token);
             localStorage.setItem('auth_name', res.data.username);
-            Swal.fire("registrat corectament");
+            Swal.fire("S'ha registrat correctament.");
             navigate("/");
         }
         else

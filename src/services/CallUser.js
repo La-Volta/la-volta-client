@@ -6,7 +6,7 @@ axios.defaults.headers.post['Accept'] = 'application/json';
 axios.defaults.withCredentials = true;
 axios.interceptors.request.use(function (config){
     const token = localStorage.getItem('auth_token');
-    config.headers.Authorization = token ? `Bearer ${token}` : ''
+    config.headers.Authorization = token ? `Bearer ${token}` : '';
     return config;
 })
 
@@ -19,6 +19,10 @@ const CallUser = () => {
      };
 
     
+     const logout = async (data) => {
+        const res = await axios.post(`/api/logout`, data);
+        return res;
+    };
 
     const postLogin = async (data) => {
         const res = await axios.post(`/api/login`, data);
@@ -56,6 +60,7 @@ const CallUser = () => {
         // trash,
         postRegister,
         //update,
+        logout,
         postLogin,
     };
 }
