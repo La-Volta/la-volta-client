@@ -1,11 +1,20 @@
 $theme-colors: (
    
     "danger": #8506A9,
-    "secondary": #1B1D1F,
+    "secondary":  #AAA9A9,
     "success": #87EA00,
     "info": #C8F500,
+    "warning": #1B1D1F,
 
 
+);
+
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 1rem,
 );
 
 
