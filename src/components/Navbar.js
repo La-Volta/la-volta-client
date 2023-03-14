@@ -49,7 +49,7 @@ function Navbar() {
 
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top  border-bottom  border-success">
             <div className="container">
 
                 <Link className="navbar-brand" to="#">La Volta</Link>

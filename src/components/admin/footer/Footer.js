@@ -9,6 +9,7 @@ import cases from '../../../assets/images/logoCases.png';
 
 
 
+
 const Footer = () => {
   return (
     <footer className="py-4 bg-light mt-auto fixed-bottom">

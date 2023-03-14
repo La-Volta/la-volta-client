@@ -52,8 +52,8 @@ return (
       
       <Navbar />
       <div className="text-center">
-        <h6 class='pt-5 fs-3 fw-bold'>Fes-te amic de La Volta</h6>
-        <h6 class='pt-5 fs-6'>Per a fer efectiva la donació és necessari registrar-se i seguir els passos indicats</h6>
+        <h6 className='pt-5 fs-3 fw-bold text-success'>Fes-te amic de La Volta</h6>
+        <h6 className='pt-5 fs-6 text-success' >Per a fer efectiva la donació és necessari registrar-se i seguir els passos indicats</h6>
       </div>
       
 
@@ -61,11 +61,8 @@ return (
         <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="card">
-                            <div className="card-header">
-                              
-                                <h4 class="text-center">Registre</h4>
-                            </div>
-                            <div className="card-body">
+                           
+                            <div className="card-body bg-secondary">
                                 <form onSubmit={registerSubmit}>
                                     <div className="form-group mb-3">
                                         <label for='name'>Nom</label>
@@ -87,7 +84,7 @@ return (
 
                                     <div className="form-group mb-3">
                                         <label>Contraseyna</label>
-                                        <input type="text" name="password" onChange={handleInput} value={registerInput.password} className="form-control"  />
+                                        <input type="password" name="password" onChange={handleInput} value={registerInput.password} className="form-control"  />
                                         <span>{registerInput.error_list.password}</span>
                                     </div>
                                     <div className="form-group mb-3">
