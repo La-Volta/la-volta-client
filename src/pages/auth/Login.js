@@ -55,27 +55,29 @@ function Login() {
     return (
         <div>
             <Navbar />
+            <div className='bg-success'>
+            <div className='bg-warning border rounded rounded-3 border-5 border-success'>
             <div className="container py-5">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
-                        <div className="card">
-                            <div className="card-header">
+                        <div className="card border-0">
+                            {/* <div className="card-header text-center">
                                 <h4>Login</h4>
-                            </div>
-                            <div className="card-body">
+                            </div> */}
+                            <div className="card-body bg-warning">
                                 <form onSubmit={loginSubmit}>
                                     <div className="form-group mb-3">
-                                        <label>Email ID</label>
+                                        <label className="text-secondary">Correu electrònic</label>
                                         <input type="email" name="email" onChange={handleInput} value={loginInput.email} className="form-control" />
                                         <span>{loginInput.error_list.email}</span>
                                     </div>
                                     <div className="form-group mb-3">
-                                        <label>Password</label>
+                                        <label className="text-secondary">Contraseyna</label>
                                         <input type="password" name="password" onChange={handleInput} value={loginInput.password} className="form-control" />
                                         <span>{loginInput.error_list.password}</span>
                                     </div>
-                                    <div className="form-group mb-3">
-                                        <button type="submit" className="btn btn-primary
+                                    <div className="form-group mb-3 text-center">
+                                        <button type="submit" className="btn btn-danger
                                         ">Login</button>
                                     </div>
                                 </form>
@@ -84,6 +86,8 @@ function Login() {
                     </div>
                 </div>
             </div>
+            </div>
+        </div>
         </div>
     );
 }
