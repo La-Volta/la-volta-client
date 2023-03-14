@@ -4,6 +4,7 @@ import Router from './application/Router';
 import { createRoot } from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import './index.scss';
 
 
 const container = document.getElementById('root');
