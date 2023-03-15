@@ -9,6 +9,7 @@ import Navbar from '../../components/Navbar';
 
 
 
+
 function Register() {
 
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ const registerSubmit = (e) => {
         {
             localStorage.setItem('auth_token', res.data.token);
             localStorage.setItem('auth_name', res.data.username);
-            Swal.fire("registrat corectament");
+            Swal.fire("S'ha registrat correctament.");
             navigate("/");
         }
         else
@@ -51,47 +52,47 @@ return (
     <div>
       
       <Navbar />
+      <div className='bg-success '> 
+      <div className='bg-warning border rounded rounded-3 border-5 border-success'> 
+
       <div className="text-center">
-        <h6 class='pt-5 fs-3 fw-bold'>Fes-te amic de La Volta</h6>
-        <h6 class='pt-5 fs-6'>Per a fer efectiva la donació és necessari registrar-se i seguir els passos indicats</h6>
+        <h6 className='pt-5 fs-3 fw-bold text-success'>Fes-te amic de La Volta</h6>
+        <h6 className='pt-5 fs-6 text-success' >Per a fer efectiva la donació és necessari registrar-se i seguir els passos indicats</h6>
       </div>
       
 
-      <div className="container py-5">
-        <div className="row justify-content-center">
+      <div className="container py-5 ">
+        <div className="row justify-content-center ">
                     <div className="col-md-6">
-                        <div className="card">
-                            <div className="card-header">
-                              
-                                <h4 class="text-center">Registre</h4>
-                            </div>
-                            <div className="card-body">
+                        <div className="card border-0">
+                           
+                            <div className="card-body bg-warning ">
                                 <form onSubmit={registerSubmit}>
                                     <div className="form-group mb-3">
-                                        <label for='name'>Nom</label>
+                                        <label className="text-secondary" for='name'>Nom</label>
                                         <input type="text" name="name" onChange={handleInput} value={registerInput.name} className="form-control"  />
                                         <span>{registerInput.error_list.name}</span>
                                     </div>
 
                                     <div className="form-group mb-3">
-                                        <label for='lastname'>Cognoms</label>
+                                        <label className="text-secondary" for='lastname'>Cognoms</label>
                                         <input type="text" name="lastname" onChange={handleInput} value={registerInput.lastname} className="form-control"  />
                                         <span>{registerInput.error_list.lastname}</span>
                                     </div>
 
                                     <div className="form-group mb-3">
-                                        <label>Correu electrònic</label>
+                                        <label className="text-secondary" for ="email">Correu electrònic</label>
                                         <input type="text" name="email" onChange={handleInput} value={registerInput.email} className="form-control"  />
                                         <span>{registerInput.error_list.email}</span>
                                     </div>
 
                                     <div className="form-group mb-3">
-                                        <label>Contraseyna</label>
-                                        <input type="text" name="password" onChange={handleInput} value={registerInput.password} className="form-control"  />
+                                        <label className="text-secondary" for="password">Contraseyna</label>
+                                        <input type="password" name="password" onChange={handleInput} value={registerInput.password} className="form-control"  />
                                         <span>{registerInput.error_list.password}</span>
                                     </div>
-                                    <div className="form-group mb-3">
-                                        <button type="submit" className="btn btn-primary">Register</button>
+                                    <div className="form-group mb-3 text-center">
+                                        <button type="submit" className="btn btn-danger ">Registra't</button>
                                     </div>
                                 </form>
                             </div>
@@ -99,6 +100,8 @@ return (
                     </div>
                 </div>
             </div>
+        </div>
+      </div>  
     </div>
   )
 }
