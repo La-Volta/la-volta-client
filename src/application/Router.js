@@ -2,9 +2,11 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Dashboard from '../pages/admin/Dashboard';
-import Profile from '../pages/admin/Profile';
+import Profile from '../pages/affiliate/Profile';
 import Login from '../pages/auth/Login';
 import Register from '../pages/auth/Register';
+import AdminPrivateRoute from '../AdminPrivateRoute';
+import AffiliateUserRoute from '../AffiliateUserRoute';
 
 
 const Router = () => {
@@ -15,15 +17,19 @@ const Router = () => {
         <Routes>
     
             <Route path="/" element={<Home/>} />
-            <Route path="/admin/dashboard" element={<Dashboard/>} />
-            <Route path="/admin/profile" element={<Profile/>} />
-        
             <Route path="/login" element={<Login/>}/>
-
             <Route path="/register" element={<Register/>}/>
-             
+            </Routes>
+            <Routes element={<AdminPrivateRoute />}>
+              <Route path="/login" element={<Login/>} />
+              <Route path="/admin/dashboard" element={<Dashboard/>} />
+            </Routes>
+            <Routes element={<AffiliateUserRoute />}>
+              <Route path="/login" element={<Profile/>} />
+              <Route path="/register" element={<Profile/>} />
+            </Routes>
         
-        </Routes>
+        
     </BrowserRouter>
   )
 }
