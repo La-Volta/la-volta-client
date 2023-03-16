@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, Link} from 'react-router-dom';
 import Swal from 'sweetalert2';
 import CallUser from '../../services/CallUser';
 import Navbar from '../../components/Navbar'
@@ -81,6 +81,10 @@ function Login() {
                                         ">Login</button>
                                     </div>
                                 </form>
+                                <div className="text-center bg-warning">
+        <h6 className='px-4 pt-5 fs-6 text-success'>si no teniu compte d'usuari, accediu al registre<Link className="nav-link" to="/register" >aquí.</Link>
+</h6>
+      </div>
                             </div>
                         </div>
                     </div>
