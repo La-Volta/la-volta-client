@@ -17,6 +17,7 @@ function Home() {
   return (
     <div>
       <Navbar />
+
       <div className="bg-success ">
         <div className="bg-warning border rounded rounded-3 border-5 border-success">
           <div className="text-center">
@@ -102,6 +103,10 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <h1 className="text-danger">Home</h1>
+      <Footer />
+
     </div>
   );
 }

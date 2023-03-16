@@ -30,7 +30,7 @@ function Login() {
                     localStorage.setItem('auth_token', res.data.token);
                     localStorage.setItem('auth_name', res.data.username);
                     Swal.fire("La sessió s'ha iniciat correctament.");
-                    if(res.data.role === 'admin')
+                    if(res.data.role === 'Admin')
                     {
                         navigate('/admin/dashboard');
                     }
