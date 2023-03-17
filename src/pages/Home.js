@@ -103,9 +103,7 @@ function Home() {
           </div>
         </div>
       </div>
-
-      <h1 className="text-danger">Home</h1>
-      <Footer />
+      
 
     </div>
   );
