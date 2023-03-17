@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import {Route, useNavigate} from 'react-router-dom';
+import {Route, Navigate, useNavigate} from 'react-router-dom';
 import swal from 'sweetalert';
 import Dashboard from './pages/admin/Dashboard';
 
@@ -9,6 +9,7 @@ function AdminPrivateRoute({...rest}) {
     const navigate = useNavigate();
     const [Authenticated, setAuthenticated] = useState(false);
     const [loading, setloading] = useState(true);
+
     useEffect(() => {
 
         axios.get(`/api/checkingAuthenticated`).then( rest => {
@@ -23,13 +24,13 @@ function AdminPrivateRoute({...rest}) {
       }
     }, []);
 
-    axios.interceptors.response.use(undefined, function axiosRetryInterceptor(err) {
-        if(err.response.status === 401)
+    axios.interceptors.response.use(undefined, function axiosRetryInterceptor(error) {
+        if(error.response.status === 401)
         {
-            swal("Unauthorized",err.response.data.message,"warning");
+            swal("Unauthorized",error.response.data.message,"warning");
             navigate('/');
         }
-        return Promise.reject(err);
+        return Promise.reject(error);
     });
 
     axios.interceptors.response.use(function (response) {
@@ -60,7 +61,8 @@ function AdminPrivateRoute({...rest}) {
         render={ ({props, location}) =>
             Authenticated ?
             ( <Dashboard {...props}/> ) :
-            navigate ("/login", {state: {from: location}}) 
+            <Navigate to="/login" replace state={{ from: location }} />
+            //navigate ("/admin/dashboard", {state: {from: location}}) 
         }
 
     />
