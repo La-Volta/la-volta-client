@@ -21,12 +21,12 @@ const Router = () => {
             <Route path="/register" element={<Register/>}/>
             </Routes>
             <Routes element={<AdminPrivateRoute />}>
-              <Route path="/login" element={<Login/>} />
+              {/* <Route path="/login" element={<Login/>} /> */}
               <Route path="/admin/dashboard" element={<Dashboard/>} />
             </Routes>
             <Routes element={<AffiliateUserRoute />}>
-              <Route path="/login" element={<Profile/>} />
-              <Route path="/register" element={<Profile/>} />
+              <Route path="/profile" element={<Profile/>} />
+              {/* <Route path="/register" element={<Profile/>} /> */}
             </Routes>
         
         

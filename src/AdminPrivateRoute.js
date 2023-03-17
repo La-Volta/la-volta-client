@@ -19,7 +19,7 @@ function AdminPrivateRoute({...rest}) {
             setloading(false);
         });
         return () => {
-            setAuthenticated(true);
+            setAuthenticated(false);
       }
     }, []);
 
@@ -32,6 +32,23 @@ function AdminPrivateRoute({...rest}) {
         return Promise.reject(err);
     });
 
+    axios.interceptors.response.use(function (response) {
+        return response;
+        }, function (error) {
+            if(error.response.status === 403) // Access Denied
+            {
+                swal("Forbedden",error.response.data.message,"warning");
+                navigate('/Page403');
+            }
+            else if(error.response.status === 404) // Page Not Found
+            {
+                swal("404 Error","Url/Page Not Found","warning");
+                navigate('/Page404');
+            }
+            return Promise.reject(error);
+        }
+    );
+
     if(loading)
     {
         return <h1 className="text-danger">Loading...</h1>
@@ -43,7 +60,7 @@ function AdminPrivateRoute({...rest}) {
         render={ ({props, location}) =>
             Authenticated ?
             ( <Dashboard {...props}/> ) :
-            navigate ("/admin/dashboard", {state: {from: location}}) 
+            navigate ("/login", {state: {from: location}}) 
         }
 
     />

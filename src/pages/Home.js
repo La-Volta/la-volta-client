@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
+import Footer from "../components/admin/footer/Footer"
 
 function Home() {
   const [donationForm, setDonationForm] = useState({type:'', amount:''});
@@ -103,7 +104,7 @@ function Home() {
           </div>
         </div>
       </div>
-      
+      <Footer />
 
     </div>
   );
