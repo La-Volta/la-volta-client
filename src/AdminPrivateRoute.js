@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import {Route, Navigate, useNavigate} from 'react-router-dom';
+import {Route, useNavigate} from 'react-router-dom';
 import swal from 'sweetalert';
 import Dashboard from './pages/admin/Dashboard';
 
@@ -61,8 +61,7 @@ function AdminPrivateRoute({...rest}) {
         render={ ({props, location}) =>
             Authenticated ?
             ( <Dashboard {...props}/> ) :
-            <Navigate to="/login" replace state={{ from: location }} />
-            //navigate ("/admin/dashboard", {state: {from: location}}) 
+            navigate ("/login", {state: {from: location}}) 
         }
 
     />
