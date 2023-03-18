@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
         </div>
                 <div className="text-muted">
-            Associació Cultural LA VOLTA | Plaça Assumpció, 22 | Sant Narcís, 17005 Girona | +34 610033833 | <Link to="mailto:info@femlavolta.cat">mail: info@femlavolta.cat</Link>  <Link to="http://www.quelic.net">Creació web:Quelic</Link> </div>    
+            Associació Cultural LA VOLTA | Plaça Assumpció, 22 | Sant Narcís, 17005 Girona | +34 610033833 | <Link to="mailto:info@femlavolta.cat">mail: info@femlavolta.cat</Link>  <Link to="http://www.quelic.net">Creació web:Amelie, Bianca, Maricarmen y Juliana</Link> </div>    
             
     </footer>
   );

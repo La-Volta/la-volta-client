@@ -53,7 +53,7 @@ function Navbar() {
             <div className="container">
                 <div>
                     <Link className="navbar-brand" to="#">
-                    <img src={logo} alt="Logo" width="80" height="35" class="d-inline-block align-text-top" />
+                    <img src={logo} alt="Logo" width="158" height="60" class="d-inline-block align-text-top" />
                     </Link>
                 </div>
                 
