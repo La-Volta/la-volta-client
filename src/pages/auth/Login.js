@@ -36,7 +36,7 @@ function Login() {
                     }
                     else
                     {
-                        navigate('/profile');
+                        navigate('/affiliate/profile');
                     }
                 }
                 else if(res.data.status === 401)

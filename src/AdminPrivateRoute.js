@@ -38,7 +38,7 @@ function AdminPrivateRoute({...rest}) {
         }, function (error) {
             if(error.response.status === 403) // Access Denied
             {
-                swal("Forbedden",error.response.data.message,"warning");
+                swal("Forbidden",error.response.data.message,"warning");
                 navigate('/Page403');
             }
             else if(error.response.status === 404) // Page Not Found
