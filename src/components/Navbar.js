@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
+import logo from "../assets/images/logoheader.png";
 import Swal from 'sweetalert2';
 
 import CallUser from '../services/CallUser';
@@ -51,8 +51,12 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top  border-bottom  border-success">
             <div className="container">
-
-                <Link className="navbar-brand" to="#">La Volta</Link>
+                <div>
+                    <Link className="navbar-brand" to="#">
+                    <img src={logo} alt="Logo" width="158" height="60" class="d-inline-block align-text-top" />
+                    </Link>
+                </div>
+                
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

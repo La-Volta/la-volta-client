@@ -4,6 +4,7 @@ import CallUser from "../../services/CallUser";
 import Swal from "sweetalert2";
 import { useNavigate, Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/admin/footer/Footer";
 
 function Register() {
   const navigate = useNavigate();
@@ -145,6 +146,7 @@ function Register() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

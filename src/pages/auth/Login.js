@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import { useNavigate, Link} from 'react-router-dom';
 import Swal from 'sweetalert2';
 import CallUser from '../../services/CallUser';
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/admin/footer/Footer'
 
 
 function Login() {
@@ -36,7 +37,7 @@ function Login() {
                     }
                     else
                     {
-                        navigate('/profile');
+                        navigate('/affiliate/profile');
                     }
                 }
                 else if(res.data.status === 401)
@@ -61,9 +62,6 @@ function Login() {
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="card border-0">
-                            {/* <div className="card-header text-center">
-                                <h4>Login</h4>
-                            </div> */}
                             <div className="card-body bg-warning">
                                 <form onSubmit={loginSubmit}>
                                     <div className="form-group mb-3">
@@ -77,22 +75,23 @@ function Login() {
                                         <span>{loginInput.error_list.password}</span>
                                     </div>
                                     <div className="form-group mb-3 text-center">
-                                        <button type="submit" className="btn btn-danger
-                                        ">Login</button>
+                                        <button type="submit" className="btn btn-danger">Login</button>
                                     </div>
                                 </form>
                                 <div className="text-center bg-warning">
-        <h6 className='px-4 pt-5 fs-6 text-success'>si no teniu compte d'usuari, accediu al registre<Link className="nav-link" to="/register" >aquí.</Link>
-</h6>
-      </div>
+                                    <h6 className='px-4 pt-5 fs-6 text-success'>si no teniu compte d'usuari, accediu al registre<Link className="nav-link" to="/register" >aquí.</Link>
+                                    </h6>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
+            </div>
+            <Footer />
         </div>
-        </div>
+    
     );
 }
 

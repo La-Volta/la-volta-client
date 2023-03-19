@@ -9,6 +9,7 @@ function AdminPrivateRoute({...rest}) {
     const navigate = useNavigate();
     const [Authenticated, setAuthenticated] = useState(false);
     const [loading, setloading] = useState(true);
+
     useEffect(() => {
 
         axios.get(`/api/checkingAuthenticated`).then( rest => {
@@ -23,13 +24,13 @@ function AdminPrivateRoute({...rest}) {
       }
     }, []);
 
-    axios.interceptors.response.use(undefined, function axiosRetryInterceptor(err) {
-        if(err.response.status === 401)
+    axios.interceptors.response.use(undefined, function axiosRetryInterceptor(error) {
+        if(error.response.status === 401)
         {
-            swal("Unauthorized",err.response.data.message,"warning");
+            swal("Unauthorized",error.response.data.message,"warning");
             navigate('/');
         }
-        return Promise.reject(err);
+        return Promise.reject(error);
     });
 
     axios.interceptors.response.use(function (response) {
@@ -37,7 +38,7 @@ function AdminPrivateRoute({...rest}) {
         }, function (error) {
             if(error.response.status === 403) // Access Denied
             {
-                swal("Forbedden",error.response.data.message,"warning");
+                swal("Forbidden",error.response.data.message,"warning");
                 navigate('/Page403');
             }
             else if(error.response.status === 404) // Page Not Found

@@ -15,19 +15,19 @@ const Router = () => {
   return (
     <BrowserRouter>
         <Routes>
-    
-            <Route path="/" element={<Home/>} />
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element={<Register/>}/>
-            </Routes>
-            <Routes element={<AdminPrivateRoute />}>
-              {/* <Route path="/login" element={<Login/>} /> */}
-              <Route path="/admin/dashboard" element={<Dashboard/>} />
-            </Routes>
-            <Routes element={<AffiliateUserRoute />}>
-              <Route path="/profile" element={<Profile/>} />
-              {/* <Route path="/register" element={<Profile/>} /> */}
-            </Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+        </Routes> 
+
+        <Routes> 
+          <Route element={<AdminPrivateRoute />} >
+            <Route path="/admin/dashboard" element={<Dashboard/>} />
+          </Route>
+          <Route element={<AffiliateUserRoute />} >
+            <Route path="/affiliate/profile" element={<Profile/>} />
+          </Route>
+        </Routes>
         
         
     </BrowserRouter>
