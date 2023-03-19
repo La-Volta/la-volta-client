@@ -5,13 +5,20 @@ import { useState } from "react";
 import Footer from "../components/admin/footer/Footer"
 
 function Home() {
-  const [donationForm, setDonationForm] = useState({type:'', amount:''});
+  const [amount, setAmount] = useState('')
+  const [donationForm, setDonationForm] = useState({donationType:'', amount: ''});
+
 
    const handleInput = (event) => {
           setDonationForm({
             ...donationForm,
             [event.target.name]: event.target.value
           })
+        }
+
+        const handleClick = (event) => {
+          setAmount(event.target.value);
+      
         }
   
 
@@ -42,11 +49,10 @@ function Home() {
                   <input
                     class="form-check-input"
                     type="radio"
-                    name="punctual"
+                    name="donationType"
                     id="gridRadios1"
-                    value="option1"
+                    value="punctual"
                     onChange={handleInput}
-                    checked
                   />
           <label class="form-check-label" for="gridRadios1">Donació punctual</label>
             </div>
@@ -54,7 +60,8 @@ function Home() {
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="monthly"
+                  value="monthly"
+                  name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
                 />
@@ -64,7 +71,8 @@ function Home() {
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="quarterly"
+                  value="quarterly"
+                  name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
               />
@@ -74,10 +82,10 @@ function Home() {
      
       <div>
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-secondary bg-success" type="button">5 €</button>
-          <button class="btn btn-secondary bg-success" type="button">10 €</button>
-          <button class="btn btn-secondary bg-success" type="button">15 €</button>
-          <button class="btn btn-secondary bg-success" type="button">25 €</button>
+          <button class="btn btn-secondary bg-success" type="button" value="5" onClick={handleClick}>5 €</button>
+          <button class="btn btn-secondary bg-success" type="button" value="10" onClick={handleClick}>10 €</button>
+          <button class="btn btn-secondary bg-success" type="button" value="15" onClick={handleClick}>15 €</button>
+          <button class="btn btn-secondary bg-success" type="button" value="25" onClick={handleClick}>25 €</button>
         </div>
       </div>
       
@@ -87,11 +95,9 @@ function Home() {
                   <input
                     class="form-check-input"
                     type="radio"
-                    name="punctual"
+                    name=""
                     id="gridRadios1"
                     value="option1"
-                    onChange={handleInput}
-                    checked
                   />
               <div className="form-group mb-3">
                 <label className="text-white" for="password">
@@ -109,7 +115,7 @@ function Home() {
               </div>
               <div class="row justify-content-center">
                 <div class="col-sm-3">
-                  <Link className="nav-link" to="/register">
+                  <Link className="nav-link" to="/register" state={donationForm}>
                     <button type="submit" className="btn btn-danger my-3">
                       Següent pas
                     </button>
