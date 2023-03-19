@@ -36,7 +36,7 @@ function Home() {
 
         
         <form>
-          <fieldset class="text-secondary d-grid gap-2 col-3 mx-auto">    
+          <fieldset class="text-white d-grid gap-2 col-3 mx-auto">    
               <div className="">
                 <div class="form-check">
                   <input
@@ -94,7 +94,7 @@ function Home() {
                     checked
                   />
               <div className="form-group mb-3">
-                <label className="text-secondary" for="password">
+                <label className="text-white" for="password">
                   Afegeix el teu import voluntari
                 </label>
                 </div>
@@ -107,10 +107,10 @@ function Home() {
                 />
               </div>
               </div>
-              <div class="form-group row d-grid gap-2 col-3 mx-auto">
-                <div class="col-sm-10">
+              <div class="row justify-content-center">
+                <div class="col-sm-3">
                   <Link className="nav-link" to="/register">
-                    <button type="submit" className="btn btn-danger ">
+                    <button type="submit" className="btn btn-danger my-3">
                       Següent pas
                     </button>
                   </Link>
