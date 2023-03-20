@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 import Footer from "../components/admin/footer/Footer"
+import Swal from "sweetalert2";
 
 function Home() {
   
@@ -22,7 +23,7 @@ function Home() {
         link = (
                
           <Link className="nav-link" to="/register" state={donationForm}>
-          <button type="submit" className="btn btn-danger my-3">
+          <button type="submit" className="btn btn-danger my-3" onSubmit={validationForm}>
             Següent pas
           </button>
         </Link>
@@ -33,15 +34,28 @@ function Home() {
         link = (
                
           <Link className="nav-link" to="/affiliate/profile" state={donationForm}>
-          <button type="submit" className="btn btn-danger my-3">
+          <button type="submit" className="btn btn-danger my-3" onSubmit={validationForm} >
             Següent pas
           </button>
         </Link>
         );
     }    
     
-
-       
+    
+    function validationForm(event) {
+      event.preventDefault();
+      //let usuario = document.getElementById('usuario').value;
+      if(donationForm.donationType === ''){
+        Swal.fire("Tria el tipus de donació.")
+        return false
+      }
+      else if(donationForm.amount === ''){
+        Swal.fire("Tria la quantitat de la teva aportació")
+        return false
+      }
+      return true
+    }
+   
   
 
   return (
@@ -64,8 +78,8 @@ function Home() {
             </div>
 
         
-        <form>
-          <fieldset class="text-white d-flex justify-content-center" aria-required>    
+        <form id="form"> 
+          <fieldset class="text-white d-flex justify-content-center" required>    
               <div className="">
                 <div class="form-check">
                   <input
@@ -102,7 +116,7 @@ function Home() {
           </div>
           </div>
           </fieldset>
-      <fieldset aria-required>
+      <fieldset required>
       <div>
         <div class="d-grid gap-2 col-6 mx-auto">
           <button class="btn btn-success" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
