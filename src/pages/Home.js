@@ -5,21 +5,21 @@ import { useState } from "react";
 import Footer from "../components/admin/footer/Footer"
 
 function Home() {
-  const [amount, setAmount] = useState('')
+  
   const [donationForm, setDonationForm] = useState({donationType:'', amount: ''});
 
 
-   const handleInput = (event) => {
+  const handleInput = (event) => {
           setDonationForm({
             ...donationForm,
             [event.target.name]: event.target.value
           })
         }
 
-        const handleClick = (event) => {
-          setAmount(event.target.value);
-      
-        }
+       
+    
+
+       
   
 
   return (
@@ -43,7 +43,7 @@ function Home() {
 
         
         <form>
-          <fieldset class="text-white d-grid gap-2 col-3 mx-auto">    
+          <fieldset class="text-white d-grid gap-2 col-3 mx-auto" aria-required>    
               <div className="">
                 <div class="form-check">
                   <input
@@ -79,31 +79,20 @@ function Home() {
           <label class="form-check-label" for="gridRadios2">Donació trimestrial</label>
           </div>
           </div>
-     
+          </fieldset>
+      <fieldset aria-required>
       <div>
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-secondary bg-success" type="button" value="5" onClick={handleClick}>5 €</button>
-          <button class="btn btn-secondary bg-success" type="button" value="10" onClick={handleClick}>10 €</button>
-          <button class="btn btn-secondary bg-success" type="button" value="15" onClick={handleClick}>15 €</button>
-          <button class="btn btn-secondary bg-success" type="button" value="25" onClick={handleClick}>25 €</button>
+          <button class="btn btn-secondary bg-success" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
+          <button class="btn btn-secondary bg-success" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
+          <button class="btn btn-secondary bg-success" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
+          <button class="btn btn-secondary bg-success" name="amount" type="button" value="25" onClick={handleInput}>25 €</button>
         </div>
       </div>
       
-              </fieldset>
+             
             <div className="d-grid gap-2 col-4 mx-auto">
               <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name=""
-                    id="gridRadios1"
-                    value="option1"
-                  />
-              <div className="form-group mb-3">
-                <label className="text-white" for="password">
-                  Afegeix el teu import voluntari
-                </label>
-                </div>
                 <input
                   type="number"
                   min="1"
@@ -113,6 +102,7 @@ function Home() {
                 />
               </div>
               </div>
+              </fieldset>
               <div class="row justify-content-center">
                 <div class="col-sm-3">
                   <Link className="nav-link" to="/register" state={donationForm}>
