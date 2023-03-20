@@ -73,7 +73,7 @@ function Home() {
                     type="radio"
                     name="donationType"
                     id="gridRadios1"
-                    value="punctual"
+                    value=" puntual "
                     onChange={handleInput}
                   />
           <label class="form-check-label" for="gridRadios1">Donació punctual</label>
@@ -82,7 +82,7 @@ function Home() {
                 <input
                   class="form-check-input"
                   type="radio"
-                  value="monthly"
+                  value=" mensual "
                   name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
@@ -93,7 +93,7 @@ function Home() {
                 <input
                   class="form-check-input"
                   type="radio"
-                  value="quarterly"
+                  value=" trimestral "
                   name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
@@ -105,16 +105,18 @@ function Home() {
       <fieldset aria-required>
       <div>
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-secondary bg-success" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
-          <button class="btn btn-secondary bg-success" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
-          <button class="btn btn-secondary bg-success" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
-          <button class="btn btn-secondary bg-success" name="amount" type="button" value="25" onClick={handleInput}>25 €</button>
+          <button class="btn btn-success" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
+          <button class="btn btn-success" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
+          <button class="btn btn-success" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
+          <button class="btn btn-success" name="amount" type="button" value="25" onClick={handleInput}>25 €</button>
         </div>
       </div>
       
-             
+     
             <div className="d-grid gap-2 col-4 mx-auto">
-             
+            <h6 className="px-4 pt-4 text-success text-center">
+            Afegeix el teu import voluntari 
+            </h6>
                 <input
                   type="number"
                   min="1"

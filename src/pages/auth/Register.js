@@ -9,6 +9,7 @@ import Footer from "../../components/admin/footer/Footer";
 function Register() {
   const location = useLocation();
   const donationForm = location.state
+  
 
   const navigate = useNavigate();
 
@@ -52,7 +53,6 @@ function Register() {
   return (
     <div>
       <Navbar />
-      <div className="text-success">{donationForm.amount}</div>
       <div className="bg-success ">
         <div className=" bg-warning border rounded rounded-3 border-5 border-success">
           <div className="text-center">
@@ -115,7 +115,7 @@ function Register() {
 
                       <div className="form-group mb-3">
                         <label className="text-secondary" for="password">
-                          Contraseyna
+                          Contrassenya
                         </label>
                         <input
                           type="password"
