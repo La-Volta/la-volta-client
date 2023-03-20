@@ -9,16 +9,25 @@ function Navbar() {
 
     
     const navigate = useNavigate();
+
+        const service=CallUser();
+
+
     const logoutSubmit = (e) => {
         e.preventDefault();
         
-        CallUser().logout().then(res => {
+        service.logout().then(res => {
             if(res.data.status === 200)
             {
                 localStorage.removeItem('auth_token');
                 localStorage.removeItem('auth_name');
                 Swal.fire("S'ha desconnectat.");
                 navigate('/');
+            }
+            else{
+                localStorage.removeItem('auth_token');
+                localStorage.removeItem('auth_name');
+                console.log(res);
             }
         });
 
