@@ -10,6 +10,7 @@ axios.interceptors.request.use(function (config){
     return config;
 })
 
+
 const CallUser = () => {
     
     const getCookies = async () => {
@@ -19,8 +20,8 @@ const CallUser = () => {
      };
 
     
-     const logout = async (data) => {
-        const res = await axios.post(`/api/logout`, data);
+     const logout = async () => {
+        const res = await axios.post(`/api/logout`);
         return res;
     };
 
