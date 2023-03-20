@@ -139,9 +139,10 @@ function Register() {
                   <div className="text-center bg-warning">
                     <h6 className="px-4 pt-5 fs-6 text-success">
                       Si ja teniu un compte d'usuari, accediu al vostre perfil
-                      <Link className="nav-link" to="/login">
+                      <span> <Link className="text-success" to="/login" state={donationForm}>
                         aquí.
                       </Link>
+                      </span>
                     </h6>
                   </div>
                 </div>
