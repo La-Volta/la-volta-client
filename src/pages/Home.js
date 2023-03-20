@@ -79,7 +79,7 @@ function Home() {
 
         
         <form id="form"> 
-          <fieldset class="text-white d-flex justify-content-center" required>    
+          <fieldset className="text-white d-flex justify-content-center" required>    
               <div className="">
                 <div class="form-check">
                   <input
