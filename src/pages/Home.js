@@ -16,7 +16,29 @@ function Home() {
           })
         }
 
-       
+   let link = '';
+    if(!localStorage.getItem('auth_token'))
+    {
+        link = (
+               
+          <Link className="nav-link" to="/register" state={donationForm}>
+          <button type="submit" className="btn btn-danger my-3">
+            Següent pas
+          </button>
+        </Link>
+        );
+    }
+    else
+    {
+        link = (
+               
+          <Link className="nav-link" to="/affiliate/profile" state={donationForm}>
+          <button type="submit" className="btn btn-danger my-3">
+            Següent pas
+          </button>
+        </Link>
+        );
+    }    
     
 
        
@@ -43,7 +65,7 @@ function Home() {
 
         
         <form>
-          <fieldset class="text-white d-grid gap-2 col-3 mx-auto" aria-required>    
+          <fieldset class="text-white d-flex justify-content-center" aria-required>    
               <div className="">
                 <div class="form-check">
                   <input
@@ -92,7 +114,7 @@ function Home() {
       
              
             <div className="d-grid gap-2 col-4 mx-auto">
-              <div class="form-check">
+             
                 <input
                   type="number"
                   min="1"
@@ -100,17 +122,12 @@ function Home() {
                   className="form-control"
                   onChange={handleInput}
                 />
-              </div>
+              
               </div>
               </fieldset>
-              <div class="row justify-content-center">
-                <div class="col-sm-3">
-                  <Link className="nav-link" to="/register" state={donationForm}>
-                    <button type="submit" className="btn btn-danger my-3">
-                      Següent pas
-                    </button>
-                  </Link>
-                </div>
+              <div class="d-flex justify-content-center">
+                {link}
+               
               </div>
             </form>
           </div>
