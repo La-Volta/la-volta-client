@@ -2,11 +2,14 @@ import React from "react";
 import { useState } from "react";
 import CallUser from "../../services/CallUser";
 import Swal from "sweetalert2";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/admin/footer/Footer";
 
 function Register() {
+  const location = useLocation();
+  const donationForm = location.state
+
   const navigate = useNavigate();
 
   const [registerInput, setRegister] = useState({
@@ -35,7 +38,7 @@ function Register() {
               localStorage.setItem("auth_token", res.data.token);
               localStorage.setItem("auth_name", res.data.username);
               Swal.fire("S'ha registrat correctament.");
-              navigate("/");
+              navigate("/affiliate/profile", {state: {donationForm : donationForm}});
             } else {
               setRegister({
                 ...registerInput,
@@ -49,6 +52,7 @@ function Register() {
   return (
     <div>
       <Navbar />
+      <div className="text-success">{donationForm.amount}</div>
       <div className="bg-success ">
         <div className=" bg-warning border rounded rounded-3 border-5 border-success">
           <div className="text-center">
