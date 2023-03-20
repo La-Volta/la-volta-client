@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
-import { useNavigate } from 'react-router';
+
+import { useNavigate, Link, useLocation} from 'react-router-dom';
+
 import Swal from 'sweetalert2';
 import CallUser from '../../services/CallUser';
 import Navbar from '../../components/Navbar'
 
 
 function Login() {
+    const {state} = useLocation();
+  console.log(state)
 
     const navigate = useNavigate();
     
@@ -36,7 +40,9 @@ function Login() {
                     }
                     else
                     {
-                        navigate('/');
+
+                        navigate('/affiliate/profile', {state: {donationForm : state}});
+
                     }
                 }
                 else if(res.data.status === 401)
@@ -81,6 +87,15 @@ function Login() {
                                         ">Login</button>
                                     </div>
                                 </form>
+
+                                <div className="text-center bg-warning">
+                                    <h6 className='px-4 pt-5 fs-6 text-success'>si no teniu compte d'usuari, accediu al registre<span> <Link className="text-success" to="/register" state={state}>
+                        aquí.
+                      </Link>
+                      </span>
+                                    </h6>
+                                </div>
+
                             </div>
                         </div>
                     </div>
