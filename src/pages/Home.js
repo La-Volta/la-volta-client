@@ -3,16 +3,59 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 import Footer from "../components/admin/footer/Footer"
+import Swal from "sweetalert2";
 
 function Home() {
-  const [donationForm, setDonationForm] = useState({type:'', amount:''});
+  
+  const [donationForm, setDonationForm] = useState({donationType:'', amount: ''});
 
-   const handleInput = (event) => {
+
+  const handleInput = (event) => {
           setDonationForm({
             ...donationForm,
             [event.target.name]: event.target.value
           })
         }
+
+   let link = '';
+    if(!localStorage.getItem('auth_token'))
+    {
+        link = (
+               
+          <Link className="nav-link" to="/register" state={donationForm}>
+          <button type="submit" className="btn btn-danger my-3" onSubmit={validationForm}>
+            Següent pas
+          </button>
+        </Link>
+        );
+    }
+    else
+    {
+        link = (
+               
+          <Link className="nav-link" to="/affiliate/profile" state={donationForm}>
+          <button type="submit" className="btn btn-danger my-3" onSubmit={validationForm} >
+            Següent pas
+          </button>
+        </Link>
+        );
+    }    
+    
+    
+    function validationForm(event) {
+      event.preventDefault();
+      //let usuario = document.getElementById('usuario').value;
+      if(donationForm.donationType === ''){
+        Swal.fire("Tria el tipus de donació.")
+        return false
+      }
+      else if(donationForm.amount === ''){
+        Swal.fire("Tria la quantitat de la teva aportació")
+        return false
+      }
+      return true
+    }
+   
   
 
   return (
@@ -35,18 +78,17 @@ function Home() {
             </div>
 
         
-        <form>
-          <fieldset class="text-white d-grid gap-2 col-3 mx-auto">    
+        <form id="form"> 
+          <fieldset className="text-white d-flex justify-content-center" required>    
               <div className="">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
-                    name="punctual"
+                    name="donationType"
                     id="gridRadios1"
-                    value="option1"
+                    value=" puntual "
                     onChange={handleInput}
-                    checked
                   />
           <label class="form-check-label" for="gridRadios1">Donació punctual</label>
             </div>
@@ -54,7 +96,8 @@ function Home() {
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="monthly"
+                  value=" mensual "
+                  name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
                 />
@@ -64,40 +107,30 @@ function Home() {
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="quarterly"
+                  value=" trimestral "
+                  name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
               />
           <label class="form-check-label" for="gridRadios2">Donació trimestrial</label>
           </div>
           </div>
-     
+          </fieldset>
+      <fieldset required>
       <div>
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-secondary bg-success" type="button">5 €</button>
-          <button class="btn btn-secondary bg-success" type="button">10 €</button>
-          <button class="btn btn-secondary bg-success" type="button">15 €</button>
-          <button class="btn btn-secondary bg-success" type="button">25 €</button>
+          <button class="btn btn-success" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
+          <button class="btn btn-success" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
+          <button class="btn btn-success" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
+          <button class="btn btn-success" name="amount" type="button" value="25" onClick={handleInput}>25 €</button>
         </div>
       </div>
       
-              </fieldset>
+     
             <div className="d-grid gap-2 col-4 mx-auto">
-              <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="punctual"
-                    id="gridRadios1"
-                    value="option1"
-                    onChange={handleInput}
-                    checked
-                  />
-              <div className="form-group mb-3">
-                <label className="text-white" for="password">
-                  Afegeix el teu import voluntari
-                </label>
-                </div>
+            <h6 className="px-4 pt-4 text-success text-center">
+            Afegeix el teu import voluntari 
+            </h6>
                 <input
                   type="number"
                   min="1"
@@ -105,16 +138,12 @@ function Home() {
                   className="form-control"
                   onChange={handleInput}
                 />
+              
               </div>
-              </div>
-              <div class="row justify-content-center">
-                <div class="col-sm-3">
-                  <Link className="nav-link" to="/register">
-                    <button type="submit" className="btn btn-danger my-3">
-                      Següent pas
-                    </button>
-                  </Link>
-                </div>
+              </fieldset>
+              <div class="d-flex justify-content-center">
+                {link}
+               
               </div>
             </form>
           </div>

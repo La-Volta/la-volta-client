@@ -2,11 +2,15 @@ import React from "react";
 import { useState } from "react";
 import CallUser from "../../services/CallUser";
 import Swal from "sweetalert2";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/admin/footer/Footer";
 
 function Register() {
+  const location = useLocation();
+  const donationForm = location.state
+  
+
   const navigate = useNavigate();
 
   const [registerInput, setRegister] = useState({
@@ -35,7 +39,7 @@ function Register() {
               localStorage.setItem("auth_token", res.data.token);
               localStorage.setItem("auth_name", res.data.username);
               Swal.fire("S'ha registrat correctament.");
-              navigate("/");
+              navigate("/affiliate/profile", {state: {donationForm : donationForm}});
             } else {
               setRegister({
                 ...registerInput,
@@ -111,7 +115,7 @@ function Register() {
 
                       <div className="form-group mb-3">
                         <label className="text-secondary" for="password">
-                          Contraseyna
+                          Contrassenya
                         </label>
                         <input
                           type="password"
@@ -135,9 +139,10 @@ function Register() {
                   <div className="text-center bg-warning">
                     <h6 className="px-4 pt-5 fs-6 text-success">
                       Si ja teniu un compte d'usuari, accediu al vostre perfil
-                      <Link className="nav-link" to="/login">
+                      <span> <Link className="text-success" to="/login" state={donationForm}>
                         aquí.
                       </Link>
+                      </span>
                     </h6>
                   </div>
                 </div>
