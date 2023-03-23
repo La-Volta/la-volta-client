@@ -28,8 +28,8 @@ const Footer = () => {
                 <div className='bg-black'>
                   <p className='text-footer text-center'>
                     Associació Cultural La Volta | Plaça Assumpció, 22 | Sant Narcís, 17005 Girona | +34 610 033 833 |
-                    <Link className='text-decoration-none' to="mailto:info@femlavolta.cat"> info@femlavolta.cat </ Link>
-                    <Link className='text-decoration-none' to="#"> | Creació web: FemCoders_cultural </ Link>
+                    <Link className='text-decoration-none text-white' to="mailto:info@femlavolta.cat"> info@femlavolta.cat </ Link>
+                    <Link className='text-decoration-none text-white' to="https://github.com/orgs/La-Volta/repositories"> | Creació web: FemCoders_cultural </ Link>
                   </p>
                 </div>
             
