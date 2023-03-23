@@ -12,11 +12,9 @@ function Profile() {
   if (state === null || state.donationForm === null) {
     divDonation = (
       <>
-      <p className="text-success d-flex justify-content-center">
-        {" "}
-        Vols fer una nova donació ?
-      
-       <span> <Link className="text-success" to="/" >
+      <p className="m-3 text-success d-flex justify-content-center">
+        Vols fer una nova donació?
+      <span> <Link className="m-3 text-success" to="/" >
        aquí.
      </Link>
      </span>
@@ -56,8 +54,23 @@ function Profile() {
     <div className="sb-nav-fixed">
       <Navbar />
       <main>
+          <div className="m-5 text-success text-center">
+          <h3>Benvingudes!</h3>
+          <h6>Aquest és el teu perfil amic de La Volta</h6> 
+          </div>
+          <div class="bg-success text-center">
+          <h6>Ajuda al fet que la Volta 
+            faci realitat els seus projectes 
+            culturals gràcies a 
+            una donació</h6>
+          </div>
+
+
+        
         <div>{divDonation}</div>
         <div className="text-success"></div>
+
+
       </main>
       <Footer />
     </div>
