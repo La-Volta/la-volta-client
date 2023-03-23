@@ -80,7 +80,7 @@ function Home() {
         
         <form id="form"> 
           <fieldset className="text-white d-flex justify-content-center" required>    
-              <div className="">
+              <div className="m-4">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -118,7 +118,7 @@ function Home() {
           </fieldset>
       <fieldset required>
       <div>
-        <div class="d-grid gap-2 col-6 mx-auto">
+        <div class="d-grid gap-3 col-6 mx-auto">
           <button class="btn btn-success" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
           <button class="btn btn-success" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
           <button class="btn btn-success" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
@@ -127,8 +127,8 @@ function Home() {
       </div>
       
      
-            <div className="d-grid gap-2 col-4 mx-auto">
-            <h6 className="px-4 pt-4 text-success text-center">
+            <div className="d-grid gap-4 col-7 mx-auto">
+            <h6 className="col-12 px-4 pt-4 text-success text-center">
             Afegeix el teu import voluntari 
             </h6>
                 <input

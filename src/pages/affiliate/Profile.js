@@ -9,17 +9,18 @@ function Profile() {
 
   let divDonation = "";
 
-  if (state === null) {
+  if (state === null || state.donationForm === null) {
     divDonation = (
       <>
       <p className="text-success d-flex justify-content-center">
         {" "}
         Vols fer una nova donació ?
-      </p>
+      
        <span> <Link className="text-success" to="/" >
        aquí.
      </Link>
      </span>
+     </p>
      </>
     );
   } else if (state.donationForm) {
@@ -44,8 +45,7 @@ function Profile() {
         <span>{state.amount}€.</span>
       </p>
       <p className="text-success text-center"> Pots canviar la teva aportació 
-      <span> <Link className="text-success" to="/" >
-      aquí.
+      <span> <Link className="text-success" to="/" >aquí.
     </Link>
     </span></p>
     </>
