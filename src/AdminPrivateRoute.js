@@ -2,9 +2,9 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {Outlet, useNavigate, Navigate} from 'react-router-dom';
 import Swal from 'sweetalert2';
-//import Dashboard from './pages/admin/Dashboard';
 
-function AdminPrivateRoute({...rest}) {
+
+function AdminPrivateRoute() {
 
     const auth = localStorage.getItem('auth_name');
     const navigate = useNavigate();
@@ -31,7 +31,7 @@ function AdminPrivateRoute({...rest}) {
             Swal.fire({
                 icon: 'error',
                 iconColor:'white',
-                title: "Error",
+                title: "Accés denegat",
                 color: 'white',
                 background: '#87EA00',
                 showConfirmButton: false,
@@ -49,7 +49,7 @@ function AdminPrivateRoute({...rest}) {
                 Swal.fire({
                     icon: 'error',
                     iconColor:'white',
-                    title: "Error",
+                    title: "No estàs autoritzat",
                     color: 'white',
                     background: '#87EA00',
                     showConfirmButton: false,
@@ -61,7 +61,7 @@ function AdminPrivateRoute({...rest}) {
                 Swal.fire({
                     icon: 'error',
                     iconColor:'white',
-                    title: "Error",
+                    title: "Pàgina no trobada",
                     color: 'white',
                     background: '#87EA00',
                     showConfirmButton: false,
@@ -84,15 +84,7 @@ function AdminPrivateRoute({...rest}) {
 
     )
 }
-    
-    {/*  <Route {...rest}
-        render={ ({props, location}) =>
-            Authenticated ?
-            ( <Dashboard {...props}/> ) :
-            navigate ("/login", {state: {from: location}}) 
-        }
 
-    />*/}
   
 
 export default AdminPrivateRoute
