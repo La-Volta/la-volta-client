@@ -4,7 +4,9 @@ import { useNavigate, Link, useLocation} from 'react-router-dom';
 
 import Swal from 'sweetalert2';
 import CallUser from '../../services/CallUser';
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/Navbar';
+import '../../styles.css';
+
 
 
 function Login() {
@@ -33,7 +35,14 @@ function Login() {
                 {
                     localStorage.setItem('auth_token', res.data.token);
                     localStorage.setItem('auth_name', res.data.username);
-                    Swal.fire("La sessió s'ha iniciat correctament.");
+                    Swal.fire({
+                        title: "La sessió s'ha iniciat correctament",
+                        color: 'white',
+                        background: '#87EA00',
+                        confirmButtonColor: '#8506A9',
+                        
+                    });
+                
                     if(res.data.role === 'admin')
                     {
                         navigate('/admin/dashboard');
@@ -47,7 +56,15 @@ function Login() {
                 }
                 else if(res.data.status === 401)
                 {
-                    Swal.fire("error");
+                    Swal.fire({
+                        icon: 'error',
+                        iconColor:'white',
+                        title: "Error",
+                        color: 'white',
+                        background: '#87EA00',
+                        showConfirmButton: false,
+                    });
+                    
                 }
                 else
                 {
@@ -89,7 +106,7 @@ function Login() {
                                 </form>
 
                                 <div className="text-center bg-warning">
-                                    <h6 className='px-4 pt-5 fs-6 text-success'>si no teniu compte d'usuari, accediu al registre<span> <Link className="text-success" to="/register" state={state}>
+                                    <h6 className='px-4 pt-5 fs-6 text-success'>Si no teniu compte d'usuari, accediu al registre<span> <Link className="text-success" to="/register" state={state}>
                         aquí.
                       </Link>
                       </span>

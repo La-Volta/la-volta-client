@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import logo from "../assets/images/logoheader.png";
 import Swal from 'sweetalert2';
+import '../styles.css'
 
 import CallUser from '../services/CallUser';
 
@@ -21,9 +22,16 @@ function Navbar() {
             {
                 localStorage.removeItem('auth_token');
                 localStorage.removeItem('auth_name');
-                Swal.fire("S'ha desconnectat.");
+                
+                Swal.fire({
+                title: "S'ha desconnectat",
+                color: 'white',
+                background: '#87EA00',
+                confirmButtonColor: '#8506A9',
+            });
                 navigate('/');
             }
+
             else{
                 localStorage.removeItem('auth_token');
                 localStorage.removeItem('auth_name');
@@ -60,7 +68,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top  border-bottom  border-success">
             <div className="container">
-                <div>
+                <div className='logo-home'>
                     <Link className="navbar-brand" to="#">
                     <img src={logo} alt="Logo" width="158" height="60" class="d-inline-block align-text-top" />
                     </Link>

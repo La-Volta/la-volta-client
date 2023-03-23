@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {Route, useNavigate} from 'react-router-dom';
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 import Dashboard from './pages/admin/Dashboard';
 
 function AdminPrivateRoute({...rest}) {
@@ -27,7 +27,14 @@ function AdminPrivateRoute({...rest}) {
     axios.interceptors.response.use(undefined, function axiosRetryInterceptor(error) {
         if(error.response.status === 401)
         {
-            swal("Unauthorized",error.response.data.message,"warning");
+            Swal.fire({
+                icon: 'error',
+                iconColor:'white',
+                title: "Error",
+                color: 'white',
+                background: '#87EA00',
+                showConfirmButton: false,
+            });
             navigate('/');
         }
         return Promise.reject(error);
@@ -38,12 +45,26 @@ function AdminPrivateRoute({...rest}) {
         }, function (error) {
             if(error.response.status === 403) // Access Denied
             {
-                swal("Forbidden",error.response.data.message,"warning");
+                Swal.fire({
+                    icon: 'error',
+                    iconColor:'white',
+                    title: "Error",
+                    color: 'white',
+                    background: '#87EA00',
+                    showConfirmButton: false,
+                });
                 navigate('/Page403');
             }
             else if(error.response.status === 404) // Page Not Found
             {
-                swal("404 Error","Url/Page Not Found","warning");
+                Swal.fire({
+                    icon: 'error',
+                    iconColor:'white',
+                    title: "Error",
+                    color: 'white',
+                    background: '#87EA00',
+                    showConfirmButton: false,
+                });
                 navigate('/Page404');
             }
             return Promise.reject(error);
