@@ -53,7 +53,7 @@ function AdminPrivateRoute({...rest}) {
                     background: '#87EA00',
                     showConfirmButton: false,
                 });
-                navigate('/Page403');
+                navigate('/');
             }
             else if(error.response.status === 404) // Page Not Found
             {
@@ -65,7 +65,7 @@ function AdminPrivateRoute({...rest}) {
                     background: '#87EA00',
                     showConfirmButton: false,
                 });
-                navigate('/Page404');
+                navigate('/');
             }
             return Promise.reject(error);
         }
