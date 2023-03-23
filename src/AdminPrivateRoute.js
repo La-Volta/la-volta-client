@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import {Route, useNavigate} from 'react-router-dom';
+import {Outlet, useNavigate, Navigate} from 'react-router-dom';
 import Swal from 'sweetalert2';
-import Dashboard from './pages/admin/Dashboard';
+//import Dashboard from './pages/admin/Dashboard';
 
 function AdminPrivateRoute({...rest}) {
 
+    const auth = localStorage.getItem('auth_name');
     const navigate = useNavigate();
     const [Authenticated, setAuthenticated] = useState(false);
     const [loading, setloading] = useState(true);
@@ -77,16 +78,21 @@ function AdminPrivateRoute({...rest}) {
     }
     
   return (
+
     
-    <Route {...rest}
+    auth ? <Outlet /> : <Navigate to='/admin/dashboard' />
+
+    )
+}
+    
+    {/*  <Route {...rest}
         render={ ({props, location}) =>
             Authenticated ?
             ( <Dashboard {...props}/> ) :
             navigate ("/login", {state: {from: location}}) 
         }
 
-    />
-  )
-}
+    />*/}
+  
 
 export default AdminPrivateRoute
