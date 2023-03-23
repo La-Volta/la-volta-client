@@ -16,16 +16,22 @@ const Footer = () => {
     <footer className="bg-white">
         <div className="d-flex justify-content-center container-fluid py-4">
                 <div>
-                  <img className="lavolta" src={logo} alt="logo La Volta"/>
-                  <img className="lavolta" src={ajuntament} alt="logo La Volta"/>
-                  <img className="lavolta" src={generalitat} alt="logo La Volta"/>
-                  <img className="lavolta" src={diputacio} alt="logo La Volta"/>
-                  <img className="lavolta" src={associacio} alt="logo La Volta"/>
-                  <img className="lavolta" src={cases} alt="logo La Volta"/> 
+                  <img className="lavoltaimgs" src={logo} alt="logo La Volta"/>
+                  <img className="lavoltaimgs" src={ajuntament} alt="logo La Volta"/>
+                  <img className="lavoltaimgs" src={generalitat} alt="logo La Volta"/>
+                  <img className="llavoltaimgs" src={diputacio} alt="logo La Volta"/>
+                  <img className="lavoltaimgs" src={associacio} alt="logo La Volta"/>
+                  <img className="lavoltaimgs" src={cases} alt="logo La Volta"/> 
                 </div>
-        </div>
-                <div className="tex text-white text-center bg-black">
-            Associació Cultural LA VOLTA | Plaça Assumpció, 22 | Sant Narcís, 17005 Girona | +34 610033833 | <Link className="text-decoration-none text-white" to="mailto:info@femlavolta.cat">mail: info@femlavolta.cat</Link>  <Link className="text-decoration-none text-white" to="http://www.quelic.net">Creació web:Amelie, Bianca, Maricarmen y Juliana</Link> </div>    
+        </div>   
+
+                <div className='bg-black'>
+                  <p className='text-footer text-center'>
+                    Associació Cultural La Volta | Plaça Assumpció, 22 | Sant Narcís, 17005 Girona | +34 610 033 833 |
+                    <Link className='text-decoration-none text-white' to="mailto:info@femlavolta.cat"> info@femlavolta.cat </ Link>
+                    <Link className='text-decoration-none text-white' to="https://github.com/orgs/La-Volta/repositories"> | Creació web: FemCoders_cultural </ Link>
+                  </p>
+                </div>
             
     </footer>
   );

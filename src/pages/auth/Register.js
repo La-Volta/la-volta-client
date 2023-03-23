@@ -38,7 +38,12 @@ function Register() {
             if (res.data.status === 200) {
               localStorage.setItem("auth_token", res.data.token);
               localStorage.setItem("auth_name", res.data.username);
-              Swal.fire(<p className="text-success">"S'ha registrat correctament."</p>);
+              Swal.fire({
+              title: "S'ha registrat correctament",
+              color: '#87EA00',
+              background: '#1B1D1F'
+              
+            })
               navigate("/affiliate/profile", {state: {donationForm : donationForm}});
             } else {
               setRegister({
