@@ -38,7 +38,7 @@ function Register() {
             if (res.data.status === 200) {
               localStorage.setItem("auth_token", res.data.token);
               localStorage.setItem("auth_name", res.data.username);
-              Swal.fire("S'ha registrat correctament.");
+              Swal.fire(<p className="text-success">"S'ha registrat correctament."</p>);
               navigate("/affiliate/profile", {state: {donationForm : donationForm}});
             } else {
               setRegister({
