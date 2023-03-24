@@ -101,7 +101,7 @@ function Login() {
                                     </div>
                                     <div className="form-group mb-3 text-center">
                                         <button type="submit" className="btn btn-danger
-                                        ">Login</button>
+                                        ">Accés</button>
                                     </div>
                                 </form>
 

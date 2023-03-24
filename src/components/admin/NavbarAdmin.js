@@ -44,10 +44,10 @@ function NavbarAdmin() {
         AuthButtons = (
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link className="nav-link" to="/login">Login</Link>
+                    <Link className="nav-link" to="/login">Accés</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/register">Register</Link>
+                    <Link className="nav-link" to="/register">Registre</Link>
                 </li>
             </ul>
         );
@@ -56,7 +56,7 @@ function NavbarAdmin() {
     {
         AuthButtons = (
             <li className="nav-item">
-                <button type="button" onClick={logoutSubmit} className="nav-link btn btn-danger btn-sm text-white">Logout</button>
+                <button type="button" onClick={logoutSubmit} className="nav-link btn btn-danger btn-sm text-white">Tanca sessió</button>
             </li>
         );
     }
@@ -75,7 +75,7 @@ function NavbarAdmin() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/">Home</Link>
+                            <Link className="nav-link active" to="/">Inici</Link>
                         </li>
                 {AuthButtons}   
                     </ul>
@@ -87,41 +87,3 @@ function NavbarAdmin() {
 
 export default NavbarAdmin;
 
-
-{/*const NavbarAdmin = () => {
-
-  return (
-    <nav className="sb-topnav navbar navbar-expand navbar-dark bg-black">
-        <Link className="navbar-brand ps-3" to="/admin">
-            <img src={logo} alt="Logo" width="158" height="60" class="d-inline-block align-text-top" />
-        </Link>
-
-           {/*   <button className="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" to="#!">hola<i className="fas fa-bars"></i>hvvvvv</button>
-           
-        <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-            <div className="input-group">
-                <input className="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                <button className="btn btn-danger" id="btnNavbarSearch" type="button">Buscar<i className="fas fa-search"></i></button>
-            </div>
-        </form>
-
-        
-         
-          <ul className="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-            <li className="nav-item dropdown">
-                <Link to="#" className="nav-link dropdown-toggle" id="navbarDropdown"  role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="fas fa-user fa-fw">Menu</i>
-                </Link>
-            <ul className="text-white dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><Link className="dropdown-item" to="#!">Settings</Link></li>
-                <li><Link className="dropdown-item" to="#!">Activity Log</Link></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><Link className="dropdown-item" to="#!">Logout</Link></li>
-            </ul>
-                </li>
-            </ul>
-        </nav>
-    
-  )
-}
-
-export default NavbarAdmin*/}
