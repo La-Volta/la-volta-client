@@ -8,12 +8,8 @@ import CallUser from '../services/CallUser';
 
 function Navbar() {
 
-    
     const navigate = useNavigate();
-
-        const service=CallUser();
-
-
+    const service=CallUser();
     const logoutSubmit = (e) => {
         e.preventDefault();
         
@@ -64,7 +60,6 @@ function Navbar() {
         );
     }
 
-
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top  border-bottom  border-success">
             <div className="container">
@@ -73,19 +68,15 @@ function Navbar() {
                     <img src={logo} alt="Logo" width="158" height="60" class="d-inline-block align-text-top" />
                     </Link>
                 </div>
-                
-
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <Link className="nav-link active" to="/">Home</Link>
                         </li>
-                 {AuthButtons}
-                        
+                {AuthButtons}   
                     </ul>
                 </div>
             </div>
