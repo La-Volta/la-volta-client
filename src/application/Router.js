@@ -8,6 +8,7 @@ import Register from '../pages/auth/Register';
 import AdminPrivateRoute from '../AdminPrivateRoute';
 import AffiliateUserRoute from '../AffiliateUserRoute';
 import ShowUsers from '../components/admin/ShowUsers';
+import EditUser from '../components/admin/EditUser';
 
 
 const Router = () => {
@@ -20,6 +21,7 @@ const Router = () => {
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/admin/dasboard" element={<ShowUsers/>} />
+          <Route path="/edit/:id" element={<EditUser/>} />
 
           <Route path="/admin/*" element={<AdminPrivateRoute />}> 
             <Route path="dashboard" element={<Dashboard/>} />
