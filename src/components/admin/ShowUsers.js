@@ -38,6 +38,7 @@ const ShowUsers = () => {
                             <th>Lastname</th>
                             <th>Email</th>
                             <th>Pyments</th>
+                            <th>Action</th>
                         </tr>
 
                     </thead>
