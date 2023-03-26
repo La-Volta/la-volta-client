@@ -11,11 +11,6 @@ function Home() {
   
   const [donationForm, setDonationForm] = useState({donationType:'', amount: ''});
   
-  // let donationId = ''
-  // if(donationForm.donationType === 'puntual' && donationForm.amount === 5) {return donationId === 1}
-
-  // console.log(donationId)
-  
   console.log(donationForm)
 
   const handleInput = (event) => {
@@ -84,7 +79,7 @@ function Home() {
                     type="radio"
                     name="donationType"
                     id="gridRadios1"
-                    value=" puntual "
+                    value="puntual"
                     onChange={handleInput}
                   />
           <label class="form-check-label" for="gridRadios1">Donació puntual</label>
@@ -93,7 +88,7 @@ function Home() {
                 <input
                   class="form-check-input"
                   type="radio"
-                  value=" mensual "
+                  value="mensual"
                   name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
