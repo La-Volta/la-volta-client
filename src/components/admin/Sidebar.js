@@ -1,15 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import './sidebar.css'
 const Sidebar = () => {
   return (
-    <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div className="sb-sidenav-menu">
+    <nav className="d-flex">
+        <div id="sidebar-container" className="bg-black">
+            <ul className='text-center list-unstyled mt-4'>
+                <li>
+                    <Link className='text-success text-decoration-none' to="#">Affiliates</Link>
+                </li>
+                <li>
+                    <Link className='text-success  text-decoration-none' to="#">Payments</Link>
+                </li>
+                <li>
+                    <Link className='text-success  text-decoration-none'  to="#">xxxx</Link>
+                </li>
+            </ul>
+        </div>
+                    {/*  <div className="sb-sidenav-menu text-danger">
                         <div className="nav">
                             <div className="sb-sidenav-menu-heading">Core</div>
                             <Link className="nav-link" to="/admin/dashboard">
-                                <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt text-danger"></i> Dashboard</div>
+                               
                             </Link>
                             <Link className="nav-link" to="/admin/profile">
                                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
@@ -68,11 +81,8 @@ const Sidebar = () => {
                                 Tables
                             </Link>
                         </div>
-                    </div>
-                    <div className="sb-sidenav-footer">
-                        <div className="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div>
+                    </div>*/}
+                   
                 </nav>
   );
 }

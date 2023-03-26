@@ -7,6 +7,8 @@ import Login from '../pages/auth/Login';
 import Register from '../pages/auth/Register';
 import AdminPrivateRoute from '../AdminPrivateRoute';
 import AffiliateUserRoute from '../AffiliateUserRoute';
+import ShowUsers from '../components/admin/ShowUsers';
+import EditUser from '../components/admin/EditUser';
 
 
 const Router = () => {
@@ -18,12 +20,17 @@ const Router = () => {
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/admin/dasboard" element={<ShowUsers/>} />
+          <Route path="/edit/:id" element={<EditUser/>} />
+
           <Route path="/admin/*" element={<AdminPrivateRoute />}> 
-            <Route path="admin" element={<Dashboard/>} />
+            <Route path="dashboard" element={<Dashboard/>} />
+            
           </Route>
           <Route path="/affiliate/*" element={<AffiliateUserRoute />} >
             <Route path="profile" element={<Profile/>} />
           </Route>
+
         </Routes>
         
         

@@ -2,29 +2,29 @@ import React from 'react';
 import NavbarAdmin from '../../components/admin/NavbarAdmin';
 import Sidebar from '../../components/admin/Sidebar';
 import Footer from '../../components/admin/footer/Footer';
+import ShowUsers from '../../components/admin/ShowUsers';
 
 
 
 function Dashboard() {
   return (
-    <div className="sb-nav-fixed">
-            <NavbarAdmin />
-            <div id="layoutSidenav">
+    <div>
+        <div className="sb-nav-fixed">
+        <NavbarAdmin />
+        <div>
+        <div className='d-flex'>
+            <Sidebar />
+            <ShowUsers />
+        </div>
+            <div className='content'>
 
-                <div id="layoutSidenav_nav">
-                    <Sidebar />
-                </div>
-
-                <div id="layoutSidenav_content">
-                    <main>
-               
-                       <p>dashboard</p>
-
-                    </main>
-                    <Footer />
-                </div>
             </div>
         </div>
+        </div>
+        <Footer />
+    </div>
+    
+         
   )
 }
 
