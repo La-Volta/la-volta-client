@@ -34,6 +34,7 @@ const EditUser = () => {
             setPassword(response.data.password)  
         }
         getUserById()
+        //·eslint-disable-next-line-react-hooks/exhaustive-deps
     }, [] )
 
     return (
