@@ -1,62 +1,54 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 import Footer from "../components/admin/footer/Footer"
 import Swal from "sweetalert2";
 
 function Home() {
+
+  const navigate = useNavigate();
   
   const [donationForm, setDonationForm] = useState({donationType:'', amount: ''});
-
+  
+  console.log(donationForm)
 
   const handleInput = (event) => {
           setDonationForm({
             ...donationForm,
             [event.target.name]: event.target.value
           })
+
+          
         }
 
-   let link = '';
-    if(!localStorage.getItem('auth_token'))
-    {
-        link = (
-               
-          <Link className="nav-link" to="/register" state={donationForm}>
-          <button type="submit" className="btn btn-danger my-3" onSubmit={validationForm}>
-            Següent pas
-          </button>
-        </Link>
-        );
-    }
-    else
-    {
-        link = (
-               
-          <Link className="nav-link" to="/affiliate/profile" state={{state: donationForm}}>
-          <button type="submit" className="btn btn-danger my-3" onSubmit={validationForm} >
-            Següent pas
-          </button>
-        </Link>
-        );
-    }    
     
-    
-    function validationForm(event) {
-      event.preventDefault();
-      //let usuario = document.getElementById('usuario').value;
-      if(donationForm.donationType === ''){
-        Swal.fire("Tria el tipus de donació.")
-        return false
-      }
-      else if(donationForm.amount === ''){
-        Swal.fire("Tria la quantitat de la teva aportació")
-        return false
-      }
-      return true
-    }
-   
-  
+        function validationForm(event) {
+          event.preventDefault();
+          if(donationForm.donationType !== '' && donationForm.amount !== ''){
+            if(!localStorage.getItem('auth_token')) {
+              navigate('/register', {state: donationForm});
+            } else {
+              navigate('/affiliate/profile', {state: {state : donationForm}});
+            }
+            
+          }
+          if(donationForm.donationType === ''){
+            Swal.fire({
+              title: "Tria el tipus de donació",
+              color: 'white',
+              background: '#87EA00',
+              confirmButtonColor: '#8506A9',})          
+          }
+          if(donationForm.amount === ''){
+            Swal.fire({
+              title: "Tria la quantitat de la teva aportació",
+              color: 'white',
+              background: '#87EA00',
+              confirmButtonColor: '#8506A9',
+            })
+          }
+        }     
 
   return (
     <div>
@@ -78,7 +70,7 @@ function Home() {
             </div>
 
         
-        <form id="form"> 
+        <form id="form" onSubmit={validationForm}> 
           <fieldset className="text-white d-flex justify-content-center" required>    
               <div className="m-4">
                 <div class="form-check">
@@ -87,16 +79,16 @@ function Home() {
                     type="radio"
                     name="donationType"
                     id="gridRadios1"
-                    value=" puntual "
+                    value="puntual"
                     onChange={handleInput}
                   />
-          <label class="form-check-label" for="gridRadios1">Donació punctual</label>
+          <label class="form-check-label" for="gridRadios1">Donació puntual</label>
             </div>
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
-                  value=" mensual "
+                  value="mensual"
                   name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
@@ -107,12 +99,12 @@ function Home() {
                 <input
                   class="form-check-input"
                   type="radio"
-                  value=" trimestral "
+                  value="anual"
                   name="donationType"
                   id="gridRadios2"
                   onChange={handleInput}
               />
-          <label class="form-check-label" for="gridRadios2">Donació trimestrial</label>
+          <label class="form-check-label" for="gridRadios2">Donació anual</label>
           </div>
           </div>
           </fieldset>
@@ -131,18 +123,14 @@ function Home() {
             <h6 className="col-12 px-4 pt-4 text-success text-center">
             Afegeix el teu import voluntari 
             </h6>
-                <input
-                  type="number"
-                  min="1"
-                  name="amount"
-                  className="form-control"
-                  onChange={handleInput}
-                />
+              
               
               </div>
               </fieldset>
               <div class="d-flex justify-content-center">
-                {link}
+              <button type="submit" className="btn btn-danger my-3" >
+                Següent pas
+              </button>
                
               </div>
             </form>
