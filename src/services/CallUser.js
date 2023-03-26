@@ -41,12 +41,7 @@ const CallUser = () => {
         const res = await axios.post(`/api/register`, data);
         return res;
     };
-    // axios.get('/sanctum/csrf-cookie').then(response => {
-    //     axios.post(`/api/register`, data)
-    // const post = async (data) => {
-    //     const res = await axios.post(url, data);
-    //     return res;
-    // };
+   
 
     /*const update = async (data) => {
         let urlID = `${url}/${data.id}`;
