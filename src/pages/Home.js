@@ -33,7 +33,7 @@ function Home() {
     {
         link = (
                
-          <Link className="nav-link" to="/affiliate/profile" state={donationForm}>
+          <Link className="nav-link" to="/affiliate/profile" state={{state: donationForm}}>
           <button type="submit" className="btn btn-danger my-3" onSubmit={validationForm} >
             Següent pas
           </button>

@@ -50,7 +50,7 @@ function Login() {
                     else
                     {
 
-                        navigate('/affiliate/profile', {state: {donationForm : state}});
+                        navigate('/affiliate/profile', {state: {state}});
 
                     }
                 }
