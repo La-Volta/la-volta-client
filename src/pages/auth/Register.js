@@ -38,6 +38,7 @@ function Register() {
             if (res.data.status === 200) {
               localStorage.setItem("auth_token", res.data.token);
               localStorage.setItem("auth_name", res.data.username);
+              localStorage.setItem("auth_Id", res.data.userId);
               Swal.fire({
               title: "S'ha registrat correctament",
               color: '#87EA00',

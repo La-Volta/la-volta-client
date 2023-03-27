@@ -35,6 +35,7 @@ function Login() {
                 {
                     localStorage.setItem('auth_token', res.data.token);
                     localStorage.setItem('auth_name', res.data.username);
+                    localStorage.setItem('auth_Id', res.data.userId);
                     Swal.fire({
                         title: "La sessió s'ha iniciat correctament",
                         color: 'white',

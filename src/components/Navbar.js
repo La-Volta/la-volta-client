@@ -72,7 +72,7 @@ function Navbar() {
               alt="Logo"
               width="158"
               height="60"
-              class="d-inline-block align-text-top"
+              className="d-inline-block align-text-top"
             />
           </Link>
         </div>
