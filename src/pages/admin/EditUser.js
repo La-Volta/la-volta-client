@@ -41,8 +41,12 @@ const EditUser = () => {
     return (
         <div>
         <NavbarAdmin />
+        <div className='d-flex'>
         <Sidebar />
-        <h3 className="text-success text-center">Edit User</h3>
+        <div className="mx-auto mt-3 text-success justify-content-center">
+            <div>
+                <h3 className="text-success my-4 text-center">Edit User</h3>
+            </div>
         <form className="text-success" onSubmit={update}>
             <div className="mb-3">
                 <label className="form-label">Name</label>
@@ -82,7 +86,8 @@ const EditUser = () => {
             </div>
             <button type='submit' className="btn btn-danger">Update</button>
         </form>
-        
+        </div>
+        </div>
         <Footer />
         </div>
         
