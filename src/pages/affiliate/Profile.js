@@ -1,11 +1,50 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/admin/footer/Footer";
-import { useLocation, Link} from "react-router-dom";
+import { useLocation, Link, useNavigate} from "react-router-dom";
+import CallUser from "../../services/CallUser";
 
 function Profile() {
+  const navigate = useNavigate();
   const  {state}  = useLocation();
   console.log(state);
+
+  let donationId = ''
+  if(state.state.amount === "5" && state.state.donationType === "puntual") {donationId = 1};
+  if(state.state.amount === "5" && state.state.donationType === "mensual") {donationId = 2};
+  if(state.state.amount === "5" && state.state.donationType === "anual") {donationId = 3}; 
+
+  console.log(donationId)
+
+  // const stripeSubmit = async (id) => {
+    
+  //   await CallUser().checkout(id).then((res) => {
+  //   if (res.data.status === 200) {
+  //     //window.location.replace(res.data.url);
+  //     //navigate(res.data.url);
+  //     console.log(res.data.url)
+  //   }
+  // });
+    
+  // };
+
+
+  
+   async function stripeSubmit(id){
+    await CallUser().checkout(id).then((res) => {
+        if (res.data.status === 200) {
+          //console.log('sucess')
+          //window.location.replace(res.data.url);
+          //navigate(res.data.url);
+          console.log(res.data.status)
+        }
+      });
+    
+    }
+    
+  
+
+ 
 
   let divDonation = "";
 
@@ -28,11 +67,11 @@ function Profile() {
         Tens un import {state.state.donationType} pendent de
         pagament de {state.state.amount}€.
       </p>
-      <p className="text-success text-center"> Pots canviar la teva aportació 
-      <span> <Link className="text-success" to="/" >
-      aquí.
-    </Link>
-    </span></p>
+      <p className="text-success text-center"> 
+        Pots canviar la teva aportació <span> <Link className="text-success" to="/" >aquí.</Link></span>
+      </p>
+      
+
     </>
     );
   } 
@@ -55,6 +94,7 @@ function Profile() {
 
         
         <div>{divDonation}</div>
+        <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger">Paga</button>
         <div className="text-success"></div>
 
 
