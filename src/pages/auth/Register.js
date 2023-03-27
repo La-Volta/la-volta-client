@@ -7,8 +7,8 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/admin/footer/Footer";
 
 function Register() {
-  const location = useLocation();
-  const donationForm = location.state
+  const {state} = useLocation();
+  //const donationForm = location.state
   
 
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ function Register() {
               background: '#1B1D1F'
               
             })
-              navigate("/affiliate/profile", {state: {donationForm : donationForm}});
+              navigate("/affiliate/profile", {state: {state}});
             } else {
               setRegister({
                 ...registerInput,
@@ -144,7 +144,7 @@ function Register() {
                   <div className="text-center bg-warning">
                     <h6 className="px-4 pt-5 fs-6 text-success">
                       Si ja teniu un compte d'usuari, accediu al vostre perfil
-                      <span> <Link className="text-success" to="/login" state={donationForm}>
+                      <span> <Link className="text-success" to="/login" state={state}>
                         aquí.
                       </Link>
                       </span>

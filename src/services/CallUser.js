@@ -18,8 +18,7 @@ const CallUser = () => {
         return res;
         
      };
-
-    
+  
      const logout = async () => {
         const res = await axios.post(`/api/logout`);
         return res;
@@ -29,6 +28,12 @@ const CallUser = () => {
         const res = await axios.post(`/api/login`, data);
         return res;
     };
+
+    const checkout = async (id) => {
+        const res = await axios.post(`/api/checkout/${id}`);
+        return res;
+    };
+
 
     // const trash = async (id) => {
     //     let urlActivity = `${url}/${id}`;
@@ -41,12 +46,7 @@ const CallUser = () => {
         const res = await axios.post(`/api/register`, data);
         return res;
     };
-    // axios.get('/sanctum/csrf-cookie').then(response => {
-    //     axios.post(`/api/register`, data)
-    // const post = async (data) => {
-    //     const res = await axios.post(url, data);
-    //     return res;
-    // };
+   
 
     /*const update = async (data) => {
         let urlID = `${url}/${data.id}`;
@@ -58,6 +58,7 @@ const CallUser = () => {
  
     return {
         getCookies,
+        checkout,
         // trash,
         postRegister,
         //update,
