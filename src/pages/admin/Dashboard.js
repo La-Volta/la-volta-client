@@ -14,7 +14,10 @@ function Dashboard() {
         <div>
         <div className='d-flex'>
             <Sidebar />
-            <ShowUsers />
+            <div className='text-success text-center'>
+                    <h1>Hola Admin!</h1>
+                    <h3>Aquest és el teu perfil admin de La Volta</h3>
+            </div>
         </div>
             <div className='content'>
 
