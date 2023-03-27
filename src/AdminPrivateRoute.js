@@ -6,10 +6,12 @@ import Swal from 'sweetalert2';
 
 function AdminPrivateRoute() {
 
-    const auth = localStorage.getItem('auth_name');
+    //const auth = localStorage.getItem('auth_name');
     const navigate = useNavigate();
     const [Authenticated, setAuthenticated] = useState(false);
     const [loading, setloading] = useState(true);
+
+    console.log()
 
     useEffect(() => {
 
@@ -80,7 +82,7 @@ function AdminPrivateRoute() {
   return (
 
     
-    auth ? <Outlet /> : <Navigate to='/admin/dashboard' />
+    Authenticated ? <Outlet /> : <Navigate to='/' />
 
     )
 }
