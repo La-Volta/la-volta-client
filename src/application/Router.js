@@ -33,6 +33,8 @@ const Router = () => {
           </Route>
           <Route path="/affiliate/*" element={<AffiliateUserRoute />} >
             <Route path="profile" element={<Profile/>} />
+            <Route path="payment/success" element={<Profile/>} />
+            <Route path="payment/cancellation" element={<Profile/>} />
           </Route>
 
         </Routes>
