@@ -1,12 +1,13 @@
 import axios from "axios";
 import React, {useState, useEffect} from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Footer from "./footer/Footer";
-import NavbarAdmin from "./NavbarAdmin";
+import Footer from "../../components/admin/footer/Footer";
+import NavbarAdmin from "../../components/admin/NavbarAdmin";
+import Sidebar from "../../components/admin/Sidebar";
 
 const endpoint = 'http://localhost:8000/api/user/'
 
-const EditUser = () => {
+const CreateUser = () => {
     const [name, setName] = useState('')
     const [lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
@@ -40,6 +41,7 @@ const EditUser = () => {
     return (
         <div>
         <NavbarAdmin />
+        <Sidebar />
         <h3 className="text-success text-center">Edit User</h3>
         <form className="text-success" onSubmit={update}>
             <div className="mb-3">
@@ -74,7 +76,7 @@ const EditUser = () => {
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
-                    type='number'
+                    type='password'
                     className="form-control"
                 />
             </div>
@@ -88,4 +90,4 @@ const EditUser = () => {
 
 }
 
-export default EditUser
+export default CreateUser
