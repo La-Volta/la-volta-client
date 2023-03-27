@@ -7,13 +7,16 @@ const Sidebar = () => {
         <div id="sidebar-container" className="bg-black">
             <ul className='text-center list-unstyled mt-4'>
                 <li>
-                    <Link className='text-success text-decoration-none' to="#">Affiliates</Link>
+                    <Link className='text-success  text-decoration-none'  to="/admin/dashboard">Inici</Link>
                 </li>
                 <li>
-                    <Link className='text-success  text-decoration-none' to="#">Payments</Link>
+                    <Link className='text-success text-decoration-none' to="/admin/affiliates">Affiliates</Link>
                 </li>
                 <li>
-                    <Link className='text-success  text-decoration-none'  to="#">xxxx</Link>
+                    <Link className='text-success  text-decoration-none' to="/admin/payments">Payments</Link>
+                </li>
+                <li>
+                <Link to="/admin/create" className='btn btn-danger btn-sb mt-2 mb-1  text-white'>Create</Link>
                 </li>
             </ul>
         </div>

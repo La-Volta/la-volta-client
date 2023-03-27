@@ -26,10 +26,7 @@ const ShowUsers = () => {
   return (
     <div className='d-grid gap-2 row d-flex justify-content-center'>
                 
-                <div className='text-success text-center'>
-                    <h1>Hola Admin!</h1>
-                    <h3>Aquest és el teu perfil admin de La Volta</h3>
-                </div>
+                
                 <table className='table table-striped'>
                     <thead className='bg-black text-white'>
                         <tr>
@@ -37,7 +34,6 @@ const ShowUsers = () => {
                             <th>Name</th>
                             <th>Lastname</th>
                             <th>Email</th>
-                            <th>Pyments</th>
                             <th>Action</th>
                         </tr>
 
@@ -49,11 +45,10 @@ const ShowUsers = () => {
                                 <td className='text-success'> {user.name} </td>
                                 <td className='text-success'> {user.lastname} </td>
                                 <td className='text-success'> {user.email} </td>
-                                <td className='text-success'> {user.pyments} </td>
                                 <td>
-                                    <Link to="/register" className='btn btn-danger btn-sb mt-2 mb-1  text-white'>Create</Link>
-                                    <Link to={`/edit/${user.id}`} className='btn btn-danger mx-2 mb-1'>Edit</Link>
+                                    <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1'>Edit</Link>
                                     <button onClick={ ()=>deleteUser(user.id) } className='btn btn-danger'>Delete</button>
+                                    <Link to={`/admin/payments/${user.id}`} className='btn btn-danger mx-2 mb-1'>Show Payments</Link>
                                 </td>
                             </tr>
                         )) }
