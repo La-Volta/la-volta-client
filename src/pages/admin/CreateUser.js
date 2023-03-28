@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, {useState, useEffect} from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import Footer from "../../components/admin/footer/Footer";
 import NavbarAdmin from "../../components/admin/NavbarAdmin";
 import Sidebar from "../../components/admin/Sidebar";
@@ -13,20 +13,15 @@ const CreateUser = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
-    const {id} = useParams()
     
-    const update = async (e) => {
+    
+    const store = async (e) => {
        e.preventDefault()
-       await axios.put(`${endpoint}${id}`, {
-            name: name,
-            lastname: lastname,
-            email: email,
-            password: password,
-       })
-       navigate('/admin/dashboard')
+       await axios.post(endpoint, {name: name, lastname: lastname, email: email, password: password})
+       navigate('/admin/affiliates')
     }
 
-    useEffect( () =>{
+    /*  useEffect( () =>{
         const getUserById = async () => {
             const response = await axios.get(`${endpoint}${id}`)
             setName(response.data.name)
@@ -36,14 +31,18 @@ const CreateUser = () => {
         }
         getUserById()
         //·eslint-disable-next-line-react-hooks/exhaustive-deps
-    }, [] )
+    }, [] )*/
 
     return (
         <div>
         <NavbarAdmin />
+        <div className='d-flex'>
         <Sidebar />
-        <h3 className="text-success text-center">Edit User</h3>
-        <form className="text-success" onSubmit={update}>
+        <div className="mx-auto mt-3 text-success justify-content-center">
+            <div>
+                <h3 className="text-success text-center">Create User</h3>
+            </div>
+        <form className="text-success" onSubmit={store}>
             <div className="mb-3">
                 <label className="form-label">Name</label>
                 <input
@@ -80,8 +79,10 @@ const CreateUser = () => {
                     className="form-control"
                 />
             </div>
-            <button type='submit' className="btn btn-danger">Update</button>
+            <button type='submit' className="btn btn-danger">Store</button>
         </form>
+        </div>
+        </div>
         
         <Footer />
         </div>

@@ -13,13 +13,19 @@ function Dashboard() {
         <NavbarAdmin />
         <div>
         <div className='d-flex'>
+          <div className='fixed-float-right'>
             <Sidebar />
-            <div className='text-success text-center'>
-                    <h1>Hola Admin!</h1>
-                    <h3>Aquest és el teu perfil admin de La Volta</h3>
+          </div>
+          <div className='mx-auto mt-3 text-success text-center d-flex justify-content-center'>
+            <div>
+              <h1>Hola Admin!</h1>
+              <h3>Aquest és el teu perfil admin de La Volta</h3>
+              <h4 className='mt-5'>Como admin puedes ver todos los usuarios, editar cada usuario, ver los pagos de cada usuario </h4>
             </div>
-        </div>
+          </div>
+          </div>
             <div className='content'>
+              
 
             </div>
         </div>
