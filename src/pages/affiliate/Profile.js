@@ -14,6 +14,15 @@ function Profile() {
   if(state.state.amount === "5" && state.state.donationType === "puntual") {donationId = 1};
   if(state.state.amount === "5" && state.state.donationType === "mensual") {donationId = 2};
   if(state.state.amount === "5" && state.state.donationType === "anual") {donationId = 3}; 
+  if(state.state.amount === "10" && state.state.donationType === "puntual") {donationId = 4};
+  if(state.state.amount === "10" && state.state.donationType === "mensual") {donationId = 5};
+  if(state.state.amount === "10" && state.state.donationType === "anual") {donationId = 6}; 
+  if(state.state.amount === "15" && state.state.donationType === "puntual") {donationId = 7};
+  if(state.state.amount === "15" && state.state.donationType === "mensual") {donationId = 8};
+  if(state.state.amount === "15" && state.state.donationType === "anual") {donationId = 9}; 
+  if(state.state.amount === "25" && state.state.donationType === "puntual") {donationId = 10};
+  if(state.state.amount === "25" && state.state.donationType === "mensual") {donationId = 11};
+  if(state.state.amount === "25" && state.state.donationType === "anual") {donationId = 12}; 
 }
 
   console.log(donationId)
