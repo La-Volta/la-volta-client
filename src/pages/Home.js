@@ -58,13 +58,14 @@ function Home() {
       <div className="bg-success ">
         <div className="bg-warning border rounded rounded-3 border-5 border-success">
           <div className="text-center">
-            <h6 className="px-4 pt-5 fs-6 text-success">
-            Fes-te amic de La Volta i aporta la teva donació. Gràcies al teu suport, aquest projecte pugui seguir endavant 
+            <h6 className="px-4 pt-5 mt-1 fs-3 text-success fw-bold">
+            Fes-te amic de La Volta i aporta la teva donació
             </h6>
+            <h5 className="px-4 pt-1 fs-5 text-success"> Gràcies al teu suport, aquest projecte pugui seguir endavant </h5>
             <h6 className="px-4 pt-5 fs-6 text-success">
-            Tria la quantia, afegeix les teves dades i completa el procés de donació
+            Tria la quantia, afegeix les teves dades i completa el procéss de donació
             </h6>
-            <h6 className="px-4 pt-5 fs-6 text-success">
+            <h6 className="px-4 pt-1 fs-6 text-success">
             Així de fàcil!
             </h6>
             </div>
@@ -110,28 +111,25 @@ function Home() {
           </fieldset>
       <fieldset required>
       <div>
-        <div class="d-grid gap-3 col-6 mx-auto">
-          <button class="btn btn-success" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
-          <button class="btn btn-success" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
-          <button class="btn btn-success" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
-          <button class="btn btn-success" name="amount" type="button" value="25" onClick={handleInput}>25 €</button>
+        <div class="btn-pagos gap-3 mx-auto">
+          <button class="btn btn-success btn-lg p-5 fw-bold fs-2 m-4" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
+          <button class="btn btn-success btn-lg p-5 fw-bold fs-2 m-4" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
+          <button class="btn btn-success btn-lg p-5 fw-bold fs-2 m-4" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
+          <button class="btn btn-success btn-lg p-5 fw-bold fs-2 m-4" name="amount" type="button" value="25" onClick={handleInput}>25 €</button>
         </div>
       </div>
       
      
-            <div className="d-grid gap-4 col-7 mx-auto">
-            <h6 className="col-12 px-4 pt-4 text-success text-center">
-            Afegeix el teu import voluntari 
-            </h6>
-              
-              
-              </div>
+            <div className="d-flex justify-content-center pt-5">
+              <button type="submit" className="col-3 px-4 pt-4 pb-4 btn-success btn-lg text-center">
+                Afegeix el teu import voluntari 
+              </button>
+            </div>
               </fieldset>
               <div class="d-flex justify-content-center">
-              <button type="submit" className="btn btn-danger my-3" >
-                Següent pas
+              <button type="submit" className="boton-seguent btn btn-danger mt-5 btn-lg" >
+                <h6 className="m-3">Següent pas</h6>
               </button>
-               
               </div>
             </form>
           </div>
