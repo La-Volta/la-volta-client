@@ -67,7 +67,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top  border-bottom  border-success">
       <div className="container">
         <div className="logo-home">
-          <Link className="navbar-brand" to="#">
+          <Link className="navbar-brand" to="/">
             <img
               src={logo}
               alt="Logo"

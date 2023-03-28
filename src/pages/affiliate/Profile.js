@@ -6,39 +6,47 @@ import CallUser from "../../services/CallUser";
 import ShowAffiliate from "../../components/ShowAffiliate";
 
 function Profile() {
+<<<<<<< HEAD
   //const navigate = useNavigate();
   const  {state}  = useLocation();
   console.log(state);
 
   /* let donationId = ''
+=======
+  
+  const  {state}  = useLocation();
+  console.log(state);
+
+  let donationId = ''
+  if(state.state !== null){ 
+>>>>>>> 70c74f8bf67265069cb4903bf25ee54c20f48b0a
   if(state.state.amount === "5" && state.state.donationType === "puntual") {donationId = 1};
   if(state.state.amount === "5" && state.state.donationType === "mensual") {donationId = 2};
   if(state.state.amount === "5" && state.state.donationType === "anual") {donationId = 3}; 
+  if(state.state.amount === "10" && state.state.donationType === "puntual") {donationId = 4};
+  if(state.state.amount === "10" && state.state.donationType === "mensual") {donationId = 5};
+  if(state.state.amount === "10" && state.state.donationType === "anual") {donationId = 6}; 
+  if(state.state.amount === "15" && state.state.donationType === "puntual") {donationId = 7};
+  if(state.state.amount === "15" && state.state.donationType === "mensual") {donationId = 8};
+  if(state.state.amount === "15" && state.state.donationType === "anual") {donationId = 9}; 
+  if(state.state.amount === "25" && state.state.donationType === "puntual") {donationId = 10};
+  if(state.state.amount === "25" && state.state.donationType === "mensual") {donationId = 11};
+  if(state.state.amount === "25" && state.state.donationType === "anual") {donationId = 12}; 
+}
 
   console.log(donationId) */
 
-  // const stripeSubmit = async (id) => {
-    
-  //   await CallUser().checkout(id).then((res) => {
-  //   if (res.data.status === 200) {
-  //     //window.location.replace(res.data.url);
-  //     //navigate(res.data.url);
-  //     console.log(res.data.url)
-  //   }
-  // });
-    
-  // };
+  
 
 
   
    async function stripeSubmit(id){
     await CallUser().checkout(id).then((res) => {
-        if (res.data.status === 200) {
-          //console.log('sucess')
-          //window.location.replace(res.data.url);
-          //navigate(res.data.url);
-          console.log(res.data.status)
-        }
+      console.log(res.data.url)
+      window.location.replace(res.data.url);
+       
+      }).catch((error) => {
+        console.log(error)
       });
     
     }
@@ -98,7 +106,13 @@ function Profile() {
 
         
         <div>{divDonation}</div>
+<<<<<<< HEAD
         <button  onClick={() => stripeSubmit()} className="btn btn-danger">Paga</button>
+=======
+       
+          <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger m-5 text-whit d-flex justify-content-center mx-auto">Continuar amb el pagament</button>
+       
+>>>>>>> 70c74f8bf67265069cb4903bf25ee54c20f48b0a
         <div className="text-success"></div>
 
         <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>show profile affiliate</Link>
