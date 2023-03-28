@@ -54,7 +54,7 @@ function Navbar() {
         <button
           type="button"
           onClick={logoutSubmit}
-          className="nav-link btn btn-danger btn-sm text-white"
+          className="nav-link btn btn-sm text-white"
         >
           Tanca sessió
         </button>
