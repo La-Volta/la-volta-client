@@ -14,7 +14,7 @@ import "../footer/footer.css";
 const Footer = () => {
   return (
     <footer>
-        <div className="bg-white p-3 d-flex justify-content-center container-fluid py-4">
+        <div className="bg-white pt-5 pb-5 d-flex justify-content-center container-fluid py-4">
                 <div>
                   <img className="lavoltaimgs" src={logo} alt="logo La Volta"/>
                   <img className="lavoltaimgs" src={ajuntament} alt="logo La Volta"/>

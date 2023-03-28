@@ -1,5 +1,10 @@
+@media screen and (max-width: 576px) {
+
+}
+
+
 .logo-home{
-    margin: 16px 16px 16px 12px;
+    margin: 16px 16px 16px -8px;
 }
 
 .nav-link{
@@ -35,4 +40,8 @@ h6{
 
 .text-css{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo-home{
+    padding-left: -1;
 }
