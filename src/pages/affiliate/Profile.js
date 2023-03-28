@@ -49,7 +49,7 @@ function Profile() {
 
   let divDonation = "";
 
-  if (state.state === null) {
+  if (state.state === null ||{state} === null) {
     divDonation = (
       <>
       <p className="m-3 text-success d-flex justify-content-center">

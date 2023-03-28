@@ -2,8 +2,8 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../../components/admin/footer/Footer";
-import NavbarAdmin from "../../components/admin/NavbarAdmin";
-import Sidebar from "../../components/admin/Sidebar";
+import Navbar from "../../components/Navbar";
+
 
 const endpoint = 'http://localhost:8000/api/user/'
 
@@ -40,9 +40,8 @@ const EditUser = () => {
 
     return (
         <div>
-        <NavbarAdmin />
+        <Navbar />
         <div className='d-flex'>
-        <Sidebar />
         <div className="mx-auto mt-3 text-success justify-content-center">
             <div>
                 <h3 className="text-success my-4 text-center">Edit User</h3>
