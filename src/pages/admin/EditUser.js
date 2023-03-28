@@ -45,11 +45,11 @@ const EditUser = () => {
         <Sidebar />
         <div className="mx-auto mt-3 text-success justify-content-center">
             <div>
-                <h3 className="text-success my-4 text-center">Edit User</h3>
+                <h3 className="text-success my-4 text-center">Edit l'usuari</h3>
             </div>
         <form className="text-success" onSubmit={update}>
             <div className="mb-3">
-                <label className="form-label">Name</label>
+                <label className="form-label">Nom</label>
                 <input
                     value={name}
                     onChange={ (e)=> setName(e.target.value)}
@@ -58,7 +58,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Lastname</label>
+                <label className="form-label">Cognom</label>
                 <input
                     value={lastname}
                     onChange={ (e)=> setLastname(e.target.value)}
@@ -67,7 +67,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Email</label>
+                <label className="form-label">Correu Electrònic</label>
                 <input
                     value={email}
                     onChange={ (e)=> setEmail(e.target.value)}
@@ -76,7 +76,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Password</label>
+                <label className="form-label">Contrasenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
@@ -84,7 +84,7 @@ const EditUser = () => {
                     className="form-control"
                 />
             </div>
-            <button type='submit' className="btn btn-danger">Update</button>
+            <button type='submit' className="btn btn-danger">Actualització</button>
         </form>
         </div>
         </div>

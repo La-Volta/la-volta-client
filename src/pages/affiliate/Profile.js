@@ -94,7 +94,9 @@ function Profile() {
 
         
         <div>{divDonation}</div>
-        <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger">Paga</button>
+       
+          <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger m-5 text-whit d-flex justify-content-center mx-auto">Continuar amb el pagament</button>
+       
         <div className="text-success"></div>
 
 
