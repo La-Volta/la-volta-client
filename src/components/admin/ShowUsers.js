@@ -25,15 +25,15 @@ const ShowUsers = () => {
     }
   return (
     <div className='d-grid gap-2 row d-flex justify-content-center mx-auto'>
-        <Link to="/admin/create" className='btn btn-danger btn-sb mt-2 mb-1  text-white'>Create new affiliate</Link>
+        <Link to="/admin/create" className='btn btn-danger btn-sb mt-2 mb-1  text-white'>Crear nou afiliat</Link>
         <table className='table table-striped'>
             <thead className='bg-black text-white'>
                 <tr>
                     <th>Id</th>
-                    <th>Name</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
-                    <th>Action</th>
+                    <th>Nom</th>
+                    <th>Cognom</th>
+                    <th>Correu Electrònic</th>
+                    <th>Acció</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,9 +44,10 @@ const ShowUsers = () => {
                     <td className='text-success'> {user.lastname} </td>
                     <td className='text-success'> {user.email} </td>
                     <td>
-                        <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1'>Edit</Link>
-                        <button onClick={ ()=>deleteUser(user.id) } className='btn btn-danger mb-1'>Delete</button>
-                        <Link to={`/admin/payments/${user.id}`} className='btn btn-danger mx-2 mb-1'>Show Payments</Link>
+                        <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1'>Editar</Link>
+                        <button onClick={ ()=>deleteUser(user.id) } className='btn btn-danger mb-1'>Suprimir</button>
+                        <Link to={`/admin/payments/${user.id}`} className='btn btn-danger mx-2 mb-1'>Mostrar els Pagaments
+</Link>
                     </td>
                 </tr>
                 )) }

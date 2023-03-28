@@ -10,10 +10,10 @@ const Sidebar = () => {
                     <Link className='text-success  text-decoration-none'  to="/admin/dashboard">Inici</Link>
                 </li>
                 <li>
-                    <Link className='text-success text-decoration-none' to="/admin/affiliates">Affiliates</Link>
+                    <Link className='text-success text-decoration-none' to="/admin/affiliates">Afiliats</Link>
                 </li>
                 <li>
-                    <Link className='text-success  text-decoration-none' to="/admin/payments">Payments</Link>
+                    <Link className='text-success  text-decoration-none' to="/admin/payments">Pagaments</Link>
                 </li>
                 <li>
                 

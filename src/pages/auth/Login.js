@@ -95,7 +95,7 @@ function Login() {
                                         <span>{loginInput.error_list.email}</span>
                                     </div>
                                     <div className="form-group mb-3">
-                                        <label className="text-secondary">Contraseyna</label>
+                                        <label className="text-secondary">Contrassenya</label>
                                         <input type="password" name="password" onChange={handleInput} value={loginInput.password} className="form-control" />
                                         <span>{loginInput.error_list.password}</span>
                                     </div>
