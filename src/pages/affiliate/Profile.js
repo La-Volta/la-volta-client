@@ -6,20 +6,12 @@ import CallUser from "../../services/CallUser";
 import ShowAffiliate from "../../components/ShowAffiliate";
 
 function Profile() {
-<<<<<<< HEAD
-  //const navigate = useNavigate();
-  const  {state}  = useLocation();
-  console.log(state);
-
-  /* let donationId = ''
-=======
   
   const  {state}  = useLocation();
   console.log(state);
 
   let donationId = ''
   if(state.state !== null){ 
->>>>>>> 70c74f8bf67265069cb4903bf25ee54c20f48b0a
   if(state.state.amount === "5" && state.state.donationType === "puntual") {donationId = 1};
   if(state.state.amount === "5" && state.state.donationType === "mensual") {donationId = 2};
   if(state.state.amount === "5" && state.state.donationType === "anual") {donationId = 3}; 
@@ -34,7 +26,7 @@ function Profile() {
   if(state.state.amount === "25" && state.state.donationType === "anual") {donationId = 12}; 
 }
 
-  console.log(donationId) */
+  console.log(donationId) 
 
   
 
@@ -106,13 +98,9 @@ function Profile() {
 
         
         <div>{divDonation}</div>
-<<<<<<< HEAD
-        <button  onClick={() => stripeSubmit()} className="btn btn-danger">Paga</button>
-=======
        
           <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger m-5 text-whit d-flex justify-content-center mx-auto">Continuar amb el pagament</button>
        
->>>>>>> 70c74f8bf67265069cb4903bf25ee54c20f48b0a
         <div className="text-success"></div>
 
         <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>show profile affiliate</Link>
