@@ -16,7 +16,7 @@ const Sidebar = () => {
                     <Link className='text-success  text-decoration-none' to="/admin/payments">Payments</Link>
                 </li>
                 <li>
-                <Link to="/admin/create" className='btn btn-danger btn-sb mt-2 mb-1  text-white'>Create</Link>
+                
                 </li>
             </ul>
         </div>
