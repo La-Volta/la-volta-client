@@ -5,8 +5,6 @@ import Footer from "../../components/admin/footer/Footer";
 import Navbar from "../../components/Navbar";
 
 
-
-
 const endpoint = 'http://localhost:8000/api/user/'
 
 const EditUser = () => {
@@ -48,14 +46,16 @@ console.log(state);
     return (
         <div>
         <Navbar />
+        <h2 className="text-success my-4 text-center">Compte</h2>
+    
         <div className='d-flex'>
         <div className="mx-auto mt-3 text-success justify-content-center">
             <div>
-                <h3 className="text-success my-4 text-center">Edit User</h3>
+                <h3 className="text-success my-4 text-center">Edita el teu perfil</h3>
             </div>
         <form className="text-success" onSubmit={update}>
             <div className="mb-3">
-                <label className="form-label">Name</label>
+                <label className="form-label">Nom</label>
                 <input
                     value={name}
                     onChange={ (e)=> setName(e.target.value)}
@@ -64,7 +64,7 @@ console.log(state);
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Lastname</label>
+                <label className="form-label">Cognom</label>
                 <input
                     value={lastname}
                     onChange={ (e)=> setLastname(e.target.value)}
@@ -73,7 +73,7 @@ console.log(state);
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Email</label>
+                <label className="form-label">Correu electrònic</label>
                 <input
                     value={email}
                     onChange={ (e)=> setEmail(e.target.value)}
@@ -82,7 +82,7 @@ console.log(state);
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Password</label>
+                <label className="form-label">Contrassenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
@@ -90,7 +90,7 @@ console.log(state);
                     className="form-control"
                 />
             </div>
-            <button type='submit' className="btn btn-danger">Update</button>
+            <button type='submit' className="btn btn-danger">Desa</button>
         </form>
         </div>
         </div>

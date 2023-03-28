@@ -45,7 +45,7 @@ const EditUser = () => {
         <Sidebar />
         <div className="mx-auto mt-3 text-success justify-content-center">
             <div>
-                <h3 className="text-success my-4 text-center">Edit l'usuari</h3>
+                <h3 className="text-success my-4 text-center">Edita el teu perfil</h3>
             </div>
         <form className="text-success" onSubmit={update}>
             <div className="mb-3">
@@ -76,7 +76,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Contrasenya</label>
+                <label className="form-label">Contrassenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
@@ -84,7 +84,7 @@ const EditUser = () => {
                     className="form-control"
                 />
             </div>
-            <button type='submit' className="btn btn-danger">Actualització</button>
+            <button type='submit' className="btn btn-danger">Desa</button>
         </form>
         </div>
         </div>

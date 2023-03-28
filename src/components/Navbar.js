@@ -39,12 +39,12 @@ function Navbar() {
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link className="nav-link" to="/login">
-            Accés
+          Inicia sessió
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/register">
-            Registre
+          Registra't
           </Link>
         </li>
       </ul>

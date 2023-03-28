@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/admin/footer/Footer";
 import { useLocation, Link} from "react-router-dom";
 import CallUser from "../../services/CallUser";
-import ShowAffiliate from "../../components/ShowAffiliate";
+
 
 function Profile() {
   
@@ -83,7 +83,7 @@ function Profile() {
       <Navbar />
 
       <main>
-      <ShowAffiliate />
+      
           <div className="m-5 text-success text-center">
           <h3>Hola {userName}!</h3>
           <h6>Aquest és el teu perfil amic de La Volta</h6> 
