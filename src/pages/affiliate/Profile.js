@@ -49,7 +49,7 @@ function Profile() {
 
   let divDonation = "";
 
-  if (state.state === null ||{state} === null) {
+  if (state.state === null) {
     divDonation = (
       <>
       <p className="m-3 text-success d-flex justify-content-center">
@@ -101,7 +101,7 @@ function Profile() {
         <button  onClick={() => stripeSubmit()} className="btn btn-danger">Paga</button>
         <div className="text-success"></div>
 
-        <Link to={`/affiliate/edit/${userId}`} className='btn btn-danger mx-2 mb-1'>show profile affiliate</Link>
+        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>show profile affiliate</Link>
      
       </main>
       <Footer />

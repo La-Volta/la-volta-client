@@ -1,13 +1,20 @@
 import axios from "axios";
 import React, {useState, useEffect} from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../components/admin/footer/Footer";
 import Navbar from "../../components/Navbar";
+
+
 
 
 const endpoint = 'http://localhost:8000/api/user/'
 
 const EditUser = () => {
+
+    const  {state}  = useLocation();
+console.log(state);
+
+
     const [name, setName] = useState('')
     const [lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
@@ -23,7 +30,7 @@ const EditUser = () => {
             email: email,
             password: password,
        })
-       navigate('/affiliate/profile')
+       navigate('/affiliate/profile', {state: {state}})
     }
 
     useEffect( () =>{
