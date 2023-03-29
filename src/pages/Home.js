@@ -61,7 +61,7 @@ function Home() {
             <h6 className="px-4 pt-5 mt-1 fs-3 text-success fw-bold">
             Fes-te amic de La Volta i aporta la teva donació
             </h6>
-            <h5 className="px-4 pt-1 fs-5 text-success"> Gràcies al teu suport, aquest projecte pugui seguir endavant </h5>
+            <h5 className="px-4 pt-1 fs-5 text-success"> Gràcies al teu suport, podem anar més lluny. </h5>
             <h6 className="px-4 pt-5 fs-6 text-success">
             Tria la quantia, afegeix les teves dades i completa el procéss de donació
             </h6>

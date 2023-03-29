@@ -4,6 +4,7 @@ import Footer from "../../components/admin/footer/Footer";
 import { useLocation, Link} from "react-router-dom";
 import CallUser from "../../services/CallUser";
 
+
 function Profile() {
   
   const  {state}  = useLocation();
@@ -25,7 +26,7 @@ function Profile() {
   if(state.state.amount === "25" && state.state.donationType === "anual") {donationId = 12}; 
 }
 
-  console.log(donationId)
+  console.log(donationId) 
 
   
 
@@ -70,21 +71,24 @@ function Profile() {
       <p className="text-success text-center"> 
         Pots canviar la teva aportació <span> <Link className="text-success" to="/" >aquí.</Link></span>
       </p>
-      
 
     </>
     );
   } 
+  const userName = window.localStorage.getItem('auth_name');
+  const userId = window.localStorage.getItem('auth_Id');
 
   return (
     <div className="sb-nav-fixed">
       <Navbar />
+
       <main>
+      
           <div className="m-5 text-success text-center">
-          <h3>Benvingudes!</h3>
+          <h3>Hola {userName}!</h3>
           <h6>Aquest és el teu perfil amic de La Volta</h6> 
           </div>
-          <div class="bg-success text-center">
+          <div className="bg-success text-center">
           <h6>Ajuda al fet que la Volta 
             faci realitat els seus projectes 
             culturals gràcies a 
@@ -94,10 +98,13 @@ function Profile() {
 
         
         <div>{divDonation}</div>
-        <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger">Paga</button>
+       
+          <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger m-5 text-whit d-flex justify-content-center mx-auto">Continuar amb el pagament</button>
+       
         <div className="text-success"></div>
 
-
+        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>show profile affiliate</Link>
+     
       </main>
       <Footer />
     </div>

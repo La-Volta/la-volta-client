@@ -16,6 +16,7 @@ function Navbar() {
       if (res.data.status === 200) {
         localStorage.removeItem("auth_token");
         localStorage.removeItem("auth_name");
+        localStorage.removeItem("auth_Id");
 
         Swal.fire({
           title: "S'ha desconnectat",
@@ -38,12 +39,12 @@ function Navbar() {
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link className="nav-link" to="/login">
-            Accés
+          Inicia sessió
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/register">
-            Registre
+          Registra't
           </Link>
         </li>
       </ul>
@@ -54,7 +55,7 @@ function Navbar() {
         <button
           type="button"
           onClick={logoutSubmit}
-          className="nav-link btn btn-sm text-white"
+          className="nav-link btn btn-danger btn-sm text-white"
         >
           Tanca sessió
         </button>
@@ -72,7 +73,7 @@ function Navbar() {
               alt="Logo"
               width="158"
               height="60"
-              class="d-inline-block align-text-top"
+              className="d-inline-block align-text-top"
             />
           </Link>
         </div>

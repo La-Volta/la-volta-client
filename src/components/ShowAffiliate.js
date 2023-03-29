@@ -5,56 +5,57 @@ import { Link } from 'react-router-dom';
 
 const endpoint = 'http://localhost:8000/api'
 
-const ShowUsers = () => {
+const ShowAffiliate = () => {
 
-    const [ users, setUsers ] = useState( [] )
+    const [ user, setUser ] = useState( [] )
     useEffect ( ()=> {
-        getAllUsers()
+        getFindUser()
     }, [])
+    console.log(user)
 
-
-
-    const getAllUsers = async () => {
-        const response = await axios.get(`${endpoint}/users`)
-        setUsers(response.data)
+    const getFindUser = async (id) => {
+        const response = await axios.get(`${endpoint}/user/${id}`)
+        .then(response => {
+        console.log(response.data.userId)
+        })
+        setUser(response.data)
     }
 
     const deleteUser = async (id) => {
        await axios.delete(`${endpoint}/user/${id}`)
-       getAllUsers()
+       getFindUser()
     }
   return (
     <div className='d-grid gap-2 row d-flex justify-content-center mx-auto'>
-        <Link to="/admin/create" className='btn btn-danger btn-sb mt-2 mb-1  text-white'>Crear nou afiliat</Link>
+        <Link to="/admin/create" className='btn btn-danger btn-sb mt-2 mb-1  text-white'>Create new affiliate</Link>
         <table className='table table-striped'>
             <thead className='bg-black text-white'>
                 <tr>
                     <th>Id</th>
-                    <th>Nom</th>
-                    <th>Cognom</th>
-                    <th>Correu Electrònic</th>
-                    <th>Acció</th>
+                    <th>Name</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                { users.map( (user) => (
+                { user => (
                 <tr className='text-success' key={user.id}>
                     <td className='text-success'> {user.id} </td>
                     <td className='text-success'> {user.name} </td>
                     <td className='text-success'> {user.lastname} </td>
                     <td className='text-success'> {user.email} </td>
                     <td>
-                        <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1'>Editar</Link>
-                        <button onClick={ ()=>deleteUser(user.id) } className='btn btn-danger mb-1'>Suprimir</button>
-                        <Link to={`/admin/payments/${user.id}`} className='btn btn-danger mx-2 mb-1'>Mostrar els Pagaments
-</Link>
+                        <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1'>Edit</Link>
+                        <button onClick={ ()=>deleteUser(user.id) } className='btn btn-danger mb-1'>Delete</button>
+                        <Link to={`/admin/payments/${user.id}`} className='btn btn-danger mx-2 mb-1'>Show Payments</Link>
                     </td>
                 </tr>
-                )) }
+                ) }
             </tbody>
         </table>
     </div>
   )
 }
 
-export default ShowUsers
+export default ShowAffiliate

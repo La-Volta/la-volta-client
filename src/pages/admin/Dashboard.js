@@ -2,7 +2,7 @@ import React from 'react';
 import NavbarAdmin from '../../components/admin/NavbarAdmin';
 import Sidebar from '../../components/admin/Sidebar';
 import Footer from '../../components/admin/footer/Footer';
-import ShowUsers from '../../components/admin/ShowUsers';
+
 
 
 
@@ -20,7 +20,8 @@ function Dashboard() {
             <div>
               <h1>Hola Admin!</h1>
               <h3>Aquest és el teu perfil admin de La Volta</h3>
-              <h4 className='mt-5'>Como admin puedes ver todos los usuarios, editar cada usuario, ver los pagos de cada usuario </h4>
+              <h4 className='mt-5'>Com administradora pots crear, veure, editar, suprimir usuaris. A més a més pots veure tols els pagaments.
+</h4>
             </div>
           </div>
           </div>
