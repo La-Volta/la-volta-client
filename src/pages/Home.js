@@ -27,9 +27,9 @@ function Home() {
           event.preventDefault();
           if(donationForm.donationType !== '' && donationForm.amount !== ''){
             if(!localStorage.getItem('auth_token')) {
-              navigate('/register', {state: donationForm});
+              navigate('/register', {state : donationForm});
             } else {
-              navigate('/affiliate/profile', {state: {state : donationForm}});
+              navigate('/affiliate/profile', {state : donationForm});
             }
             
           }

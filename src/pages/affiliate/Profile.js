@@ -8,12 +8,13 @@ import CallUser from "../../services/CallUser";
 function Profile() {
   
   const  {state}  = useLocation();
-  console.log(state);
+  
 
-  const amount = state.state.amount
-  const donationType = state.state.donationType
+
   let donationId = ''
-  if(state.state !== null){ 
+  if(state!== null){ 
+    const amount = state.amount
+    const donationType = state.donationType
   if(amount === "5" && donationType === "puntual") {donationId = 1};
   if(amount === "5" && donationType === "mensual") {donationId = 2};
   if(amount === "5" && donationType === "anual") {donationId = 3}; 
@@ -45,7 +46,7 @@ function Profile() {
 
   let divDonation = "";
 
-  if (state.state === null) {
+  if (state === null) {
     divDonation = (
       <>
       <p className="m-3 text-black d-flex justify-content-center">
@@ -57,12 +58,12 @@ function Profile() {
      </p>
      </>
     );
-  } else if (state.state) {
+  } else if (state) {
     divDonation = (
     <div>
       <p className="text-black d-flex justify-content-center">
-        Tens un import {donationType} pendent de
-        pagament de {amount}€.
+        Tens un import {state.donationType} pendent de
+        pagament de {state.amount}€.
       </p>
       <p className="text-black text-center"> 
         Pots canviar la teva aportació <span> <Link className="text-black" to="/" >aquí.</Link></span>
