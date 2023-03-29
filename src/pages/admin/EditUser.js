@@ -11,7 +11,7 @@ const EditUser = () => {
     const [name, setName] = useState('')
     const [lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [password, setPassword] = useState('auth_token')
     const navigate = useNavigate()
     const {id} = useParams()
     
