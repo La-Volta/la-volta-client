@@ -10,8 +10,11 @@ import '../../styles.css';
 
 
 function Login() {
-    const {state} = useLocation();
-  console.log(state)
+    const state = useLocation();
+ 
+  console.log(state.state)
+
+  const donationForm = state.state
 
     const navigate = useNavigate();
     
@@ -51,7 +54,7 @@ function Login() {
                     else
                     {
 
-                        navigate('/affiliate/profile', {state: {state}});
+                        navigate('/affiliate/profile', {state: donationForm});
 
                     }
                 }
@@ -109,7 +112,7 @@ function Login() {
                                 </form>
 
                                 <div className="text-center bg-warning">
-                                    <h6 className='px-4 pt-5 fs-6 text-success'>Si encara no ets usuari, resgista't<span> <Link className="text-success" to="/register" state={state}>
+                                    <h6 className='px-4 pt-5 fs-6 text-success'>Si encara no ets usuari, resgista't<span> <Link className="text-success" to="/register" state={donationForm}>
                         aquí.
                       </Link>
                       </span>
