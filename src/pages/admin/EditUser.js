@@ -76,7 +76,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Contrassenya</label>
+                <label className="form-label">Contrasenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}

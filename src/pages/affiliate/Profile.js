@@ -88,21 +88,19 @@ function Profile() {
         <div className="m-5 text-success text-center">
           <h3>Hola {userName}!</h3>
           <h6>Aquest és el teu perfil amic de La Volta</h6> 
-        </div>
-        <div className="bg-success text-center">
-          <h6>Ajuda al fet que la Volta 
+          </div>
+          <div className="bg-success text-center">
+          <h6>Ajuda a que La Volta 
             faci realitat els seus projectes 
             culturals gràcies a 
             una donació</h6>
-        
+          </div>
        
         <div>{divDonation}</div>
         <div className="text-success"></div>
-        </div>
-        <div className="bg-success text-center">
-          <h6>Vols configurar la compte?</h6>
-          <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>Compte</Link>
-        </div>
+
+        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>show profile affiliate</Link>
+     
       </main>
       <Footer />
 
