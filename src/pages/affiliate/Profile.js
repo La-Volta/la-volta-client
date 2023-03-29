@@ -10,28 +10,24 @@ function Profile() {
   const  {state}  = useLocation();
   console.log(state);
 
+  const amount = state.state.amount
+  const donationType = state.state.donationType
   let donationId = ''
   if(state.state !== null){ 
-  if(state.state.amount === "5" && state.state.donationType === "puntual") {donationId = 1};
-  if(state.state.amount === "5" && state.state.donationType === "mensual") {donationId = 2};
-  if(state.state.amount === "5" && state.state.donationType === "anual") {donationId = 3}; 
-  if(state.state.amount === "10" && state.state.donationType === "puntual") {donationId = 4};
-  if(state.state.amount === "10" && state.state.donationType === "mensual") {donationId = 5};
-  if(state.state.amount === "10" && state.state.donationType === "anual") {donationId = 6}; 
-  if(state.state.amount === "15" && state.state.donationType === "puntual") {donationId = 7};
-  if(state.state.amount === "15" && state.state.donationType === "mensual") {donationId = 8};
-  if(state.state.amount === "15" && state.state.donationType === "anual") {donationId = 9}; 
-  if(state.state.amount === "25" && state.state.donationType === "puntual") {donationId = 10};
-  if(state.state.amount === "25" && state.state.donationType === "mensual") {donationId = 11};
-  if(state.state.amount === "25" && state.state.donationType === "anual") {donationId = 12}; 
+  if(amount === "5" && donationType === "puntual") {donationId = 1};
+  if(amount === "5" && donationType === "mensual") {donationId = 2};
+  if(amount === "5" && donationType === "anual") {donationId = 3}; 
+  if(amount === "10" && donationType === "puntual") {donationId = 4};
+  if(amount === "10" && donationType === "mensual") {donationId = 5};
+  if(amount === "10" && donationType === "anual") {donationId = 6}; 
+  if(amount === "15" && donationType === "puntual") {donationId = 7};
+  if(amount === "15" && donationType === "mensual") {donationId = 8};
+  if(amount === "15" && donationType === "anual") {donationId = 9}; 
+  if(amount === "25" && donationType === "puntual") {donationId = 10};
+  if(amount === "25" && donationType === "mensual") {donationId = 11};
+  if(amount === "25" && donationType === "anual") {donationId = 12}; 
 }
 
-  console.log(donationId) 
-
-  
-
-
-  
    async function stripeSubmit(id){
     await CallUser().checkout(id).then((res) => {
       console.log(res.data.url)
@@ -65,8 +61,8 @@ function Profile() {
     divDonation = (
     <div>
       <p className="text-black d-flex justify-content-center">
-        Tens un import {state.state.donationType} pendent de
-        pagament de {state.state.amount}€.
+        Tens un import {donationType} pendent de
+        pagament de {amount}€.
       </p>
       <p className="text-black text-center"> 
         Pots canviar la teva aportació <span> <Link className="text-black" to="/" >aquí.</Link></span>
