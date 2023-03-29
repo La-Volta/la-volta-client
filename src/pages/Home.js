@@ -51,10 +51,10 @@ function Home() {
         }     
 
   return (
-    <div>
+      <>
       <Navbar />
 
-<div>
+
       <div className="bg-success">
         <div className="bg-warning border rounded rounded-3 border-5 border-success">
           <div className="text-center">
@@ -73,6 +73,7 @@ function Home() {
         
         <form id="form" onSubmit={validationForm}> 
           <fieldset className="text-white d-flex justify-content-center" required>    
+
               <div className="m-4">
                 <div class="form-check">
                   <input
@@ -81,10 +82,11 @@ function Home() {
                     name="donationType"
                     id="gridRadios1"
                     value="puntual"
-                    onChange={handleInput}
-                  />
-          <label class="form-check-label" for="gridRadios1">Donació puntual</label>
-            </div>
+                    onChange={handleInput}/>
+
+                    <label class="form-check-label" for="gridRadios1">Donació puntual</label>
+                </div>
+
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -94,8 +96,9 @@ function Home() {
                   id="gridRadios2"
                   onChange={handleInput}/>
 
-          <label class="form-check-label" for="gridRadios2">Donació mensual</label>
-            </div>
+                <label class="form-check-label" for="gridRadios2">Donació mensual</label>
+              </div>
+
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -105,42 +108,37 @@ function Home() {
                   id="gridRadios2"
                   onChange={handleInput}/>
 
-          <label class="form-check-label" for="gridRadios2">Donació anual</label>
-          </div>
-          </div>
-          </fieldset>
-      <fieldset required>
-
-            <div>
-              <div class="btn-pagos gap-3 mx-auto pt-4 pb-4">
-                <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
-                <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
-                <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
-                <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="25" onClick={handleInput}>25 €</button>
+                <label class="form-check-label" for="gridRadios2">Donació anual</label>
               </div>
             </div>
-      
-     
+
+          </fieldset>
+
+          <fieldset required>
+            <div class="btn-pagos gap-3 mx-auto pt-4 pb-4">
+              <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
+              <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
+              <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>
+              <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="25" onClick={handleInput}>25 €</button>
+            </div>
+  
             <div className="d-flex justify-content-center pt-5">
               <button type="submit" className="col-4 btn btn-success btn-lg text-center">
-               <p className="text-css px-4 pt-3 fs-6 fw-bold">Afegeix el teu import voluntari</p> 
+              <p className="text-css px-4 pt-3 fs-6 fw-bold">Afegeix el teu import voluntari</p> 
               </button>
             </div>
-      </fieldset>
-              <div class="d-flex justify-content-center">
-                <button type="submit" className="boton-seguent btn btn-danger mt-5 btn-lg" >
-                <h6 className="m-3">Següent pas</h6>
-              </button>
-              </div>
-            </form>
+          </fieldset>
+          <div class="d-flex justify-content-center">
+            <button type="submit" className="boton-seguent btn btn-danger mt-5 btn-lg" >
+              <h6 className="m-3">Següent pas</h6>
+            </button>
           </div>
+        </form>
         </div>
-</div>
+      </div>
 
-      
       <Footer />
-
-    </div>
+    </>
   );
 }
 
