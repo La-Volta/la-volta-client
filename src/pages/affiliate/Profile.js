@@ -69,7 +69,7 @@ function Profile() {
         pagament de {state.state.amount}€.
       </p>
       <p className="text-black text-center"> 
-        Pots canviar la teva aportació <span> <Link className="text-success" to="/" >aquí.</Link></span>
+        Pots canviar la teva aportació <span> <Link className="text-black" to="/" >aquí.</Link></span>
       </p>
       <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger my-5 text-whit d-flex justify-content-center mx-auto">Continuar amb el pagament</button>
        
