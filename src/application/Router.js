@@ -13,6 +13,7 @@ import Payments from '../pages/admin/Payments';
 import CreateUser from '../pages/admin/CreateUser';
 import Success from '../pages/affiliate/Success';
 import Cancellation from '../pages/affiliate/Cancellation';
+import EditAffiliate from '../pages/affiliate/EditAffiliate';
 
 
 const Router = () => {
@@ -37,12 +38,11 @@ const Router = () => {
             <Route path="profile" element={<Profile/>} />
             <Route path="payment/success" element={<Success/>} />
             <Route path="payment/cancellation" element={<Cancellation/>} />
+            <Route path="edit/:id" element={<EditAffiliate/>} />
           </Route>
 
-        </Routes>
-        
-        
-    </BrowserRouter>
+        </Routes> 
+        </BrowserRouter>
   )
 }
 
