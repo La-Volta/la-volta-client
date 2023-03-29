@@ -28,7 +28,7 @@ console.log(state);
             email: email,
             password: password,
        })
-       navigate('/affiliate/profile',  {state})
+       navigate('/affiliate/profile', {state: state})
     }
 
     useEffect( () =>{
