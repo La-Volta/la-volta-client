@@ -52,9 +52,9 @@ function Profile() {
   if (state.state === null) {
     divDonation = (
       <>
-      <p className="m-3 text-success d-flex justify-content-center">
+      <p className="m-3 text-black d-flex justify-content-center">
         Vols fer una nova donació?
-      <span> <Link className="m-3 text-success" to="/" >
+      <span> <Link className="m-3 text-black" to="/" >
        aquí.
      </Link>
      </span>
@@ -94,14 +94,18 @@ function Profile() {
             faci realitat els seus projectes 
             culturals gràcies a 
             una donació</h6>
-          </div>
+          
        
         <div>{divDonation}</div>
         <div className="text-success"></div>
+        </div>
+        <div>
+        <h6>Vols canviar el teu compte amic</h6>
+        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>Compte </Link>
+        </div>
 
-        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>show profile affiliate</Link>
-     
       </main>
+      
       <Footer />
 
     </div>
