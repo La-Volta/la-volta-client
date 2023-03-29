@@ -90,7 +90,12 @@ console.log(state);
                     className="form-control"
                 />
             </div>
+            <div>
             <button type='submit' className="btn btn-danger">Desa</button>
+            </div>
+            <div>
+            <button type='submit' className="btn btn-danger">Suprimir</button>
+            </div>
         </form>
         </div>
         </div>
