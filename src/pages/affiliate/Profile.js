@@ -99,9 +99,9 @@ function Profile() {
         <div>{divDonation}</div>
         <div className="text-success"></div>
         </div>
-        <div>
+        <div className="pb-5 pt-5 m-5 text-success text-center">
         <h6>Vols canviar el teu compte amic</h6>
-        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>Compte </Link>
+        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1 m-t-5 a'>Compte </Link>
         </div>
 
       </main>

@@ -46,7 +46,7 @@ console.log(state);
     return (
         <div>
         <Navbar />
-        <h2 className="text-success my-4 text-center">Compte</h2>
+        <h2 className="text-success my-4 text-center"> La meva compte amic</h2>
     
         <div className='d-flex'>
         <div className="mx-auto mt-3 text-success justify-content-center">
