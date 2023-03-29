@@ -16,7 +16,7 @@ console.log(state);
     const [name, setName] = useState('')
     const [lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [password, setPassword] = useState('auth_token')
     const navigate = useNavigate()
     const {id} = useParams()
     
@@ -46,7 +46,7 @@ console.log(state);
     return (
         <div>
         <Navbar />
-        <h2 className="text-success my-4 text-center">Compte</h2>
+        <h2 className="text-success my-4 text-center"> La meva compte amic</h2>
     
         <div className='d-flex'>
         <div className="mx-auto mt-3 text-success justify-content-center">
@@ -82,7 +82,7 @@ console.log(state);
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Contrassenya</label>
+                <label className="form-label">Contrasenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}

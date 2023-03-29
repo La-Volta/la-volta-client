@@ -52,9 +52,9 @@ function Profile() {
   if (state.state === null) {
     divDonation = (
       <>
-      <p className="m-3 text-success d-flex justify-content-center">
+      <p className="m-3 text-black d-flex justify-content-center">
         Vols fer una nova donació?
-      <span> <Link className="m-3 text-success" to="/" >
+      <span> <Link className="m-3 text-black" to="/" >
        aquí.
      </Link>
      </span>
@@ -63,16 +63,17 @@ function Profile() {
     );
   } else if (state.state) {
     divDonation = (
-      <>
-      <p className="text-success d-flex justify-content-center">
+    <div>
+      <p className="text-black d-flex justify-content-center">
         Tens un import {state.state.donationType} pendent de
         pagament de {state.state.amount}€.
       </p>
-      <p className="text-success text-center"> 
-        Pots canviar la teva aportació <span> <Link className="text-success" to="/" >aquí.</Link></span>
+      <p className="text-black text-center"> 
+        Pots canviar la teva aportació <span> <Link className="text-black" to="/" >aquí.</Link></span>
       </p>
-
-    </>
+      <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger my-5 text-whit d-flex justify-content-center mx-auto">Continuar amb el pagament</button>
+       
+    </div>
     );
   } 
   const userName = window.localStorage.getItem('auth_name');
@@ -84,29 +85,29 @@ function Profile() {
 
       <main>
       
-          <div className="m-5 text-success text-center">
+        <div className="m-5 text-success text-center">
           <h3>Hola {userName}!</h3>
           <h6>Aquest és el teu perfil amic de La Volta</h6> 
           </div>
           <div className="bg-success text-center">
-          <h6>Ajuda al fet que la Volta 
+          <h6>Ajuda a que La Volta 
             faci realitat els seus projectes 
             culturals gràcies a 
             una donació</h6>
-          </div>
-
-
-        
+          
+       
         <div>{divDonation}</div>
-       
-          <button  onClick={() => stripeSubmit(donationId)} className="btn btn-danger m-5 text-whit d-flex justify-content-center mx-auto">Continuar amb el pagament</button>
-       
         <div className="text-success"></div>
+        </div>
+        <div className="pb-5 pt-5 m-5 text-success text-center">
+        <h6>Vols canviar el teu compte amic</h6>
+        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1 m-t-5 a'>Compte </Link>
+        </div>
 
-        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1'>show profile affiliate</Link>
-     
       </main>
+      
       <Footer />
+
     </div>
   );
 }
