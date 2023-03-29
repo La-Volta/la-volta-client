@@ -34,34 +34,42 @@ const CallUser = () => {
         return res;
     };
 
-
-    // const trash = async (id) => {
-    //     let urlActivity = `${url}/${id}`;
-    //     const res = await axios.delete(urlActivity);
-    //     return res;
-    // };
-
-
     const postRegister = async (data) => {
         const res = await axios.post(`/api/register`, data);
         return res;
     };
-   
 
-    /*const update = async (data) => {
-        let urlID = `${url}/${data.id}`;
-        const res = await axios.put(urlID, data);
+    const allOrders = async () => {
+        const res = await axios.get(`/api/orders`);
         return res;
-    };*/
+    };
+
+    const payments = async () => {
+        const res = await axios.get(`/api/orders/payments`);
+        return res;
+    };
+
+    const orderByUser = async (id) => {
+        const res = await axios.get(`/api/orders/user/${id}`);
+        return res;
+    };
+   
+    const deleteOrder = async (id) => {
+        const res = await axios.delete(`/api/order/destroy/${id}`);
+        return res;
+    };
+
 
     
  
     return {
         getCookies,
+        allOrders,
+        payments,
+        orderByUser,
+        deleteOrder,
         checkout,
-        // trash,
         postRegister,
-        //update,
         logout,
         postLogin,
     };
