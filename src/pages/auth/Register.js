@@ -66,7 +66,7 @@ function Register() {
               Fes-te amic de La Volta
             </h6>
             <h6 className="px-4 pt-5 fs-6 text-success">
-              Per a fer efectiva la donació és necessari registrar-se i seguir
+              Per fer efectiva la donació és necessari registrar-se i seguir
               els passos indicats
             </h6>
           </div>
@@ -121,7 +121,7 @@ function Register() {
 
                       <div className="form-group mb-3">
                         <label className="text-secondary" for="password">
-                          Contrassenya
+                          Contrasenya
                         </label>
                         <input
                           type="password"

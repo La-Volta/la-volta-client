@@ -40,7 +40,7 @@ const CreateUser = () => {
         <Sidebar />
         <div className="mx-auto mt-3 text-success justify-content-center">
             <div>
-                <h3 className="text-success text-center">Crear nou l'usuari</h3>
+                <h3 className="text-success text-center">Crea un nou usuari</h3>
             </div>
         <form className="text-success" onSubmit={store}>
             <div className="mb-3">
