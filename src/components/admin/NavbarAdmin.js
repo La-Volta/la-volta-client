@@ -44,10 +44,10 @@ function NavbarAdmin() {
         AuthButtons = (
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link className="nav-link" to="/login">Accés</Link>
+                    <Link className="nav-link" to="/login">Inicia sessió</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/register">Registre</Link>
+                    <Link className="nav-link" to="/register">Registra't</Link>
                 </li>
             </ul>
         );
