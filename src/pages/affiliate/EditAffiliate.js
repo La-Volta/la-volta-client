@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../components/admin/footer/Footer";
 import Navbar from "../../components/Navbar";
-
+import '../../styles.css';
 
 const endpoint = 'http://localhost:8000/api/user/'
 
@@ -94,7 +94,7 @@ console.log(state);
             <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
             </div>
             <div>
-            <button type='submit' className="btn btn-danger my-2">Donar-te de baixa de la Volta</button>
+            <button type='submit' className="text-css fs-6 btn btn-danger my-2">Donar-te de baixa de la Volta</button>
             </div>
         </form>
         </div>
