@@ -61,18 +61,15 @@ p{
 
 .section-amic-left{
     width: 30%;
-    height: 50%;
+    height: 70%;
     margin-left: 20%;
 }
 
 .section-amic-right{
     width: 30%;
-    height: 50%;
-    margin-right: 20%;
+    height: 70%;
+    /*margin-right: 10%;*/
 }
 
-.section-amic-text{
-    padding: 15%;
-    flex-wrap: wrap;
-}
+
 
