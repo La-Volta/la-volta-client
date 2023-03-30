@@ -46,7 +46,7 @@ console.log(state);
     return (
         <div>
         <Navbar />
-        <h2 className="text-css fs-6 text-success my-4 text-center"> La meva compte amic</h2>
+        <h2 className="text-css fs-6 text-success my-2 text-center"> La meva compte amic</h2>
     
         <div className='d-flex'>
         <div className="mx-auto mt-3 text-success justify-content-center">
@@ -94,7 +94,7 @@ console.log(state);
             <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
             </div>
             <div>
-            <button type='submit' className="btn btn-danger">Suprimir</button>
+            <button type='submit' className="btn btn-danger my-2">Donar-te de baixa de la Volta</button>
             </div>
         </form>
         </div>
