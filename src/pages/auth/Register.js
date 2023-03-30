@@ -44,8 +44,9 @@ function Register() {
               localStorage.setItem("auth_Id", res.data.userId);
               Swal.fire({
               title: "S'ha registrat correctament",
-              color: '#87EA00',
-              background: '#1B1D1F'
+              color: 'white',
+              background: '#87EA00',
+              confirmButtonColor: '#8506A9',
               
             })
               navigate("/affiliate/profile", {state : donationForm});

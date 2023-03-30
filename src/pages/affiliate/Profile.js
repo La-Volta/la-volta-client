@@ -50,9 +50,9 @@ function Profile() {
   if (state === null) {
     divDonation = (
       <>
-      <p className="m-3 text-black d-flex justify-content-center">
+      <p className="m-3 text-black justify-content-center">
         Vols fer una nova donació?
-      <span> <Link className="m-3 text-css btn btn-danger mx-2 mb-4 mt-5 d-flex justify-content-center" to="/" >
+      <span> <Link className="text-css btn btn-danger mt-4 d-flex justify-content-center mx-auto" to="/" >
        Aquí
      </Link>
      </span>
@@ -87,25 +87,26 @@ function Profile() {
           <h6>Aquest és el teu perfil amic de La Volta</h6> 
         </div>
         <div className="justify-content-center mx-auto">
-        <div className="section-amic">
-          <div className="bg-success text-center rounded-2">
-            <div className="section-amic-text">
+        <div className="section-amic justify-content-center mx-auto">
+          <div className="section-amic-left bg-success text-center rounded-2 mb-4 ms-3">
+            <div className="section-amic-text mt-3 mx-3">
               <h6>Ajuda a que La Volta faci realitat els seus projectes culturals gràcies a una donació</h6>
             </div>
           <div>{divDonation}</div>
           <div className="text-success"></div>
         </div>
-        <div className="section-amic-right bg-success text-center rounded-2">
-          <div className="section-amic-text">
+        <div className="section-amic-right bg-success text-center rounded-2 ms-3 me-3 ">
+          <div className="section-amic-text mt-3 mb-4 mx-3">
             <h6>Vols canviar el teu compte amic</h6>
-            <Link to={`/affiliate/edit/${userId}`} state={state} className='text-css btn btn-danger mx-2 mb-4 mt-5'>Compte</Link>
+            <Link to={`/affiliate/edit/${userId}`} state={state} className='text-css btn btn-danger mt-4 d-flex justify-content-center mx-auto'>Compte</Link>
           </div>
           </div>
         </div>
         </div>
       </main>
-      
+      <div className="sb-topnav">
       <Footer />
+      </div>
 
     </div>
   );
