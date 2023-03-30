@@ -2,3 +2,7 @@
    min-height: 60vh;
    width: 10rem;
 }
+
+.text-css{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

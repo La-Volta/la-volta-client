@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../../components/admin/footer/Footer";
 import NavbarAdmin from "../../components/admin/NavbarAdmin";
 import Sidebar from "../../components/admin/Sidebar";
+import '../../styles.css';
 
 const endpoint = 'http://localhost:8000/api/user/'
 
@@ -38,9 +39,9 @@ const CreateUser = () => {
         <NavbarAdmin />
         <div className='d-flex'>
         <Sidebar />
-        <div className="mx-auto mt-3 text-success justify-content-center">
-            <div>
-                <h3 className="text-css fs-6 text-success text-center">Crea un nou usuari</h3>
+        <div className="mx-auto mt-3 text-white justify-content-center">
+            <div className="">
+                <h3 className="text-css fs-4 text-success text-center">Crea un nou usuari</h3>
             </div>
         <form className="text-success" onSubmit={store}>
             <div className="mb-3">
@@ -62,8 +63,7 @@ const CreateUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="text-css fs-6 form-label">Correu Electrònic
-</label>
+                <label className="text-css fs-6 form-label">Correu Electrònic</label>
                 <input
                     value={email}
                     onChange={ (e)=> setEmail(e.target.value)}
@@ -79,14 +79,18 @@ const CreateUser = () => {
                     type='password'
                     className="form-control"
                 />
-            </div>
+            </div>  
+            <div className="d-flex justify-content-center mx-auto">
             <button type='submit' className="text-css fs-6 btn btn-danger">Emmagatzemar</button>
+            </div> 
         </form>
-        </div>
-        </div>
         
-        <Footer />
+           
+        
         </div>
+    </div>
+    <Footer />
+    </div>
         
     )
 
