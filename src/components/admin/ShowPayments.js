@@ -35,7 +35,7 @@ function ShowPayments() {
   return (
     <div>
         <div className='d-grid gap-2 row d-flex justify-content-center mx-auto'>
-        <h4 className='text-success text-center'> pagaments reeixits </h4>
+        <h4 className='text-success text-center'> Pagaments reeixits </h4>
         <table className='table table-striped'>           
             <thead className='bg-black text-white'>               
                 <tr>
@@ -66,6 +66,7 @@ function ShowPayments() {
             </tbody>
         </table>
 
+        <h4 className='text-success text-center'>Pagaments fallits</h4>
 
         <table className='table table-striped'>
             <thead className='bg-black text-white'>
