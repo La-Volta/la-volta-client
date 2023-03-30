@@ -1,70 +1,51 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Información General :ledger:
+***
+La Asociación cultural La Volta ofrece diferentes modalidades de socio para que artistas, artesanos, gestores y creadores desarrollen su proyecto profesional de autoempleo a través del ecosistema de La Volta.
+La acción de La Volta gira en torno a los residentes y los proyectos de creación que materializarán a lo largo de la residencia de dos años, prorrogable a través de otras categorías de socios, para acompañar el proceso creativo y potenciar la retroalimentación con otros creadores, públicos o entidades.
+***
+**Nuestro objetivo es ampliar su sistema de socias/os para recibir contribuciones económicas y ofrecerles beneficios por su aporte a partir de la web que estamos creando. La Volta ya tiene su propia web en WordPress.**
+***
+Este diseño hace parte del proyecto final del bottcamps ***Femcoders*** de [Factoria F5](https://factoriaf5.org/) :woman_student:
 
-## Available Scripts
+### Screenshot
+![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+## Tecnologias
+***
+Metodologias y herramientas: :toolbox:
+* [Trello](https://trello.com/b/Ls3plE0O/kanban-la-volta) 
+* [Visual Studio](https://code.visualstudio.com/)
+* [GitHub](https://github.com/La-Volta/la-volta-client/edit/main/README.md)
+* [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+* [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+* [React](https://es.reactjs.org/)
+* [Sass](https://sass-lang.com/)
+* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+* [Figama](https://www.figma.com/file/uxSfTva6l0hcZhLCf5MgES/La-Volta?node-id=1-15)
+## Instalación
+***
+1. Clonar el proyecto 
+```
+gh repo clone La-Volta/la-volta-client
+```
+2. Ir al directorio del proyecto
+```
+cd la-volata-client
+```
+3. Instalar dependencias
+```
+  npm install
+```
+```
+  composer install
+```
 
-In the project directory, you can run:
+***Enlace para el repositorio de la [api](https://github.com/La-Volta/la-volta-api)***
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Miembros del equipo
+***
+* [Maricarmen](https://github.com/marchuovi) :penguin:
+* [Amelie](https://github.com/AmelieLT) :hatched_chick:
+* [Juliana](https://github.com/JulianaMZa) :flamingo:
+* [Bianca](https://github.com/bgiudicid) :parrot:
+* [Luisa](https://github.com/LuisaVAZ) :owl:
