@@ -9,7 +9,13 @@ La acción de La Volta gira en torno a los residentes y los proyectos de creaci�
 Este diseño hace parte del proyecto final del bottcamps ***Femcoders*** de [Factoria F5](https://factoriaf5.org/) :woman_student:
 
 ### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text1](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text2](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text3](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text4](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text4](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+
+
 ## Tecnologias
 ***
 Metodologias y herramientas: :toolbox:
@@ -26,18 +32,25 @@ Metodologias y herramientas: :toolbox:
 ***
 1. Clonar el proyecto 
 ```
-gh repo clone La-Volta/la-volta-client
+git remote add origin https:La-Volta/la-volta-client
 ```
-2. Ir al directorio del proyecto
+2. Necesitamos configurar una rama ascendente y establecer el control remoto como origen
 ```
-cd la-volata-client
+ git push --set-upstream origin master
 ```
-3. Instalar dependencias
+3. Para que podamos cargar nuestra aplicación creada en GitHub Pages, primero debemos instalar el paquete gh-pages.
+
 ```
-  npm install
+  yarn add gh-pages
 ```
+4. Para desplegar nuestra aplicación, escribe lo siguiente en la terminal
 ```
-  composer install
+  npm run deploy
+```
+5. 
+```
+yarn add react-router-dom
+
 ```
 
 ***Enlace para el repositorio de la [api](https://github.com/La-Volta/la-volta-api)***
