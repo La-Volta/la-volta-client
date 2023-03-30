@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/admin/footer/Footer";
+import '../../styles.css';
 
 function Register() {
   const state = useLocation();
@@ -80,7 +81,7 @@ function Register() {
                   <div className="card-body bg-warning text-secondary">
                     <form onSubmit={registerSubmit}>
                       <div className="form-group mb-3">
-                        <label className="text-css text-success mb-2 fs-6" for="name">
+                        <label className="text-css fs-6 text-success mb-2 " for="name">
                           Nom
                         </label>
                         <input
