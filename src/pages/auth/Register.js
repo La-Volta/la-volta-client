@@ -65,10 +65,10 @@ function Register() {
       <div className="bg-success ">
         <div className=" bg-warning border rounded rounded-3 border-5 border-success">
           <div className="text-center">
-            <h6 className="pt-5 fs-3 fw-bold text-success">
+            <h6 className="text-css fs-3 pt-5 fw-bold text-success">
               Fes-te amic de La Volta
             </h6>
-            <h6 className="px-4 pt-5 fs-6 text-success">
+            <h6 className="px-4 pt-5 fs-5 text-success text-css">
               Per fer efectiva la donació és necessari registrar-se i seguir
               els passos indicats
             </h6>
@@ -138,7 +138,7 @@ function Register() {
                         </span>
                       </div>
                       <div className="form-group mb-3 text-center">
-                        <button type="submit" className="btn btn-danger text-css mt-3">
+                        <button type="submit" className="btn btn-danger text-css fs-5 mt-3">
                           Registra't
                         </button>
                       </div>
@@ -146,9 +146,9 @@ function Register() {
                   </div>
 
                   <div className="text-center bg-warning">
-                    <h6 className="px-4 pt-5 fs-6 text-success">
+                    <h6 className="text-css px-4 pt-5 fs-6 text-success">
                       Si ja teniu un compte d'usuari, accediu al vostre perfil
-                      <span> <Link className="text-success" to="/login" state={donationForm}>
+                      <span> <Link className="text-success text-css fs-6" to="/login" state={donationForm}>
                         aquí.
                       </Link>
                       </span>

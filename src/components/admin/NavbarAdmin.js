@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import logo from '../../assets/images/logoheader.png';
 import Swal from 'sweetalert2';
-//import '../styles.css';
+import '../../styles.css';
 
 import CallUser from '../../services/CallUser';
 
@@ -56,7 +56,7 @@ function NavbarAdmin() {
     {
         AuthButtons = (
             <li className="nav-item">
-                <button type="button" onClick={logoutSubmit} className="nav-link btn btn-danger btn-sm text-white">Tanca sessió</button>
+                <button type="button" onClick={logoutSubmit} className="text-css fs-5 nav-link btn btn-danger btn-sm text-white">Tanca sessió</button>
             </li>
         );
     }
@@ -75,7 +75,7 @@ function NavbarAdmin() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/">Inici</Link>
+                            <Link className="nav-link active text-css fs-5" to="/">Inici</Link>
                         </li>
                 {AuthButtons}   
                     </ul>
