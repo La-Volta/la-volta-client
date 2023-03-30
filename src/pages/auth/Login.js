@@ -60,7 +60,7 @@ function Login() {
                     Swal.fire({
                         icon: 'error',
                         iconColor:'white',
-                        title: "Error",
+                        title: "Revisa les teves dades. Hi ha un error",
                         color: 'white',
                         background: '#87EA00',
                         showConfirmButton: false,
@@ -82,7 +82,7 @@ function Login() {
             <div className='bg-success'>
             <div className='bg-warning border rounded rounded-3 border-5 border-success'>
             <div className="container py-5">
-            <p className='px-4 pt-5 mt-1 fs-4 text-success justify-content-center'>Per entrar al teu perfil personal, necessites iniciar sessió</p>
+            <p className='px-4 pt-5 mt-1 fs-4 text-success text-center'>Per entrar al teu perfil personal, necessites iniciar sessió</p>
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="card border-0">
@@ -93,17 +93,17 @@ function Login() {
                             <div className="card-body bg-warning">
                                 <form onSubmit={loginSubmit}>
                                     <div className="form-group mb-3">
-                                        <label className="text-secondary">Correu electrònic</label>
+                                        <label className="text-css text-secondary mb-2 fs-6">Correu electrònic</label>
                                         <input type="email" name="email" onChange={handleInput} value={loginInput.email} className="form-control" />
                                         <span>{loginInput.error_list.email}</span>
                                     </div>
                                     <div className="form-group mb-3">
-                                        <label className="text-secondary">Contrasenya</label>
+                                        <label className="text-css text-secondary mb-2 fs-6">Contrasenya</label>
                                         <input type="password" name="password" onChange={handleInput} value={loginInput.password} className="form-control" />
                                         <span>{loginInput.error_list.password}</span>
                                     </div>
                                     <div className="form-group mb-3 text-center">
-                                        <button type="submit" className="btn btn-danger
+                                        <button type="submit" className="text-css btn btn-danger mt-3
                                         ">Inicia sessió</button>
                                     </div>
                                 </form>

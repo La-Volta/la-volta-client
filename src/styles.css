@@ -38,10 +38,40 @@ h6{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .text-css{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .logo-home{
     padding-left: -1;
 }
+
+.section-amic{
+    display: flex;
+}
+
+.section-amic-left{
+    width: 30%;
+    height: 50%;
+    margin-left: 20%;
+}
+
+.section-amic-right{
+    width: 30%;
+    height: 50%;
+    margin-right: 20%;
+}
+
+.section-amic-text{
+    padding: 15%;
+    flex-wrap: wrap;
+}
+

@@ -58,7 +58,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Cognom</label>
+                <label className="text-css fs-6 form-label">Cognom</label>
                 <input
                     value={lastname}
                     onChange={ (e)=> setLastname(e.target.value)}
@@ -67,7 +67,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Correu Electrònic</label>
+                <label className="text-css fs-6 form-label">Correu Electrònic</label>
                 <input
                     value={email}
                     onChange={ (e)=> setEmail(e.target.value)}
@@ -76,7 +76,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Contrasenya</label>
+                <label className="text-css fs-6 form-label">Contrasenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
@@ -84,7 +84,7 @@ const EditUser = () => {
                     className="form-control"
                 />
             </div>
-            <button type='submit' className="btn btn-danger">Desa</button>
+            <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
         </form>
         </div>
         </div>

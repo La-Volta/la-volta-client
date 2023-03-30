@@ -86,23 +86,34 @@ function Profile() {
       <main>
       
         <div className="m-5 text-success text-center">
-          <h3>Hola {userName}!</h3>
+          <h3 className="text-css fs-2 mb-3">Hola {userName}!</h3>
           <h6>Aquest és el teu perfil amic de La Volta</h6> 
           </div>
-          <div className="bg-success text-center">
-          <h6>Ajuda a que La Volta 
-            faci realitat els seus projectes 
-            culturals gràcies a 
-            una donació</h6>
-          
-       
-        <div>{divDonation}</div>
-        <div className="text-success"></div>
-        </div>
-        <div className="pb-5 pt-5 m-5 text-success text-center">
-        <h6>Vols canviar el teu compte amic</h6>
-        <Link to={`/affiliate/edit/${userId}`} state={state} className='btn btn-danger mx-2 mb-1 m-t-5 a'>Compte </Link>
-        </div>
+
+          <div className="section-amic">
+            <div className="section-amic-left bg-success text-center rounded-2 m-5">
+              <div className="section-amic-text">
+                <h6>Ajuda a que La Volta 
+                  faci realitat els seus projectes 
+                  culturals gràcies a 
+                  una donació
+                </h6>
+                
+              </div>
+              
+        
+              <div>{divDonation}</div>
+              <div className="text-success"></div>
+            </div>
+
+            <div className="section-amic-right bg-success text-center rounded-2 m-5">
+              <div className="section-amic-text">
+              <h6>Vols canviar el teu compte amic</h6>
+
+              <Link to={`/affiliate/edit/${userId}`} state={state} className='text-css btn btn-danger mx-2 mb-4 mt-5'>Compte</Link>
+              </div>
+            </div>
+          </div>
 
       </main>
       
