@@ -40,11 +40,11 @@ const CreateUser = () => {
         <Sidebar />
         <div className="mx-auto mt-3 text-success justify-content-center">
             <div>
-                <h3 className="text-success text-center">Crea un nou usuari</h3>
+                <h3 className="text-css fs-6 text-success text-center">Crea un nou usuari</h3>
             </div>
         <form className="text-success" onSubmit={store}>
             <div className="mb-3">
-                <label className="form-label">Nom</label>
+                <label className="text-css fs-6 form-label">Nom</label>
                 <input
                     value={name}
                     onChange={ (e)=> setName(e.target.value)}
@@ -53,7 +53,7 @@ const CreateUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Cognom</label>
+                <label className="text-css fs-6 form-label">Cognom</label>
                 <input
                     value={lastname}
                     onChange={ (e)=> setLastname(e.target.value)}
@@ -62,7 +62,7 @@ const CreateUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Correu Electrònic
+                <label className="text-css fs-6 form-label">Correu Electrònic
 </label>
                 <input
                     value={email}
@@ -72,7 +72,7 @@ const CreateUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Contrasenya</label>
+                <label className="text-css form-label text-css fs-6">Contrasenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
@@ -80,7 +80,7 @@ const CreateUser = () => {
                     className="form-control"
                 />
             </div>
-            <button type='submit' className="btn btn-danger">Emmagatzemar</button>
+            <button type='submit' className="text-css fs-6 btn btn-danger">Emmagatzemar</button>
         </form>
         </div>
         </div>

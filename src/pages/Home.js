@@ -27,9 +27,9 @@ function Home() {
           event.preventDefault();
           if(donationForm.donationType !== '' && donationForm.amount !== ''){
             if(!localStorage.getItem('auth_token')) {
-              navigate('/register', {state: donationForm});
+              navigate('/register', {state : donationForm});
             } else {
-              navigate('/affiliate/profile', {state: {state : donationForm}});
+              navigate('/affiliate/profile', {state : donationForm});
             }
             
           }
@@ -115,7 +115,7 @@ function Home() {
           </fieldset>
 
           <fieldset required>
-            <div class="btn-pagos gap-3 mx-auto pt-4 pb-4">
+            <div class="btn-pagos gap-3 mx-auto pt-6 pb-4">
               <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="5" onClick={handleInput}>5 €</button>
               <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="10" onClick={handleInput}>10 €</button>
               <button class="btn btn-success btn-lg p-5 fw-bold fs-3 m-4" name="amount" type="button" value="15" onClick={handleInput}>15 €</button>

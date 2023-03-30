@@ -7,9 +7,11 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/admin/footer/Footer";
 
 function Register() {
-  const {state} = useLocation();
-  //const donationForm = location.state
+  const state = useLocation();
   
+  console.log(state.state)
+
+  const donationForm = state.state
 
   const navigate = useNavigate();
 
@@ -45,7 +47,7 @@ function Register() {
               background: '#1B1D1F'
               
             })
-              navigate("/affiliate/profile", {state: {state}});
+              navigate("/affiliate/profile", {state : donationForm});
             } else {
               setRegister({
                 ...registerInput,
@@ -73,12 +75,12 @@ function Register() {
 
           <div className="container py-5 ">
             <div className="row justify-content-center ">
-              <div className="col-md-6">
-                <div className="card border-0">
+              <div className="col-md-6 ">
+                <div className="card border-0 ">
                   <div className="card-body bg-warning text-secondary">
                     <form onSubmit={registerSubmit}>
                       <div className="form-group mb-3">
-                        <label className="text-secondary" for="name">
+                        <label className="text-css text-success mb-2 fs-6" for="name">
                           Nom
                         </label>
                         <input
@@ -92,7 +94,7 @@ function Register() {
                       </div>
 
                       <div className="form-group mb-3">
-                        <label className="text-secondary" for="lastname">
+                        <label className="text-success" for="lastname">
                           Cognoms
                         </label>
                         <input
@@ -106,7 +108,7 @@ function Register() {
                       </div>
 
                       <div className="form-group mb-3">
-                        <label className="text-secondary" for="email">
+                        <label className="text-success" for="email">
                           Correu electrònic
                         </label>
                         <input
@@ -120,7 +122,7 @@ function Register() {
                       </div>
 
                       <div className="form-group mb-3">
-                        <label className="text-secondary" for="password">
+                        <label className="text-success" for="password">
                           Contrasenya
                         </label>
                         <input
@@ -135,7 +137,7 @@ function Register() {
                         </span>
                       </div>
                       <div className="form-group mb-3 text-center">
-                        <button type="submit" className="btn btn-danger ">
+                        <button type="submit" className="btn btn-danger text-css mt-3">
                           Registra't
                         </button>
                       </div>
@@ -145,7 +147,7 @@ function Register() {
                   <div className="text-center bg-warning">
                     <h6 className="px-4 pt-5 fs-6 text-success">
                       Si ja teniu un compte d'usuari, accediu al vostre perfil
-                      <span> <Link className="text-success" to="/login" state={state}>
+                      <span> <Link className="text-success" to="/login" state={donationForm}>
                         aquí.
                       </Link>
                       </span>

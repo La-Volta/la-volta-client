@@ -38,12 +38,12 @@ function Navbar() {
     AuthButtons = (
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link className="nav-link" to="/login">
+          <Link className="text-css fs-6 nav-link" to="/login">
           Inicia sessió
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/register">
+          <Link className="text-css fs-6 nav-link" to="/register">
           Registra't
           </Link>
         </li>
@@ -51,15 +51,22 @@ function Navbar() {
     );
   } else {
     AuthButtons = (
+      <>
       <li className="nav-item">
         <button
           type="button"
           onClick={logoutSubmit}
-          className="nav-link btn btn-danger btn-sm text-white"
+          className="text-css fs-6 nav-link btn btn-sm text-white"
         >
           Tanca sessió
         </button>
       </li>
+      <li className="nav-item">
+          <Link className="nav-link" to="/affiliate/profile">
+          El meu perfil
+          </Link>
+        </li>
+      </>
     );
   }
 
@@ -91,7 +98,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">
+              <Link className="text-css fs-6 nav-link active" to="/">
                 Inici
               </Link>
             </li>
