@@ -51,15 +51,22 @@ function Navbar() {
     );
   } else {
     AuthButtons = (
+      <>
       <li className="nav-item">
         <button
           type="button"
           onClick={logoutSubmit}
-          className="nav-link btn btn-danger btn-sm text-white"
+          className="nav-link btn btn-sm text-white"
         >
           Tanca sessió
         </button>
       </li>
+      <li className="nav-item">
+          <Link className="nav-link" to="/affiliate/profile">
+          El meu perfil
+          </Link>
+        </li>
+      </>
     );
   }
 
