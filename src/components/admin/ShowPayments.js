@@ -35,15 +35,16 @@ function ShowPayments() {
   return (
     <div>
         <div className='d-grid gap-2 row d-flex justify-content-center mx-auto'>
-        <table className='table table-striped'>
-            <thead className='bg-black text-white'>
+        <h4 className='text-success text-center'> Pagaments reeixits </h4>
+        <table className='table table-striped'>           
+            <thead className='bg-black text-white'>               
                 <tr>
                     <th>Id del pagament</th>
                     <th>Id del soci</th>
                     <th>Import pagat</th>
                     <th>Data</th>
                     <th>Hora</th>
-                    <th>Acció</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -65,6 +66,7 @@ function ShowPayments() {
             </tbody>
         </table>
 
+        <h4 className='text-success text-center'>Pagaments fallits</h4>
 
         <table className='table table-striped'>
             <thead className='bg-black text-white'>
