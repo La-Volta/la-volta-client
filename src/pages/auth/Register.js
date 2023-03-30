@@ -80,7 +80,7 @@ function Register() {
                   <div className="card-body bg-warning text-secondary">
                     <form onSubmit={registerSubmit}>
                       <div className="form-group mb-3">
-                        <label className="text-secondary" for="name">
+                        <label className="text-css text-secondary mb-2 fs-6" for="name">
                           Nom
                         </label>
                         <input
@@ -94,7 +94,7 @@ function Register() {
                       </div>
 
                       <div className="form-group mb-3">
-                        <label className="text-secondary" for="lastname">
+                        <label className="text-css text-secondary mb-2 fs-6" for="lastname">
                           Cognoms
                         </label>
                         <input
@@ -108,7 +108,7 @@ function Register() {
                       </div>
 
                       <div className="form-group mb-3">
-                        <label className="text-secondary" for="email">
+                        <label className="text-css text-secondary mb-2 fs-6" for="email">
                           Correu electrònic
                         </label>
                         <input
@@ -122,7 +122,7 @@ function Register() {
                       </div>
 
                       <div className="form-group mb-3">
-                        <label className="text-secondary" for="password">
+                        <label className="text-css text-secondary mb-2 fs-6" for="password">
                           Contrasenya
                         </label>
                         <input
@@ -137,7 +137,7 @@ function Register() {
                         </span>
                       </div>
                       <div className="form-group mb-3 text-center">
-                        <button type="submit" className="btn btn-danger ">
+                        <button type="submit" className="btn btn-danger text-css mt-3">
                           Registra't
                         </button>
                       </div>

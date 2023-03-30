@@ -20,7 +20,7 @@ function Dashboard() {
             <div>
               <h1>Hola Admin!</h1>
               <h3>Aquest és el teu perfil Admin de La Volta</h3>
-              <h4 className='mt-5'>Com admin pots crear, veure, editar, suprimir usuaris. A més a més, pots veure tots els pagaments.
+              <h4 className='text-css mt-5'>Com admin pots crear, veure, editar, suprimir usuaris. A més a més, pots veure tots els pagaments.
 </h4>
             </div>
           </div>

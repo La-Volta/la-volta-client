@@ -46,7 +46,7 @@ console.log(state);
     return (
         <div>
         <Navbar />
-        <h2 className="text-success my-4 text-center"> La meva compte amic</h2>
+        <h2 className="text-css fs-6 text-success my-4 text-center"> La meva compte amic</h2>
     
         <div className='d-flex'>
         <div className="mx-auto mt-3 text-success justify-content-center">
@@ -55,7 +55,7 @@ console.log(state);
             </div>
         <form className="text-success" onSubmit={update}>
             <div className="mb-3">
-                <label className="form-label">Nom</label>
+                <label className="text-css fs-6 form-label">Nom</label>
                 <input
                     value={name}
                     onChange={ (e)=> setName(e.target.value)}
@@ -64,7 +64,7 @@ console.log(state);
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Cognom</label>
+                <label className="text-css fs-6 form-label">Cognom</label>
                 <input
                     value={lastname}
                     onChange={ (e)=> setLastname(e.target.value)}
@@ -73,7 +73,7 @@ console.log(state);
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Correu electrònic</label>
+                <label className="text-css fs-6 form-label">Correu electrònic</label>
                 <input
                     value={email}
                     onChange={ (e)=> setEmail(e.target.value)}
@@ -82,7 +82,7 @@ console.log(state);
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Contrasenya</label>
+                <label className="text-css fs-6 form-label">Contrasenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
@@ -91,7 +91,7 @@ console.log(state);
                 />
             </div>
             <div>
-            <button type='submit' className="btn btn-danger">Desa</button>
+            <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
             </div>
             <div>
             <button type='submit' className="btn btn-danger">Suprimir</button>
