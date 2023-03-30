@@ -27,9 +27,9 @@ function Home() {
           event.preventDefault();
           if(donationForm.donationType !== '' && donationForm.amount !== ''){
             if(!localStorage.getItem('auth_token')) {
-              navigate('/register', {state: donationForm});
+              navigate('/register', {state : donationForm});
             } else {
-              navigate('/affiliate/profile', {state: {state : donationForm}});
+              navigate('/affiliate/profile', {state : donationForm});
             }
             
           }
@@ -61,9 +61,9 @@ function Home() {
             <h6 className="px-4 pt-5 mt-1 fs-3 text-success fw-bold">
             Fes-te amic de La Volta i aporta la teva donació
             </h6>
-            <h5 className="px-4 pt-1 fs-5 text-success"> Gràcies al teu suport, podem anar més lluny. </h5>
+            <h5 className="px-4 pt-1 fs-5 text-success"> Gràcies al teu suport, aquest projecte seguirà endavant </h5>
             <h6 className="px-4 pt-5 fs-6 text-success">
-            Tria la quantia, afegeix les teves dades i completa el procéss de donació
+            Tria la quantia, afegeix les teves dades i completa el procés de donació
             </h6>
               <h6 className="px-4 pt-1 fs-6 text-success">
                 Així de fàcil!
@@ -124,7 +124,8 @@ function Home() {
   
             <div className="d-flex justify-content-center pt-5">
               <button type="submit" className="col-4 btn btn-success btn-lg text-center">
-              <p className="text-css px-4 pt-3 fs-6 fw-bold">Afegeix el teu import voluntari</p> 
+              <p className="text-css px-4 pt-3 fs-6 fw-bold">Fer una donació puntual de
+ l'import que desitgis</p> 
               </button>
             </div>
           </fieldset>

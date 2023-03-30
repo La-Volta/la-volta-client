@@ -19,8 +19,8 @@ function Dashboard() {
           <div className='mx-auto mt-3 text-success text-center d-flex justify-content-center'>
             <div>
               <h1>Hola Admin!</h1>
-              <h3>Aquest és el teu perfil admin de La Volta</h3>
-              <h4 className='mt-5'>Com administradora pots crear, veure, editar, suprimir usuaris. A més a més pots veure tols els pagaments.
+              <h3>Aquest és el teu perfil Admin de La Volta</h3>
+              <h4 className='mt-5'>Com admin pots crear, veure, editar, suprimir usuaris. A més a més, pots veure tots els pagaments.
 </h4>
             </div>
           </div>

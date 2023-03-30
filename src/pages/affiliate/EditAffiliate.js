@@ -28,7 +28,7 @@ console.log(state);
             email: email,
             password: password,
        })
-       navigate('/affiliate/profile', {state: {state}})
+       navigate('/affiliate/profile', {state: state})
     }
 
     useEffect( () =>{
@@ -46,7 +46,7 @@ console.log(state);
     return (
         <div>
         <Navbar />
-        <h2 className="text-success my-4 text-center">Compte</h2>
+        <h2 className="text-success my-4 text-center"> La meva compte amic</h2>
     
         <div className='d-flex'>
         <div className="mx-auto mt-3 text-success justify-content-center">
@@ -82,7 +82,7 @@ console.log(state);
                 />
             </div>
             <div className="mb-3">
-                <label className="form-label">Contrassenya</label>
+                <label className="form-label">Contrasenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
@@ -90,7 +90,12 @@ console.log(state);
                     className="form-control"
                 />
             </div>
+            <div>
             <button type='submit' className="btn btn-danger">Desa</button>
+            </div>
+            <div>
+            <button type='submit' className="btn btn-danger">Suprimir</button>
+            </div>
         </form>
         </div>
         </div>
