@@ -80,7 +80,7 @@ function Register() {
                   <div className="card-body bg-warning text-secondary">
                     <form onSubmit={registerSubmit}>
                       <div className="form-group mb-3">
-                        <label className="text-success" for="name">
+                        <label className="text-css text-success mb-2 fs-6" for="name">
                           Nom
                         </label>
                         <input
@@ -137,7 +137,7 @@ function Register() {
                         </span>
                       </div>
                       <div className="form-group mb-3 text-center">
-                        <button type="submit" className="btn btn-danger ">
+                        <button type="submit" className="btn btn-danger text-css mt-3">
                           Registra't
                         </button>
                       </div>
