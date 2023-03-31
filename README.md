@@ -40,7 +40,7 @@ npm install
 ```
 3. Hacer el  siguiente comando 
 ```
- npm 
+ npm install
  ```
 
 ***Enlace para el repositorio de la [api](https://github.com/La-Volta/la-volta-api)***
