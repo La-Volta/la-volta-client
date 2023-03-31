@@ -32,26 +32,15 @@ Metodologias y herramientas: :toolbox:
 ***
 1. Clonar el proyecto 
 ```
-git remote add origin https:La-Volta/la-volta-client
+git clone https://github.com/La-Volta/la-volta-client.git
 ```
-2. Necesitamos configurar una rama ascendente y establecer el control remoto como origen
+2. Hacer el  siguiente comando para instalar las dependencias de node
 ```
- git push --set-upstream origin master
+npm install
 ```
-3. Para que podamos cargar nuestra aplicación creada en GitHub Pages, primero debemos instalar el paquete gh-pages.
-
+3. Hacer el  siguiente comando 
 ```
-  yarn add gh-pages
-```
-4. Para desplegar nuestra aplicación, escribe lo siguiente en la terminal
-```
-  npm run deploy
-```
-5. 
-```
-yarn add react-router-dom
-
-```
+ npm start
 
 ***Enlace para el repositorio de la [api](https://github.com/La-Volta/la-volta-api)***
 
