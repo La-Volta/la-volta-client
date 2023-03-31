@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import CallUser from "../../services/CallUser";
+import serviceAxios from "../../services/serviceAxios";
 import Swal from "sweetalert2";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import Navbar from "../../components/Navbar";
@@ -32,10 +32,10 @@ function Register() {
   const registerSubmit = (e) => {
     e.preventDefault();
 
-    CallUser()
+    serviceAxios()
       .getCookies()
       .then((response) => {
-        CallUser()
+        serviceAxios()
           .postRegister(registerInput)
           .then((res) => {
             if (res.data.status === 200) {
