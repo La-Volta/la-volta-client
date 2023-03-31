@@ -9,11 +9,11 @@ La acción de La Volta gira en torno a los residentes y los proyectos de creaci�
 Este diseño hace parte del proyecto final del bottcamps ***Femcoders*** de [Factoria F5](https://factoriaf5.org/) :woman_student:
 
 ### Screenshot
-![Image text1](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-![Image text2](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-![Image text3](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-![Image text4](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-![Image text4](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text1](./src/assets/images/1.png)
+![Image text2](./src/assets/images/2.png)
+![Image text3](./src/assets/images/3.png)
+![Image text4](./src/assets/images/4.png)
+![Image text4](./src/assets/images/5.png)
 
 
 ## Tecnologias
