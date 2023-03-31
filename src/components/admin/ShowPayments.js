@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import CallUser from '../../services/CallUser';
+import '../../styles.css';
 
 function ShowPayments() {
 
@@ -33,27 +34,28 @@ function ShowPayments() {
 
 
   return (
-    <div>
-        <div className='d-grid gap-2 row d-flex justify-content-center mx-auto'>
-        <table className='table table-striped'>
-            <thead className='bg-black text-white'>
+    <div className='d-grid gap-2 row d-flex justify-content-center mx-auto mt-3'>
+        <div className=''>
+        <h4 className='text-success text-css fs-4 text-center'> Pagaments reeixits </h4>
+        <table className='table table-striped'>           
+            <thead className='bg-black text-success'>               
                 <tr>
                     <th>Id del pagament</th>
                     <th>Id del soci</th>
                     <th>Import pagat</th>
                     <th>Data</th>
                     <th>Hora</th>
-                    <th>Acció</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 { payment.map( (order) => (
                 <tr className='text-success' key={order.id}>
-                    <td className='text-success'> {order.payment_id} </td>
-                    <td className='text-success'> {order.user_id} </td>
-                    <td className='text-success'> {order.total_price} € </td>
-                    <td className='text-success'> {order.created_at.substring(0, 10)} </td>
-                    <td className='text-success'> {order.created_at.substring(11, 19)} </td>
+                    <td className='text-white'> {order.payment_id} </td>
+                    <td className='text-white'> {order.user_id} </td>
+                    <td className='text-white'> {order.total_price} € </td>
+                    <td className='text-white'> {order.created_at.substring(0, 10)} </td>
+                    <td className='text-white'> {order.created_at.substring(11, 19)} </td>
                     <td>
 
                         {/* <button onClick={ ()=>deleteOrder(order.id) } className='btn btn-danger mb-1'>Suprimir</button>
@@ -65,9 +67,10 @@ function ShowPayments() {
             </tbody>
         </table>
 
+        <h4 className='text-success text-center text-css fs-4'>Pagaments fallits</h4>
 
         <table className='table table-striped'>
-            <thead className='bg-black text-white'>
+            <thead className='bg-black text-success'>
                 <tr>
                     <th>Id del soci</th>
                     <th>Estat</th>
@@ -81,11 +84,11 @@ function ShowPayments() {
                 { order.map( (order) => (
                 <tr className='text-success' key={order.id}>
                    
-                    <td className='text-success'> {order.user_id} </td>
-                    <td className='text-success'> {order.status} </td>
-                    <td className='text-success'> {order.total_price} € </td>
-                    <td className='text-success'> {order.created_at.substring(0, 10)} </td>
-                    <td className='text-success'> {order.created_at.substring(11, 19)} </td>
+                    <td className='text-white'> {order.user_id} </td>
+                    <td className='text-white'> {order.status} </td>
+                    <td className='text-white'> {order.total_price} € </td>
+                    <td className='text-white'> {order.created_at.substring(0, 10)} </td>
+                    <td className='text-white'> {order.created_at.substring(11, 19)} </td>
                     <td>
 
                         {/* <button onClick={ ()=>deleteOrder(order.id) } className='btn btn-danger mb-1'>Suprimir</button>
