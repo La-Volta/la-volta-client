@@ -84,7 +84,9 @@ const EditUser = () => {
                     className="form-control"
                 />
             </div>
-            <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
+            <div className="justify-content-center mx-auto d-flex">
+                <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
+            </div>
         </form>
         </div>
         </div>

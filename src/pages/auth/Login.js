@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import CallUser from '../../services/CallUser';
 import Navbar from '../../components/Navbar';
 import '../../styles.css';
+import Footer from '../../components/admin/footer/Footer';
 
 
 
@@ -126,6 +127,7 @@ function Login() {
             </div>
             </div>
         </div>
+        <Footer />
         </div>
     );
 }
