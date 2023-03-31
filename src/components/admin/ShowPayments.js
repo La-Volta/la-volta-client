@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import serviceAxios from '../../services/serviceAxios';
 import '../../styles.css';
 import Swal from 'sweetalert2';
-import DeleteAlert from '../../utils/alerts/DeleteAlert';
 
 function ShowPayments() {
 

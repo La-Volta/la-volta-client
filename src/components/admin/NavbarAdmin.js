@@ -56,7 +56,7 @@ function NavbarAdmin() {
     {
         AuthButtons = (
             <li className="nav-item">
-                <button type="button" onClick={logoutSubmit} className="text-css fs-5 nav-link btn btn-danger btn-sm text-white">Tanca sessió</button>
+                <button type="button" onClick={logoutSubmit} className="text-css fs-5 nav-link btn btn-sm text-white">Tanca sessió</button>
             </li>
         );
     }
