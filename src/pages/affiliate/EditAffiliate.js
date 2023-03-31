@@ -46,12 +46,12 @@ console.log(state);
     return (
         <div>
         <Navbar />
-        <h2 className="text-css fs-6 text-success my-2 text-center"> La meva compte amic</h2>
+        <h2 className="text-css fs-5 text-success my-2 text-center"> La meva compte amic</h2>
     
         <div className='d-flex'>
         <div className="mx-auto mt-3 text-success justify-content-center">
             <div>
-                <h3 className="text-success my-4 text-center">Edita el teu perfil</h3>
+                <h3 className="text-success my-2 text-center">Edita el teu perfil</h3>
             </div>
         <form className="text-success" onSubmit={update}>
             <div className="mb-3">
@@ -90,11 +90,11 @@ console.log(state);
                     className="form-control"
                 />
             </div>
-            <div>
-            <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
+            <div className="justify-content-center mx-auto d-flex">
+                <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
             </div>
             <div>
-            <button type='submit' className="text-css fs-6 btn btn-danger my-2">Donar-te de baixa de la Volta</button>
+                <button type='submit' className="text-css fs-6 btn btn-danger my-2 mb-3">Donar-te de baixa de la Volta</button>
             </div>
         </form>
         </div>

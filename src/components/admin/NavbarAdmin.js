@@ -75,7 +75,7 @@ function NavbarAdmin() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active text-css fs-5" to="/">Inici</Link>
+                            <Link className="nav-link active text-css fs-5" to="/admin/dashboard">Inici</Link>
                         </li>
                 {AuthButtons}   
                     </ul>

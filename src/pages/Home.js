@@ -123,8 +123,8 @@ function Home() {
             </div>
   
             <div className="d-flex justify-content-center pt-5">
-              <button type="submit" className="col-4 btn btn-success btn-lg text-center">
-              <p className="text-css px-4 pt-3 fs-6 fw-bold">Fer una donació puntual de
+              <button type="submit" className="col-4 btn btn-success btn-lg ">
+              <p className="text-css pt-3 fs-6 fw-bold">Fer una donació puntual de
  l'import que desitgis</p> 
               </button>
             </div>
