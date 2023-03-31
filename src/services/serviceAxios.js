@@ -11,21 +11,25 @@ axios.interceptors.request.use(function (config){
 })
 
 
-const CallUser = () => {
+const serviceAxios = () => {
     
     const getCookies = async () => {
         const res = await axios.get('/sanctum/csrf-cookie');
-        return res;
-        
-     };
-  
-     const logout = async () => {
-        const res = await axios.post(`/api/logout`);
+        return res;      
+    };
+
+    const postRegister = async (data) => {
+        const res = await axios.post(`/api/register`, data);
         return res;
     };
 
     const postLogin = async (data) => {
         const res = await axios.post(`/api/login`, data);
+        return res;
+    };
+  
+    const logout = async () => {
+        const res = await axios.post(`/api/logout`);
         return res;
     };
 
@@ -34,8 +38,13 @@ const CallUser = () => {
         return res;
     };
 
-    const postRegister = async (data) => {
-        const res = await axios.post(`/api/register`, data);
+    const getUsers = async () => {
+        const res = await axios.get(`/api/users`)
+        return res;
+    }
+
+    const deleteUser = async (id) => {
+        const res = await axios.delete(`/api/user/${id}`);
         return res;
     };
 
@@ -64,15 +73,19 @@ const CallUser = () => {
  
     return {
         getCookies,
+        postRegister,
+        postLogin,
+        logout,
+        checkout,
+        getUsers,
+        deleteUser,
         allOrders,
         payments,
         orderByUser,
         deleteOrder,
-        checkout,
-        postRegister,
-        logout,
-        postLogin,
+        
+        
     };
 }
 
-export default CallUser
+export default serviceAxios
