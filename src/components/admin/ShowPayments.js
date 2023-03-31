@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import CallUser from '../../services/CallUser';
+import serviceAxios from '../../services/serviceAxios';
 import '../../styles.css';
 
 function ShowPayments() {
@@ -9,7 +9,7 @@ function ShowPayments() {
     const [order, setOrders] = useState([]);
 
     async function payments(){
-      await CallUser().payments()
+      await serviceAxios().payments()
       .then(res => {
         setPayments(res.data)
       })
@@ -17,7 +17,7 @@ function ShowPayments() {
       useEffect(() => {payments()},[])
 
       async function orders(){
-        await CallUser().allOrders()
+        await serviceAxios().allOrders()
         .then(res => {
           setOrders(res.data)
         })

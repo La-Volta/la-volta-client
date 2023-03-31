@@ -4,13 +4,13 @@ import logo from '../../assets/images/logoheader.png';
 import Swal from 'sweetalert2';
 import '../../styles.css';
 
-import CallUser from '../../services/CallUser';
+import serviceAxios from '../../services/serviceAxios';
 
 
 function NavbarAdmin() {
 
     const navigate = useNavigate();
-    const service=CallUser();
+    const service=serviceAxios();
     const logoutSubmit = (e) => {
         e.preventDefault();
         

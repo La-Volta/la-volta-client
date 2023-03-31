@@ -11,7 +11,7 @@ axios.interceptors.request.use(function (config){
 })
 
 
-const CallUser = () => {
+const serviceAxios = () => {
     
     const getCookies = async () => {
         const res = await axios.get('/sanctum/csrf-cookie');
@@ -75,4 +75,4 @@ const CallUser = () => {
     };
 }
 
-export default CallUser
+export default serviceAxios
