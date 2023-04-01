@@ -18,30 +18,32 @@ const ShowUsers = () => {
     }
 
     const deleteUser = async (id) => {
-        await serviceAxios().deleteUser(id)
-        Swal.fire({
-            title: 'Desitja eliminar aquest soci de la base de dades?',
-            text: "No podràs revertir això!",
-            icon: 'warning',
+      await Swal.fire({
+        title: 'Desitja eliminar aquest soci de la base de dades?',
+        text: "No podràs revertir això!",
+        icon: 'warning',
+        iconColor:'white',
+        showCancelButton: true,
+        confirmButtonColor: '#8506A9',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        color: 'white',
+        background: '#87EA00',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          serviceAxios().deleteUser(id)
+          Swal.fire({
+            text: "S'ha suprimit el compte d'usuari.",
+            icon: 'success',
             iconColor:'white',
-            showCancelButton: true,
             confirmButtonColor: '#8506A9',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!',
             color: 'white',
             background: '#87EA00',
-          }).then((result) => {
-            if (result.isConfirmed) {
-              Swal.fire({
-                text: "S'ha suprimit el compte d'usuari.",
-                icon: 'success',
-                iconColor:'white',
-                confirmButtonColor: '#8506A9',
-                color: 'white',
-                background: '#87EA00',
-              })
-            }
           })
+        
+        }
+      })
+         
        getUsers()
     }
   return (
@@ -67,7 +69,7 @@ const ShowUsers = () => {
                     <td>
                         <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1 text-css fs-6'>Editar</Link>
                         <button onClick={ ()=>deleteUser(user.id) } className='text-css fs-6 btn btn-danger mx-2 mb-1'>Suprimir</button>
-                        <Link to={`/admin/payments/${user.id}`} className='text-css fs-6 btn btn-danger mx-2 mb-1'>Mostrar els Pagaments
+                        <Link to={`/admin/affiliate/${user.id}`} className='text-css fs-6 btn btn-danger mx-2 mb-1'>Mostrar els Pagaments
                         </Link>
                     </td>
                 </tr>

@@ -93,9 +93,9 @@ console.log(state);
             <div className="justify-content-center mx-auto d-flex">
                 <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
             </div>
-            <div>
+            {/* <div>
                 <button type='submit' className="text-css fs-6 btn btn-danger my-2 mb-3">Donar-te de baixa de la Volta</button>
-            </div>
+            </div> */}
         </form>
         </div>
         </div>

@@ -26,7 +26,7 @@ function ShowPayments() {
         useEffect(() => {orders()},[])
     
      async function deleteOrder(id){
-        await serviceAxios().deleteOrder(id)
+        await 
         Swal.fire({
             title: 'Desitja eliminar aquest pagament de la base de dades?',
             text: "No podràs revertir això!",
@@ -40,6 +40,7 @@ function ShowPayments() {
             background: '#87EA00',
           }).then((result) => {
             if (result.isConfirmed) {
+              serviceAxios().deleteOrder(id)
               Swal.fire({
                 text: "S'ha suprimit el pagament.",
                 icon: 'success',

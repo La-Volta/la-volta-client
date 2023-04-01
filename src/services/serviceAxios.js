@@ -41,7 +41,12 @@ const serviceAxios = () => {
     const getUsers = async () => {
         const res = await axios.get(`/api/users`)
         return res;
-    }
+    };
+
+    const getUserById = async (id) => {
+        const res = await axios.get(`/api/user/${id}`)
+        return res;
+    };
 
     const deleteUser = async (id) => {
         const res = await axios.delete(`/api/user/${id}`);
@@ -78,6 +83,7 @@ const serviceAxios = () => {
         logout,
         checkout,
         getUsers,
+        getUserById,
         deleteUser,
         allOrders,
         payments,
