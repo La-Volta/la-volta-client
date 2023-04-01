@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import serviceAxios from '../../services/serviceAxios';
 import '../../styles.css';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 function ShowPayments() {
 
@@ -26,7 +27,7 @@ function ShowPayments() {
         useEffect(() => {orders()},[])
     
      async function deleteOrder(id){
-        await serviceAxios().deleteOrder(id)
+        await 
         Swal.fire({
             title: 'Desitja eliminar aquest pagament de la base de dades?',
             text: "No podràs revertir això!",
@@ -40,6 +41,7 @@ function ShowPayments() {
             background: '#87EA00',
           }).then((result) => {
             if (result.isConfirmed) {
+              serviceAxios().deleteOrder(id)
               Swal.fire({
                 text: "S'ha suprimit el pagament.",
                 icon: 'success',
@@ -79,6 +81,9 @@ function ShowPayments() {
                     <td className='text-white'> {order.total_price} € </td>
                     <td className='text-white'> {order.created_at.substring(0, 10)} </td>
                     <td className='text-white'> {order.created_at.substring(11, 19)} </td>
+                    <td>
+                      <Link to={`/admin/affiliate/${order.user_id}`} className='text-css fs-6 btn btn-danger mx-2 mb-1'>Veure Soci</Link>
+                    </td>
                 </tr>
                 )) }
             </tbody>
@@ -108,6 +113,7 @@ function ShowPayments() {
                     <td className='text-white'> {order.created_at.substring(11, 19)} </td>
                     <td>
                         <button onClick={()=>deleteOrder(order.id) } className='btn btn-danger mb-1'>Suprimir</button>
+                        <Link to={`/admin/affiliate/${order.user_id}`} className='text-css fs-6 btn btn-danger mx-2 mb-1'>Veure Soci</Link>
                     </td>
                 </tr>
                 )) }

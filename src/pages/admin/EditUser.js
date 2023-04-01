@@ -23,7 +23,7 @@ const EditUser = () => {
             email: email,
             password: password,
        })
-       navigate('/admin/affiliates')
+       navigate(`/admin/affiliate/${id}`)
     }
 
     useEffect( () =>{
