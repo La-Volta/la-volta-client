@@ -68,6 +68,7 @@ function Login() {
                         color: 'white',
                         background: '#87EA00',
                         showConfirmButton: false,
+                        timer: 1500,
                     });
                     
                 }

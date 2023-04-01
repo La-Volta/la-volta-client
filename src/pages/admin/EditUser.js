@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../../components/admin/footer/Footer";
 import NavbarAdmin from "../../components/admin/NavbarAdmin";
 import Sidebar from "../../components/admin/Sidebar";
+import Swal from "sweetalert2";
 
 const endpoint = 'http://localhost:8000/api/user/'
 
@@ -23,6 +24,15 @@ const EditUser = () => {
             email: email,
             password: password,
        })
+       Swal.fire({
+        icon: 'success',
+        title: "Els canvis s'han desat",
+        showConfirmButton: false,
+        timer: 1500,
+        iconColor:'white',
+        color: 'white',
+        background: '#87EA00',
+      })
        navigate(`/admin/affiliate/${id}`)
     }
 
