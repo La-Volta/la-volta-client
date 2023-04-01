@@ -69,7 +69,7 @@ const ShowUsers = () => {
                     <td>
                         <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1 text-css fs-6'>Editar</Link>
                         <button onClick={ ()=>deleteUser(user.id) } className='text-css fs-6 btn btn-danger mx-2 mb-1'>Suprimir</button>
-                        <Link to={`/admin/affiliate/${user.id}`} className='text-css fs-6 btn btn-danger mx-2 mb-1'>Mostrar els Pagaments
+                        <Link to={`/admin/affiliate/${user.id}`} className='text-css fs-6 btn btn-danger mx-2 mb-1'>Detalls i pagaments
                         </Link>
                     </td>
                 </tr>
