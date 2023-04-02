@@ -82,12 +82,12 @@ function Profile() {
       <Navbar />
 
       <main className="">
-        <div className="m-5 text-success text-center">
+        <div className="m-5 text-success text-center ">
           <h3 className="text-css fs-2 mb-3">Hola {userName}!</h3>
           <h6>Aquest és el teu perfil amic de La Volta</h6> 
         </div>
         <div className="justify-content-center mx-auto">
-        <div className="section-amic justify-content-center mx-auto">
+        <div className="section-amic justify-content-center mx-auto ">
           <div className="section-amic-left bg-success text-center rounded-2 mb-4 ms-3">
             <div className="section-amic-text mt-3 mx-3">
               <h6>Ajuda a que La Volta faci realitat els seus projectes culturals gràcies a una donació</h6>
