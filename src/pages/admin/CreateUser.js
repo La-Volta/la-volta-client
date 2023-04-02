@@ -81,7 +81,7 @@ const CreateUser = () => {
                 />
             </div>  
             <div className="d-flex justify-content-center mx-auto">
-            <button type='submit' className="text-css fs-6 btn btn-danger">Emmagatzemar</button>
+            <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
             </div> 
         </form>
         
