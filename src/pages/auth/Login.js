@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { useNavigate, Link, useLocation} from 'react-router-dom';
 
 import Swal from 'sweetalert2';
-import CallUser from '../../services/CallUser';
+import serviceAxios from '../../services/serviceAxios';
 import Navbar from '../../components/Navbar';
 import '../../styles.css';
 import Footer from '../../components/admin/footer/Footer';
@@ -33,8 +33,8 @@ function Login() {
     const loginSubmit = (e) => {
         e.preventDefault();
 
-        CallUser().getCookies().then(response => {
-            CallUser().postLogin(loginInput).then(res => {
+        serviceAxios().getCookies().then(response => {
+            serviceAxios().postLogin(loginInput).then(res => {
                 if(res.data.status === 200)
                 {
                     localStorage.setItem('auth_token', res.data.token);
@@ -68,6 +68,7 @@ function Login() {
                         color: 'white',
                         background: '#87EA00',
                         showConfirmButton: false,
+                        timer: 1500,
                     });
                     
                 }

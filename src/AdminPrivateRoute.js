@@ -37,6 +37,8 @@ function AdminPrivateRoute() {
                 color: 'white',
                 background: '#87EA00',
                 showConfirmButton: false,
+                timer: 1500,
+
             });
             navigate('/');
         }
@@ -55,6 +57,8 @@ function AdminPrivateRoute() {
                     color: 'white',
                     background: '#87EA00',
                     showConfirmButton: false,
+                    timer: 1500,
+
                 });
                 navigate('/');
             }
@@ -67,6 +71,8 @@ function AdminPrivateRoute() {
                     color: 'white',
                     background: '#87EA00',
                     showConfirmButton: false,
+                    timer: 1500,
+
                 });
                 navigate('/');
             }

@@ -4,13 +4,13 @@ import logo from '../../assets/images/logoheader.png';
 import Swal from 'sweetalert2';
 import '../../styles.css';
 
-import CallUser from '../../services/CallUser';
+import serviceAxios from '../../services/serviceAxios';
 
 
 function NavbarAdmin() {
 
     const navigate = useNavigate();
-    const service=CallUser();
+    const service=serviceAxios();
     const logoutSubmit = (e) => {
         e.preventDefault();
         
@@ -56,7 +56,7 @@ function NavbarAdmin() {
     {
         AuthButtons = (
             <li className="nav-item">
-                <button type="button" onClick={logoutSubmit} className="text-css fs-5 nav-link btn btn-danger btn-sm text-white">Tanca sessió</button>
+                <button type="button" onClick={logoutSubmit} className="text-css fs-5 nav-link btn btn-sm text-white">Tanca sessió</button>
             </li>
         );
     }

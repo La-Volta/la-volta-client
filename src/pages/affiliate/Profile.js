@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/admin/footer/Footer";
 import { useLocation, Link} from "react-router-dom";
-import CallUser from "../../services/CallUser";
+import serviceAxios from "../../services/serviceAxios";
 import '../../styles.css'
 
 
@@ -31,7 +31,7 @@ function Profile() {
 }
 
    async function stripeSubmit(id){
-    await CallUser().checkout(id).then((res) => {
+    await serviceAxios().checkout(id).then((res) => {
       console.log(res.data.url)
       window.location.replace(res.data.url);
        

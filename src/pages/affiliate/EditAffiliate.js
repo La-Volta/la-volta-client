@@ -4,6 +4,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../components/admin/footer/Footer";
 import Navbar from "../../components/Navbar";
 import '../../styles.css';
+import Swal from "sweetalert2";
 
 const endpoint = 'http://localhost:8000/api/user/'
 
@@ -28,6 +29,15 @@ console.log(state);
             email: email,
             password: password,
        })
+       Swal.fire({
+        icon: 'success',
+        title: "Els canvis s'han desat",
+        showConfirmButton: false,
+        timer: 1500,
+        iconColor:'white',
+        color: 'white',
+        background: '#87EA00',
+      })
        navigate('/affiliate/profile', {state: state})
     }
 
@@ -93,9 +103,9 @@ console.log(state);
             <div className="justify-content-center mx-auto d-flex">
                 <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
             </div>
-            <div>
+            {/* <div>
                 <button type='submit' className="text-css fs-6 btn btn-danger my-2 mb-3">Donar-te de baixa de la Volta</button>
-            </div>
+            </div> */}
         </form>
         </div>
         </div>

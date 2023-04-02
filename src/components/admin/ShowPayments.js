@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import CallUser from '../../services/CallUser';
+import serviceAxios from '../../services/serviceAxios';
 import '../../styles.css';
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 function ShowPayments() {
 
@@ -9,7 +11,7 @@ function ShowPayments() {
     const [order, setOrders] = useState([]);
 
     async function payments(){
-      await CallUser().payments()
+      await serviceAxios().payments()
       .then(res => {
         setPayments(res.data)
       })
@@ -17,19 +19,42 @@ function ShowPayments() {
       useEffect(() => {payments()},[])
 
       async function orders(){
-        await CallUser().allOrders()
+        await serviceAxios().allOrders()
         .then(res => {
           setOrders(res.data)
         })
         }
         useEffect(() => {orders()},[])
     
-    //  async function deleteActivity(id){
-    //   await CallAxios().trash(id)
-    //   const fiteredActivities=activity.filter(task =>task.id !== id)
-    //   setActivities(fiteredActivities)
-    //   }
-    //   useEffect(() => {callGet()},[])
+     async function deleteOrder(id){
+        await 
+        Swal.fire({
+            title: 'Desitja eliminar aquest pagament de la base de dades?',
+            text: "No podràs revertir això!",
+            icon: 'warning',
+            iconColor:'white',
+            showCancelButton: true,
+            confirmButtonColor: '#8506A9',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+            color: 'white',
+            background: '#87EA00',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              serviceAxios().deleteOrder(id)
+              Swal.fire({
+                text: "S'ha suprimit el pagament.",
+                icon: 'success',
+                iconColor:'white',
+                confirmButtonColor: '#8506A9',
+                color: 'white',
+                background: '#87EA00',
+              })
+            }
+          })
+        orders()
+      }
+      useEffect(() => {orders()},[])
 
 
 
@@ -57,10 +82,7 @@ function ShowPayments() {
                     <td className='text-white'> {order.created_at.substring(0, 10)} </td>
                     <td className='text-white'> {order.created_at.substring(11, 19)} </td>
                     <td>
-
-                        {/* <button onClick={ ()=>deleteOrder(order.id) } className='btn btn-danger mb-1'>Suprimir</button>
-                        <Link to={`/admin/payments/${user.id}`} className='btn btn-danger mx-2 mb-1'>Mostrar els Pagaments
-</Link> */}
+                      <Link to={`/admin/affiliate/${order.user_id}`} className='text-css fs-6 btn btn-danger mx-2 mb-1'>Veure Soci</Link>
                     </td>
                 </tr>
                 )) }
@@ -81,7 +103,7 @@ function ShowPayments() {
                 </tr>
             </thead>
             <tbody>
-                { order.map( (order) => (
+                { order.filter(order => order.status === 'unpaid').map( (order) => (
                 <tr className='text-success' key={order.id}>
                    
                     <td className='text-white'> {order.user_id} </td>
@@ -90,10 +112,8 @@ function ShowPayments() {
                     <td className='text-white'> {order.created_at.substring(0, 10)} </td>
                     <td className='text-white'> {order.created_at.substring(11, 19)} </td>
                     <td>
-
-                        {/* <button onClick={ ()=>deleteOrder(order.id) } className='btn btn-danger mb-1'>Suprimir</button>
-                        <Link to={`/admin/payments/${user.id}`} className='btn btn-danger mx-2 mb-1'>Mostrar els Pagaments
-</Link> */}
+                        <button onClick={()=>deleteOrder(order.id) } className='btn btn-danger mb-1'>Suprimir</button>
+                        <Link to={`/admin/affiliate/${order.user_id}`} className='text-css fs-6 btn btn-danger mx-2 mb-1'>Veure Soci</Link>
                     </td>
                 </tr>
                 )) }
