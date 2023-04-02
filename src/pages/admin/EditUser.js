@@ -95,7 +95,7 @@ const EditUser = () => {
                 />
             </div>
             <div className="justify-content-center mx-auto d-flex">
-                <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
+                <button type='submit' className="text-css fs-6 btn btn-danger mb-2">Desa</button>
             </div>
         </form>
         </div>

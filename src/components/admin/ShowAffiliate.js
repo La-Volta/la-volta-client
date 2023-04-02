@@ -104,8 +104,8 @@ const ShowAffiliate = () => {
                     <td className='text-success'> {user.lastname} </td>
                     <td className='text-success'> {user.email} </td>
                     <td>
-                        <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1'>Edit</Link>
-                        <button onClick={ ()=>deleteUser(user.id) } className='btn btn-danger mb-1'>Delete</button>
+                        <Link to={`/admin/edit/${user.id}`} className='btn btn-danger mx-2 mb-1'>Editar</Link>
+                        <button onClick={ ()=>deleteUser(user.id) } className='btn btn-danger mb-1'>Suprimir</button>
                     </td>
                 </tr>
               
