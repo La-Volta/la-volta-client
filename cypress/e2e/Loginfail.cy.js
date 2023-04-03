@@ -1,7 +1,5 @@
-/// <reference types="Cypress" />
-
-describe ('Visit La Volta by FemCoders', () => {
-  beforeEach() => {
+describe ('Fail login', () => {
+  beforeEach(() => {
       cy.visit('http://localhost:3000/')
     })
 
@@ -24,4 +22,4 @@ describe ('Visit La Volta by FemCoders', () => {
 
   })
 
-  
+})
