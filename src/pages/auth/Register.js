@@ -92,7 +92,7 @@ function Register() {
                           value={registerInput.name}
                           className="form-control"
                         />
-                        <span>{registerInput.error_list.name}</span>
+                        <span className="text-secondary">{registerInput.error_list.name}</span>
                       </div>
 
                       <div className="form-group mb-3">
