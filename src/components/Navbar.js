@@ -4,11 +4,11 @@ import logo from "../assets/images/logoheader.png";
 import Swal from "sweetalert2";
 import "../styles.css";
 
-import CallUser from "../services/CallUser";
+import serviceAxios from "../services/serviceAxios";
 
 function Navbar() {
   const navigate = useNavigate();
-  const service = CallUser();
+  const service = serviceAxios();
   const logoutSubmit = (e) => {
     e.preventDefault();
 
@@ -16,6 +16,7 @@ function Navbar() {
       if (res.data.status === 200) {
         localStorage.removeItem("auth_token");
         localStorage.removeItem("auth_name");
+        localStorage.removeItem("auth_Id");
 
         Swal.fire({
           title: "S'ha desconnectat",
@@ -37,28 +38,35 @@ function Navbar() {
     AuthButtons = (
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link className="nav-link" to="/login">
-            Accés
+          <Link className="text-css fs-6 nav-link" to="/login">
+          Inicia sessió
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/register">
-            Registre
+          <Link className="text-css fs-6 nav-link" to="/register">
+          Registra't
           </Link>
         </li>
       </ul>
     );
   } else {
     AuthButtons = (
+      <>
       <li className="nav-item">
         <button
           type="button"
           onClick={logoutSubmit}
-          className="nav-link btn btn-danger btn-sm text-white"
+          className="text-css fs-6 nav-link btn btn-sm text-white"
         >
           Tanca sessió
         </button>
       </li>
+      <li className="nav-item">
+          <Link className="nav-link" to="/affiliate/profile">
+          El meu perfil
+          </Link>
+        </li>
+      </>
     );
   }
 
@@ -66,13 +74,13 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top  border-bottom  border-success">
       <div className="container">
         <div className="logo-home">
-          <Link className="navbar-brand" to="#">
+          <Link className="navbar-brand" to="/">
             <img
               src={logo}
               alt="Logo"
               width="158"
               height="60"
-              class="d-inline-block align-text-top"
+              className="d-inline-block align-text-top"
             />
           </Link>
         </div>
@@ -90,7 +98,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">
+              <Link className="text-css fs-6 nav-link active" to="/">
                 Inici
               </Link>
             </li>
