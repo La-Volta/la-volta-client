@@ -2,7 +2,7 @@ import React from 'react';
 import NavbarAdmin from '../../components/admin/NavbarAdmin';
 import Sidebar from '../../components/admin/Sidebar';
 import Footer from '../../components/admin/footer/Footer';
-import ShowUsers from '../../components/admin/ShowUsers';
+import '../../styles.css';
 
 
 
@@ -16,11 +16,11 @@ function Dashboard() {
           <div className='fixed-float-right'>
             <Sidebar />
           </div>
-          <div className='mx-auto mt-3 text-success text-center d-flex justify-content-center'>
+          <div className='text-css mx-auto mt-3 text-success text-center d-flex justify-content-center'>
             <div>
-              <h1>Hola Admin!</h1>
-              <h3>Aquest és el teu perfil admin de La Volta</h3>
-              <h4 className='mt-5'>Como admin puedes ver todos los usuarios, editar cada usuario, ver los pagos de cada usuario </h4>
+              <h1 className='display-5'>Hola Admin!</h1>
+              <h3 className='fs-4'>Aquest és el teu perfil Admin de La Volta</h3>
+              <h4 className='fs-4 text-css mt-4'>Com admin pots crear, veure, editar, suprimir usuaris. A més a més, pots veure tots els pagaments.</h4>
             </div>
           </div>
           </div>

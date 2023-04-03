@@ -1,28 +1,47 @@
 import axios from "axios";
-import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../components/admin/footer/Footer";
-import NavbarAdmin from "../../components/admin/NavbarAdmin";
-import Sidebar from "../../components/admin/Sidebar";
+import Navbar from "../../components/Navbar";
 import '../../styles.css';
+import Swal from "sweetalert2";
 
 const endpoint = 'http://localhost:8000/api/user/'
 
-const CreateUser = () => {
+const EditUser = () => {
+
+    const  {state}  = useLocation();
+console.log(state);
+
+
     const [name, setName] = useState('')
     const [lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [password, setPassword] = useState('auth_token')
     const navigate = useNavigate()
+    const {id} = useParams()
     
-    
-    const store = async (e) => {
+    const update = async (e) => {
        e.preventDefault()
-       await axios.post(endpoint, {name: name, lastname: lastname, email: email, password: password})
-       navigate('/admin/affiliates')
+       await axios.put(`${endpoint}${id}`, {
+            name: name,
+            lastname: lastname,
+            email: email,
+            password: password,
+       })
+       Swal.fire({
+        icon: 'success',
+        title: "Els canvis s'han desat",
+        showConfirmButton: false,
+        timer: 1500,
+        iconColor:'white',
+        color: 'white',
+        background: '#87EA00',
+      })
+       navigate('/affiliate/profile', {state: state})
     }
 
-    /*  useEffect( () =>{
+    useEffect( () =>{
         const getUserById = async () => {
             const response = await axios.get(`${endpoint}${id}`)
             setName(response.data.name)
@@ -32,18 +51,19 @@ const CreateUser = () => {
         }
         getUserById()
         //·eslint-disable-next-line-react-hooks/exhaustive-deps
-    }, [] )*/
+    }, [] )
 
     return (
         <div>
-        <NavbarAdmin />
+        <Navbar />
+        <h2 className="text-css fs-5 text-success my-2 text-center"> La meva compte amic</h2>
+    
         <div className='d-flex'>
-        <Sidebar />
-        <div className="mx-auto mt-3 text-white justify-content-center">
-            <div className="">
-                <h3 className="text-css fs-4 text-success text-center">Crea un nou amic</h3>
+        <div className="mx-auto mt-3 text-success justify-content-center">
+            <div>
+                <h3 className="text-success my-2 text-center">Edita el teu perfil</h3>
             </div>
-        <form className="text-success" onSubmit={store}>
+        <form className="text-success" onSubmit={update}>
             <div className="mb-3">
                 <label className="text-css fs-6 form-label">Nom</label>
                 <input
@@ -63,7 +83,7 @@ const CreateUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="text-css fs-6 form-label">Correu Electrònic</label>
+                <label className="text-css fs-6 form-label">Correu electrònic</label>
                 <input
                     value={email}
                     onChange={ (e)=> setEmail(e.target.value)}
@@ -72,28 +92,28 @@ const CreateUser = () => {
                 />
             </div>
             <div className="mb-3">
-                <label className="text-css form-label text-css fs-6">Contrasenya</label>
+                <label className="text-css fs-6 form-label">Contrasenya</label>
                 <input
                     value={password}
                     onChange={ (e)=> setPassword(e.target.value)}
                     type='password'
                     className="form-control"
                 />
-            </div>  
-            <div className="d-flex justify-content-center mx-auto">
-            <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
-            </div> 
+            </div>
+            <div className="justify-content-center mx-auto d-flex">
+                <button type='submit' className="text-css fs-6 btn btn-danger">Desa</button>
+            </div>
+            {/* <div>
+                <button type='submit' className="text-css fs-6 btn btn-danger my-2 mb-3">Donar-te de baixa de la Volta</button>
+            </div> */}
         </form>
-        
-           
-        
         </div>
-    </div>
-    <Footer />
-    </div>
+        </div>
+        <Footer />
+        </div>
         
     )
 
 }
 
-export default CreateUser
+export default EditUser
