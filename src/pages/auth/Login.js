@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
-
 import { useNavigate, Link, useLocation} from 'react-router-dom';
-
 import Swal from 'sweetalert2';
 import serviceAxios from '../../services/serviceAxios';
 import Navbar from '../../components/Navbar';
