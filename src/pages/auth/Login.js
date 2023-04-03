@@ -100,12 +100,12 @@ function Login() {
                                     <div className="form-group mb-3">
                                         <label className="text-css text-success mb-2 fs-6">Correu electrònic</label>
                                         <input type="email" name="email" onChange={handleInput} value={loginInput.email} className="form-control" />
-                                        <span>{loginInput.error_list.email}</span>
+                                        <span className='text-secondary'>{loginInput.error_list.email}</span>
                                     </div>
                                     <div className="form-group mb-3">
                                         <label className="text-css text-success mb-2 fs-6">Contrasenya</label>
                                         <input type="password" name="password" onChange={handleInput} value={loginInput.password} className="form-control" />
-                                        <span>{loginInput.error_list.password}</span>
+                                        <span className='text-secondary'>{loginInput.error_list.password}</span>
                                     </div>
                                     <div className="form-group mb-3 text-center">
                                         <button type="submit" className="text-css fs-6 btn btn-danger mt-3
