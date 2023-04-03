@@ -22,9 +22,9 @@ Metodologias y herramientas: :toolbox:
 * [Trello](https://trello.com/b/Ls3plE0O/kanban-la-volta) 
 * [Visual Studio](https://code.visualstudio.com/)
 * [GitHub](https://github.com/La-Volta/la-volta-client/edit/main/README.md)
-* [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-* [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
-* [React](https://es.reactjs.org/)
+* [CSS](https://developer.mozilla.org/es/docs/Web/CSS): versión css3
+* [HTML](https://developer.mozilla.org/es/docs/Web/HTML) : versión html5
+* [React](https://es.reactjs.org/): versión 16.8.6
 * [Sass](https://sass-lang.com/)
 * [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 * [Figama](https://www.figma.com/file/uxSfTva6l0hcZhLCf5MgES/La-Volta?node-id=1-15)
